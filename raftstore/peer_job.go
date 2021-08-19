@@ -35,7 +35,7 @@ func (pr *peerReplica) startApplyingSnapJob() {
 	pr.ps.applySnapJobLock.Unlock()
 }
 
-func (pr *peerReplica) startRegistrationJob() {
+func (pr *peerReplica) startRegistrationJob(from string) {
 	delegate := &applyDelegate{
 		store:            pr.store,
 		ps:               pr.ps,
@@ -49,6 +49,10 @@ func (pr *peerReplica) startRegistrationJob() {
 			pr.store.cfg.Customize.CustomAdjustInitAppliedIndexFactory(pr.ps.shard.Group) != nil,
 	}
 
+	logger.Errorf(">>>>>>>>>>>> shard %d peer add registration job by %s",
+		pr.ps.shard.ID,
+		pr.peer.ID,
+		from)
 	err := pr.store.addApplyJob(pr.applyWorker, "doRegistrationJob", func() error {
 		if pr.store.cfg.Test.PeerReplicaDelegateWait > 0 {
 			time.Sleep(pr.store.cfg.Test.PeerReplicaDelegateWait)

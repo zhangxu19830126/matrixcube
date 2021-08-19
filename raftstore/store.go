@@ -494,7 +494,7 @@ func (s *store) startShards() {
 			pr.startApplyingSnapJob()
 		}
 
-		pr.startRegistrationJob()
+		pr.startRegistrationJob("startShards")
 
 		s.updateShardKeyRange(localState.Shard)
 		s.addPR(pr)
@@ -578,7 +578,7 @@ func (s *store) doCreate(shard bhmetapb.Shard) {
 		}
 		s.mustSaveShards(shard)
 		s.updateShardKeyRange(shard)
-		pr.startRegistrationJob()
+		pr.startRegistrationJob("doCreate")
 	} else {
 		pr.stopEventLoop()
 	}

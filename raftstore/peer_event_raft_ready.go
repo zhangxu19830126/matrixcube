@@ -322,7 +322,7 @@ func (pr *peerReplica) handleRaftReadyApply(ctx *readyContext, rd *raft.Ready) {
 	}
 
 	if result != nil {
-		pr.startRegistrationJob()
+		pr.startRegistrationJob("handleRaftReadyApply")
 	}
 
 	pr.applyCommittedEntries(rd)
