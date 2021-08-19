@@ -49,7 +49,7 @@ func (pr *peerReplica) startRegistrationJob(from string) {
 			pr.store.cfg.Customize.CustomAdjustInitAppliedIndexFactory(pr.ps.shard.Group) != nil,
 	}
 
-	logger.Errorf(">>>>>>>>>>>> shard %d peer add registration job by %s",
+	logger.Errorf(">>>>>>>>>>>> shard %d peer %d add registration job by %s",
 		pr.ps.shard.ID,
 		pr.peer.ID,
 		from)
@@ -57,6 +57,10 @@ func (pr *peerReplica) startRegistrationJob(from string) {
 		if pr.store.cfg.Test.PeerReplicaDelegateWait > 0 {
 			time.Sleep(pr.store.cfg.Test.PeerReplicaDelegateWait)
 		}
+		defer logger.Errorf(">>>>>>>>>>>> shard %d peer %d add registration job by %s, completed",
+			pr.ps.shard.ID,
+			pr.peer.ID,
+			from)
 		return pr.doRegistrationJob(delegate)
 	}, nil)
 

@@ -96,8 +96,8 @@ func (pr *peerReplica) handleReady() {
 		}
 
 		if !pr.store.snapshotManager.Exists(ctx.snap) {
-			logger.Infof("shard %d receiving snapshot, skip further handling",
-				pr.shardID)
+			logger.Infof("shard %d peer %d receiving snapshot, skip further handling",
+				pr.shardID, pr.peer.ID)
 			return
 		}
 	}
@@ -325,7 +325,7 @@ func (pr *peerReplica) handleRaftReadyApply(ctx *readyContext, rd *raft.Ready) {
 		pr.startRegistrationJob("handleRaftReadyApply")
 	}
 
-	pr.applyCommittedEntries(rd)
+	pr.applyCommittedEntries(rd, result)
 
 	pr.doApplyReads(rd)
 
@@ -369,6 +369,8 @@ func (pr *peerReplica) doApplySnapshot(ctx *readyContext, rd *raft.Ready) *apply
 		}
 	}
 
+	logger.Errorf(">>>>>>>>>>>> shard %d peer %d start applying snapshot",
+		pr.shardID, pr.peer.ID)
 	pr.startApplyingSnapJob()
 
 	// remove pending snapshots for sending
@@ -383,14 +385,14 @@ func (pr *peerReplica) doApplySnapshot(ctx *readyContext, rd *raft.Ready) *apply
 	}
 }
 
-func (pr *peerReplica) applyCommittedEntries(rd *raft.Ready) {
+func (pr *peerReplica) applyCommittedEntries(rd *raft.Ready, result *applySnapResult) {
 	if pr.ps.isApplyingSnapshot() {
 		pr.ps.lastReadyIndex = pr.ps.getTruncatedIndex()
 	} else {
 		// make sure the delegate already registered
 		if _, ok := pr.store.delegates.Load(pr.shardID); !ok {
-			logger.Errorf(">>>>>>>>>>>> shard %d peer %d skip with no delegates, %d commits",
-				pr.shardID, pr.peer.ID, len(rd.CommittedEntries))
+			logger.Errorf(">>>>>>>>>>>> shard %d peer %d skip with no delegates, %d commits, result %+v",
+				pr.shardID, pr.peer.ID, len(rd.CommittedEntries), result)
 			return
 		}
 
