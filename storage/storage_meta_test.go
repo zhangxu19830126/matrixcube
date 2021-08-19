@@ -197,7 +197,7 @@ func TestSetAndGetWithTTL(t *testing.T) {
 			assert.NoError(t, err, "TestSetAndGetWithTTL failed")
 			assert.Equal(t, string(value1), string(value), "TestSetAndGetWithTTL failed")
 
-			time.Sleep(time.Millisecond * 1200)
+			time.Sleep(time.Second * 2)
 			value, err = s.Get(key1)
 			assert.NoError(t, err, "TestSetAndGetWithTTL failed")
 			assert.Equal(t, 0, len(value), "TestSetAndGetWithTTL failed")
