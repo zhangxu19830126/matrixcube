@@ -386,7 +386,7 @@ func (pr *peerReplica) doApplySnapshot(ctx *readyContext, rd *raft.Ready) *apply
 }
 
 func (pr *peerReplica) applyCommittedEntries(rd *raft.Ready, result *applySnapResult) {
-	if pr.ps.isApplyingSnapshot() {
+	if result != nil || pr.ps.isApplyingSnapshot() {
 		pr.ps.lastReadyIndex = pr.ps.getTruncatedIndex()
 	} else {
 		// make sure the delegate already registered
