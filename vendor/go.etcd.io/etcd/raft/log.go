@@ -35,7 +35,7 @@ type raftLog struct {
 	// applied is the highest log position that the application has
 	// been instructed to apply to its state machine.
 	// Invariant: applied <= committed
-	applied uint64
+	id, applied uint64
 
 	logger Logger
 
@@ -47,17 +47,18 @@ type raftLog struct {
 // newLog returns log using the given storage and default options. It
 // recovers the log to the state that it just commits and applies the
 // latest snapshot.
-func newLog(storage Storage, logger Logger) *raftLog {
-	return newLogWithSize(storage, logger, noLimit)
+func newLog(id uint64, storage Storage, logger Logger) *raftLog {
+	return newLogWithSize(id, storage, logger, noLimit)
 }
 
 // newLogWithSize returns a log using the given storage and max
 // message size.
-func newLogWithSize(storage Storage, logger Logger, maxNextEntsSize uint64) *raftLog {
+func newLogWithSize(id uint64, storage Storage, logger Logger, maxNextEntsSize uint64) *raftLog {
 	if storage == nil {
 		log.Panic("storage must not be nil")
 	}
 	log := &raftLog{
+		id:              id,
 		storage:         storage,
 		logger:          logger,
 		maxNextEntsSize: maxNextEntsSize,
@@ -350,6 +351,7 @@ func (l *raftLog) mustCheckOutOfBounds(lo, hi uint64) error {
 	}
 	fi := l.firstIndex()
 	if lo < fi {
+		l.logger.Errorf("%d >>>>>>>>>>>>>>>> [%d:%d:%d)", l.id, lo, hi, fi)
 		return ErrCompacted
 	}
 

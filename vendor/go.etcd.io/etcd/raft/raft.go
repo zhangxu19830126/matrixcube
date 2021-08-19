@@ -328,7 +328,7 @@ func newRaft(c *Config) *raft {
 	if err := c.validate(); err != nil {
 		panic(err.Error())
 	}
-	raftlog := newLogWithSize(c.Storage, c.Logger, c.MaxCommittedSizePerReady)
+	raftlog := newLogWithSize(c.ID, c.Storage, c.Logger, c.MaxCommittedSizePerReady)
 	hs, cs, err := c.Storage.InitialState()
 	if err != nil {
 		panic(err) // TODO(bdarnell)

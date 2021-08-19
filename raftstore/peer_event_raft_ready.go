@@ -337,6 +337,8 @@ func (pr *peerReplica) handleRaftReadyApply(ctx *readyContext, rd *raft.Ready) {
 	if result != nil {
 		// Because we only handle raft ready when not applying snapshot, so following
 		// line won't be called twice for the same snapshot.
+		logger.Errorf(">>>>>>>>>>>> shard %d peer %d AdvanceApply with %d",
+			pr.shardID, pr.peer.ID, pr.ps.lastReadyIndex)
 		pr.rn.AdvanceApply(pr.ps.lastReadyIndex)
 	}
 }
@@ -387,6 +389,8 @@ func (pr *peerReplica) applyCommittedEntries(rd *raft.Ready) {
 	} else {
 		// make sure the delegate already registered
 		if _, ok := pr.store.delegates.Load(pr.shardID); !ok {
+			logger.Errorf(">>>>>>>>>>>> shard %d peer %d skip with no delegates, %d commits",
+				pr.shardID, pr.peer.ID, len(rd.CommittedEntries))
 			return
 		}
 
