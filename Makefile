@@ -26,7 +26,7 @@ example-http: http; $(info ======== compiled matrixcube http example:)
 
 .PHONY: test
 test: ; $(info ======== test matrixcube)
-	go test $(RACE) -v -count=1 -timeout 600s $(PKGNAME)/storage
+	# go test $(RACE) -v -count=1 -timeout 600s $(PKGNAME)/storage
 	go test $(RACE) -v -count=1 -timeout 600s $(PKGNAME)/raftstore
 
 .PHONY: race-test

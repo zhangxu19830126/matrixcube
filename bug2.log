@@ -1,0 +1,811 @@
+2021-08-20T05:02:28.1683335Z === RUN   TestSpeedupAddShard
+2021-08-20T05:02:28.1685748Z 2021/08/20 05:02:28.168386 [info] [transport]: send snapshot worker stopped
+2021-08-20T05:02:28.1686571Z 2021/08/20 05:02:28.168402 [info] [transport]: send snapshot worker stopped
+2021-08-20T05:02:28.1687340Z 2021/08/20 05:02:28.168407 [info] [transport]: send snapshot worker stopped
+2021-08-20T05:02:28.1688099Z 2021/08/20 05:02:28.168412 [info] [transport]: send snapshot worker stopped
+2021-08-20T05:02:28.1688866Z 2021/08/20 05:02:28.168417 [info] [transport]: send snapshot worker stopped
+2021-08-20T05:02:28.1689636Z 2021/08/20 05:02:28.168424 [info] [transport]: send snapshot worker stopped
+2021-08-20T05:02:28.1690389Z 2021/08/20 05:02:28.168431 [info] [transport]: send snapshot worker stopped
+2021-08-20T05:02:28.1691147Z 2021/08/20 05:02:28.168435 [info] [transport]: send snapshot worker stopped
+2021-08-20T05:02:28.1691873Z 2021/08/20 05:02:28.168438 [info] [transport]: send raft worker stopped
+2021-08-20T05:02:28.1709218Z 2021/08/20 05:02:28.170773 [info] prophet: prophet logger set
+2021-08-20T05:02:28.1715424Z 2021/08/20 05:02:28.171351 [info] [raftstore]: start scan gc snap files
+2021-08-20T05:02:28.1720528Z 2021/08/20 05:02:28.171884 [info] [raftstore]: start scan gc snap files
+2021-08-20T05:02:28.1724288Z 2021/08/20 05:02:28.172297 [info] [raftstore]: begin start raftstore
+2021-08-20T05:02:28.1725222Z 2021/08/20 05:02:28.172342 [info] [raftstore]: begin to start prophet
+2021-08-20T05:02:28.1726196Z 2021/08/20 05:02:28.172308 [info] [raftstore]: start scan gc snap files
+2021-08-20T05:02:28.1727390Z [WARNING] Deprecated '--logger=capnslog' flag is set; use '--logger=zap' flag instead
+2021-08-20T05:02:28.1728718Z 2021-08-20 05:02:28.172728 I | embed: pprof is enabled under /debug/pprof
+2021-08-20T05:02:28.1730234Z 2021-08-20 05:02:28.172897 I | embed: name = node-0
+2021-08-20T05:02:28.1731297Z 2021-08-20 05:02:28.172924 I | embed: data dir = /tmp/cube/node-0/prophet
+2021-08-20T05:02:28.1732406Z 2021-08-20 05:02:28.172938 I | embed: member dir = /tmp/cube/node-0/prophet/member
+2021-08-20T05:02:28.1733516Z 2021-08-20 05:02:28.173061 I | embed: heartbeat = 100ms
+2021-08-20T05:02:28.1734406Z 2021-08-20 05:02:28.173175 I | embed: election = 3000ms
+2021-08-20T05:02:28.1735355Z 2021-08-20 05:02:28.173287 I | embed: snapshot count = 100000
+2021-08-20T05:02:28.1736305Z 2021-08-20 05:02:28.173404 I | embed: advertise client URLs = http://127.0.0.1:40000
+2021-08-20T05:02:28.1770020Z 2021-08-20 05:02:28.176470 I | etcdserver: starting member 93ccda9956d988f4 in cluster 6a4ade671189dc2f
+2021-08-20T05:02:28.1771529Z {"level":"info","ts":"2021-08-20T05:02:28.176Z","caller":"raft/raft.go:1550","msg":"93ccda9956d988f4 switched to configuration voters=()"}
+2021-08-20T05:02:28.1772888Z {"level":"info","ts":"2021-08-20T05:02:28.176Z","caller":"raft/raft.go:711","msg":"93ccda9956d988f4 became follower at term 0"}
+2021-08-20T05:02:28.1774436Z {"level":"info","ts":"2021-08-20T05:02:28.176Z","caller":"raft/raft.go:388","msg":"newRaft 93ccda9956d988f4 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0]"}
+2021-08-20T05:02:28.1776368Z {"level":"info","ts":"2021-08-20T05:02:28.176Z","caller":"raft/raft.go:711","msg":"93ccda9956d988f4 became follower at term 1"}
+2021-08-20T05:02:28.1778010Z {"level":"info","ts":"2021-08-20T05:02:28.176Z","caller":"raft/raft.go:1550","msg":"93ccda9956d988f4 switched to configuration voters=(10650127570946328820)"}
+2021-08-20T05:02:28.1785478Z 2021-08-20 05:02:28.178326 W | auth: simple token is not cryptographically signed
+2021-08-20T05:02:28.1808478Z 2021-08-20 05:02:28.179770 I | etcdserver: starting server... [version: 3.4.15, cluster version: to_be_decided]
+2021-08-20T05:02:28.1810448Z 2021-08-20 05:02:28.180180 I | etcdserver: 93ccda9956d988f4 as single-node; fast-forwarding 29 ticks (election ticks 30)
+2021-08-20T05:02:28.1812002Z {"level":"info","ts":"2021-08-20T05:02:28.180Z","caller":"raft/raft.go:1550","msg":"93ccda9956d988f4 switched to configuration voters=(10650127570946328820)"}
+2021-08-20T05:02:28.1813512Z 2021-08-20 05:02:28.180392 I | etcdserver/membership: added member 93ccda9956d988f4 [http://127.0.0.1:50000] to cluster 6a4ade671189dc2f
+2021-08-20T05:02:28.1814673Z 2021-08-20 05:02:28.180533 I | embed: listening for peers on 127.0.0.1:50000
+2021-08-20T05:02:28.2305124Z 2021/08/20 05:02:28.230080 [info] [raftstore]: shard 2 raft tick stopped
+2021-08-20T05:02:28.2306019Z 2021/08/20 05:02:28.230106 [info] [raftstore]: shard 5 raft tick stopped
+2021-08-20T05:02:28.2622773Z 2021/08/20 05:02:28.261842 [info] prophet: [prophet-leader/node-0]/loop: exit
+2021-08-20T05:02:28.3302156Z 2021/08/20 05:02:28.329982 [info] prophet: watcher  removed
+2021-08-20T05:02:28.3302971Z 2021/08/20 05:02:28.330001 [info] prophet: watcher  removed
+2021-08-20T05:02:28.3303774Z 2021/08/20 05:02:28.330005 [info] prophet: watcher  removed
+2021-08-20T05:02:30.1786115Z {"level":"info","ts":"2021-08-20T05:02:30.178Z","caller":"raft/raft.go:934","msg":"93ccda9956d988f4 is starting a new election at term 1"}
+2021-08-20T05:02:30.1787847Z {"level":"info","ts":"2021-08-20T05:02:30.178Z","caller":"raft/raft.go:724","msg":"93ccda9956d988f4 became candidate at term 2"}
+2021-08-20T05:02:30.1789895Z {"level":"info","ts":"2021-08-20T05:02:30.178Z","caller":"raft/raft.go:835","msg":"93ccda9956d988f4 received MsgVoteResp from 93ccda9956d988f4 at term 2"}
+2021-08-20T05:02:30.1791514Z {"level":"info","ts":"2021-08-20T05:02:30.178Z","caller":"raft/raft.go:776","msg":"93ccda9956d988f4 became leader at term 2"}
+2021-08-20T05:02:30.1793173Z {"level":"info","ts":"2021-08-20T05:02:30.178Z","caller":"raft/node.go:325","msg":"raft.node: 93ccda9956d988f4 elected leader 93ccda9956d988f4 at term 2"}
+2021-08-20T05:02:30.1794777Z 2021-08-20 05:02:30.178463 I | etcdserver: setting up the initial cluster version to 3.4
+2021-08-20T05:02:30.1808489Z 2021-08-20 05:02:30.180052 N | etcdserver/membership: set the initial cluster version to 3.4
+2021-08-20T05:02:30.1810752Z 2021-08-20 05:02:30.180107 I | etcdserver: published {Name:node-0 ClientURLs:[http://127.0.0.1:40000]} to cluster 6a4ade671189dc2f
+2021-08-20T05:02:30.1812342Z 2021-08-20 05:02:30.180118 I | embed: ready to serve client requests
+2021-08-20T05:02:30.1813638Z 2021/08/20 05:02:30.180185 [info] prophet: create etcd v3 client with endpoints [http://127.0.0.1:40000]
+2021-08-20T05:02:30.1815623Z 2021-08-20 05:02:30.180547 N | embed: serving insecure client requests on 127.0.0.1:40000, this is strongly discouraged!
+2021-08-20T05:02:30.1826370Z 2021/08/20 05:02:30.182044 [info] prophet: net application started
+2021-08-20T05:02:30.1827222Z 2021/08/20 05:02:30.182169 [info] prophet: start system time monitor 
+2021-08-20T05:02:30.1830072Z 2021/08/20 05:02:30.182431 [info] prophet: [prophet-leader/node-0]/loop: current leader is []
+2021-08-20T05:02:30.1831556Z 2021/08/20 05:02:30.182788 [info] prophet: [prophet-leader/node-0]/campaign: load expect leader: []
+2021-08-20T05:02:30.1834230Z 2021/08/20 05:02:30.182821 [info] prophet: [prophet-leader/node-0]/campaign: start
+2021-08-20T05:02:30.1835597Z 2021/08/20 05:02:30.183219 [info] prophet: [prophet-leader/node-0]/campaign: grant lease ok
+2021-08-20T05:02:30.1841297Z 2021/08/20 05:02:30.183731 [info] prophet: [prophet-leader/node-0]/campaign: completed, start keepalive
+2021-08-20T05:02:30.1842585Z 2021/08/20 05:02:30.183747 [info] prophet: ********node-0 become to leader now********
+2021-08-20T05:02:30.1849048Z 2021/08/20 05:02:30.184405 [info] prophet: load 0 containers, cost 554.706µs
+2021-08-20T05:02:30.1850120Z 2021/08/20 05:02:30.184680 [info] prophet: load 0 resources, cost 241.103µs
+2021-08-20T05:02:30.1865025Z 2021/08/20 05:02:30.185535 [info] prophet: client start init connection to leader 127.0.0.1:30000
+2021-08-20T05:02:30.1867434Z 2021/08/20 05:02:30.185653 [info] prophet: coordinator starts to collect cluster information 
+2021-08-20T05:02:30.1868615Z 2021/08/20 05:02:30.185691 [info] prophet: coordinator has finished cluster information preparation 
+2021-08-20T05:02:30.1869667Z 2021/08/20 05:02:30.185704 [info] prophet: coordinator starts to run schedulers 
+2021-08-20T05:02:30.1871837Z 2021/08/20 05:02:30.185724 [info] prophet: client start connect to leader 127.0.0.1:30000
+2021-08-20T05:02:30.1874234Z 2021/08/20 05:02:30.185800 [info] prophet: session 1[127.0.0.1:39688] connected
+2021-08-20T05:02:30.1875054Z 2021/08/20 05:02:30.185855 [info] prophet: client read loop started 
+2021-08-20T05:02:30.1879506Z 2021/08/20 05:02:30.185865 [info] prophet: client read loop actived, ready to read from leader
+2021-08-20T05:02:30.1880380Z 2021/08/20 05:02:30.185873 [info] prophet: client started
+2021-08-20T05:02:30.1881208Z 2021/08/20 05:02:30.185879 [info] [raftstore]: *********Become prophet leader*********
+2021-08-20T05:02:30.1882101Z 2021/08/20 05:02:30.185888 [info] [raftstore]: begin to bootstrap the cluster
+2021-08-20T05:02:30.1883533Z 2021/08/20 05:02:30.185927 [info] [raftstore]: raftstore init with store raftAddr:"127.0.0.1:10000" clientAddr:"127.0.0.1:20000" labels:<key:"c" value:"0" > startTime:1629435750 deployPath:"not set" 
+2021-08-20T05:02:30.1884733Z 2021/08/20 05:02:30.185936 [info] [raftstore]: begin to create local store metadata
+2021-08-20T05:02:30.1885553Z 2021/08/20 05:02:30.186554 [info] prophet: load 0 jobs
+2021-08-20T05:02:30.1886505Z 2021/08/20 05:02:30.187005 [info] [raftstore]: create local store with id 1
+2021-08-20T05:02:30.1887502Z 2021/08/20 05:02:30.187203 [info] prophet: coordinator begins to actively drive push operator 
+2021-08-20T05:02:30.1888523Z 2021/08/20 05:02:30.187250 [info] prophet: coordinator starts patrol resources 
+2021-08-20T05:02:30.1889494Z 2021/08/20 05:02:30.187556 [info] [raftstore]: the cluster already bootstrap: false
+2021-08-20T05:02:30.1890477Z 2021/08/20 05:02:30.187590 [info] [raftstore]: begin to bootstrap the cluster with init shards
+2021-08-20T05:02:30.1891763Z 2021/08/20 05:02:30.187765 [info] [raftstore]: create init shard id:2 start:"a" end:"b" epoch:<confVer:1 version:1 > peers:<id:3 containerID:1 > 
+2021-08-20T05:02:30.1921422Z 2021/08/20 05:02:30.189463 [info] prophet: container 1 limit added
+2021-08-20T05:02:30.1922219Z 2021/08/20 05:02:30.189545 [info] [raftstore]: prophet started
+2021-08-20T05:02:30.1922942Z 2021/08/20 05:02:30.189619 [info] [transport]: net application started
+2021-08-20T05:02:30.1923709Z 2021/08/20 05:02:30.189638 [info] [raftstore]: start listen at 127.0.0.1:10000 for raft
+2021-08-20T05:02:30.1924625Z 2021/08/20 05:02:30.189663 [info] [raftstore]: raft shards workers started
+2021-08-20T05:02:30.1926030Z 2021/08/20 05:02:30.189695 [info] [raftstore]: shard 2 init with raft local state {HardState:{Term:5 Vote:0 Commit:5 XXX_unrecognized:[]} LastIndex:5 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}
+2021-08-20T05:02:30.1931751Z 2021/08/20 05:02:30.189711 [info] [raftstore]: shard 2 init raft apply state, state=<{AppliedIndex:5 TruncatedState:{Index:5 Term:5 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}>
+2021-08-20T05:02:30.1934062Z 2021/08/20 05:02:30.189729 [info] [raftstore]: shard 2 init last term, last term=<5>
+2021-08-20T05:02:30.1936467Z {"level":"info","ts":"2021-08-20T05:02:30.189Z","caller":"raft/raft.go:1550","msg":"3 switched to configuration voters=(3)"}
+2021-08-20T05:02:30.1938696Z {"level":"info","ts":"2021-08-20T05:02:30.189Z","caller":"raft/raft.go:711","msg":"3 became follower at term 5"}
+2021-08-20T05:02:30.1940155Z {"level":"info","ts":"2021-08-20T05:02:30.189Z","caller":"raft/raft.go:388","msg":"newRaft 3 [peers: [3], term: 5, commit: 5, applied: 5, lastindex: 5, lastterm: 5]"}
+2021-08-20T05:02:30.1941140Z 2021/08/20 05:02:30.189784 [info] prophet: container 1 heartbeat stream binded
+2021-08-20T05:02:30.1941866Z 2021/08/20 05:02:30.189827 [info] [raftstore]: raft worker 0/0 start
+2021-08-20T05:02:30.1942679Z 2021/08/20 05:02:30.189853 [info] [raftstore]: shard 2 try to campaign leader, because only self
+2021-08-20T05:02:30.1947010Z {"level":"info","ts":"2021-08-20T05:02:30.189Z","caller":"raft/raft.go:934","msg":"3 is starting a new election at term 5"}
+2021-08-20T05:02:30.1948228Z {"level":"info","ts":"2021-08-20T05:02:30.189Z","caller":"raft/raft.go:724","msg":"3 became candidate at term 6"}
+2021-08-20T05:02:30.1949467Z {"level":"info","ts":"2021-08-20T05:02:30.189Z","caller":"raft/raft.go:835","msg":"3 received MsgVoteResp from 3 at term 6"}
+2021-08-20T05:02:30.1950652Z {"level":"info","ts":"2021-08-20T05:02:30.189Z","caller":"raft/raft.go:776","msg":"3 became leader at term 6"}
+2021-08-20T05:02:30.1951604Z 2021/08/20 05:02:30.190002 [error] [raftstore]: >>>>>>>>>>>> shard 2 peer 3 add registration job by startShards
+2021-08-20T05:02:30.1952663Z 2021/08/20 05:02:30.190034 [error] [raftstore]: >>>>>>>>>>>> shard 2 peer 3 add registration job by startShards, completed
+2021-08-20T05:02:30.1956272Z 2021/08/20 05:02:30.190085 [info] [raftstore]: shard 2 added with peer {ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, epoch {ConfVer:1 Version:1 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, peers [{ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}], raft worker 0, apply worker apply-0-0
+2021-08-20T05:02:30.1958418Z 2021/08/20 05:02:30.190104 [info] [raftstore]: starts with 1 shards, including 0 tombstones and 0 applying shards
+2021-08-20T05:02:30.1959363Z 2021/08/20 05:02:30.190129 [info] [raftstore]: cleanup possible garbage data complete
+2021-08-20T05:02:30.1960108Z 2021/08/20 05:02:30.190142 [info] [raftstore]: shards started
+2021-08-20T05:02:30.1960828Z 2021/08/20 05:02:30.190162 [info] [raftstore]: shard timer based tasks started
+2021-08-20T05:02:30.1961558Z 2021/08/20 05:02:30.190185 [info] [raftstore]: net application started
+2021-08-20T05:02:30.1962334Z 2021/08/20 05:02:30.190198 [info] [raftstore]: start listen at 127.0.0.1:20000 for client
+2021-08-20T05:02:30.1963017Z 2021/08/20 05:02:30.190242 [info] [raftstore]: router started
+2021-08-20T05:02:30.1963798Z 2021/08/20 05:02:30.190306 [info] prophet: client start init connection to leader 127.0.0.1:30000
+2021-08-20T05:02:30.1964599Z 2021/08/20 05:02:30.190381 [info] [raftstore]: router event loop task started
+2021-08-20T05:02:30.1965400Z 2021/08/20 05:02:30.190527 [info] prophet: client start connect to leader 127.0.0.1:30000
+2021-08-20T05:02:30.1966240Z 2021/08/20 05:02:30.190539 [info] prophet: watcher init leader connection 127.0.0.1:30000 succeed
+2021-08-20T05:02:30.1967118Z 2021/08/20 05:02:30.190719 [info] prophet: session 2[127.0.0.1:39690] connected
+2021-08-20T05:02:30.1967884Z 2021/08/20 05:02:30.191527 [info] prophet: new watcher 127.0.0.1:39690 added
+2021-08-20T05:02:30.1968571Z 2021/08/20 05:02:30.191658 [info] [raftstore]: begin start raftstore
+2021-08-20T05:02:30.1969275Z 2021/08/20 05:02:30.191664 [info] [raftstore]: begin to start prophet
+2021-08-20T05:02:30.1969957Z 2021/08/20 05:02:30.191776 [info] [raftstore]: start init event
+2021-08-20T05:02:30.1971340Z {"level":"info","ts":"2021-08-20T05:02:30.192Z","caller":"raft/raft.go:1550","msg":"93ccda9956d988f4 switched to configuration voters=(10650127570946328820 15706693617893082774)"}
+2021-08-20T05:02:30.1972859Z 2021-08-20 05:02:30.192682 I | etcdserver/membership: added member d9f962a0ba698696 [http://127.0.0.1:50001] to cluster 6a4ade671189dc2f
+2021-08-20T05:02:30.1974031Z 2021-08-20 05:02:30.192757 I | rafthttp: starting peer d9f962a0ba698696...
+2021-08-20T05:02:30.1975072Z 2021-08-20 05:02:30.192799 I | rafthttp: started HTTP pipelining with peer d9f962a0ba698696
+2021-08-20T05:02:30.1976192Z 2021-08-20 05:02:30.193047 I | rafthttp: started streaming with peer d9f962a0ba698696 (writer)
+2021-08-20T05:02:30.1977294Z 2021-08-20 05:02:30.193239 I | rafthttp: started streaming with peer d9f962a0ba698696 (writer)
+2021-08-20T05:02:30.1978249Z 2021-08-20 05:02:30.193480 I | rafthttp: started peer d9f962a0ba698696
+2021-08-20T05:02:30.1979382Z 2021-08-20 05:02:30.193509 I | rafthttp: added peer d9f962a0ba698696
+2021-08-20T05:02:30.1980501Z 2021-08-20 05:02:30.193537 I | rafthttp: started streaming with peer d9f962a0ba698696 (stream Message reader)
+2021-08-20T05:02:30.1983607Z 2021-08-20 05:02:30.193650 I | rafthttp: started streaming with peer d9f962a0ba698696 (stream MsgApp v2 reader)
+2021-08-20T05:02:30.1984802Z [WARNING] Deprecated '--logger=capnslog' flag is set; use '--logger=zap' flag instead
+2021-08-20T05:02:30.1985845Z 2021-08-20 05:02:30.194418 I | embed: pprof is enabled under /debug/pprof
+2021-08-20T05:02:30.1986631Z 2021-08-20 05:02:30.194490 I | embed: name = node-1
+2021-08-20T05:02:30.1987460Z 2021-08-20 05:02:30.194514 I | embed: data dir = /tmp/cube/node-1/prophet
+2021-08-20T05:02:30.1988403Z 2021-08-20 05:02:30.194529 I | embed: member dir = /tmp/cube/node-1/prophet/member
+2021-08-20T05:02:30.1989248Z 2021-08-20 05:02:30.194543 I | embed: heartbeat = 100ms
+2021-08-20T05:02:30.1989996Z 2021-08-20 05:02:30.194556 I | embed: election = 3000ms
+2021-08-20T05:02:30.1990752Z 2021-08-20 05:02:30.194570 I | embed: snapshot count = 100000
+2021-08-20T05:02:30.1991718Z 2021-08-20 05:02:30.194595 I | embed: advertise client URLs = http://127.0.0.1:40001
+2021-08-20T05:02:30.1994072Z 2021-08-20 05:02:30.198104 I | etcdserver: starting member d9f962a0ba698696 in cluster 6a4ade671189dc2f
+2021-08-20T05:02:30.1995582Z {"level":"info","ts":"2021-08-20T05:02:30.198Z","caller":"raft/raft.go:1550","msg":"d9f962a0ba698696 switched to configuration voters=()"}
+2021-08-20T05:02:30.1996952Z {"level":"info","ts":"2021-08-20T05:02:30.198Z","caller":"raft/raft.go:711","msg":"d9f962a0ba698696 became follower at term 0"}
+2021-08-20T05:02:30.1998498Z {"level":"info","ts":"2021-08-20T05:02:30.198Z","caller":"raft/raft.go:388","msg":"newRaft d9f962a0ba698696 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0]"}
+2021-08-20T05:02:30.2000688Z 2021-08-20 05:02:30.199214 W | auth: simple token is not cryptographically signed
+2021-08-20T05:02:30.2001552Z 2021/08/20 05:02:30.199915 [info] [raftstore]: shard 2 ********become leader now********
+2021-08-20T05:02:30.2011829Z 2021-08-20 05:02:30.200602 I | rafthttp: started HTTP pipelining with peer 93ccda9956d988f4
+2021-08-20T05:02:30.2012922Z 2021-08-20 05:02:30.200619 I | rafthttp: starting peer 93ccda9956d988f4...
+2021-08-20T05:02:30.2016527Z 2021-08-20 05:02:30.200645 I | rafthttp: started HTTP pipelining with peer 93ccda9956d988f4
+2021-08-20T05:02:30.2017661Z 2021-08-20 05:02:30.200879 I | rafthttp: started streaming with peer 93ccda9956d988f4 (writer)
+2021-08-20T05:02:30.2018958Z 2021-08-20 05:02:30.201050 I | rafthttp: started streaming with peer 93ccda9956d988f4 (writer)
+2021-08-20T05:02:30.2019966Z 2021-08-20 05:02:30.201303 I | rafthttp: started peer 93ccda9956d988f4
+2021-08-20T05:02:30.2020871Z 2021-08-20 05:02:30.201317 I | rafthttp: added peer 93ccda9956d988f4
+2021-08-20T05:02:30.2021981Z 2021-08-20 05:02:30.201332 I | etcdserver: starting server... [version: 3.4.15, cluster version: to_be_decided]
+2021-08-20T05:02:30.2023248Z 2021-08-20 05:02:30.201368 I | rafthttp: started streaming with peer 93ccda9956d988f4 (stream MsgApp v2 reader)
+2021-08-20T05:02:30.2028847Z 2021-08-20 05:02:30.201462 I | rafthttp: started streaming with peer 93ccda9956d988f4 (stream Message reader)
+2021-08-20T05:02:30.2029991Z 2021-08-20 05:02:30.202381 I | embed: listening for peers on 127.0.0.1:50001
+2021-08-20T05:02:30.2031532Z {"level":"info","ts":"2021-08-20T05:02:30.202Z","caller":"raft/raft.go:870","msg":"d9f962a0ba698696 [term: 0] received a MsgHeartbeat message with higher term from 93ccda9956d988f4 [term: 2]"}
+2021-08-20T05:02:30.2033014Z {"level":"info","ts":"2021-08-20T05:02:30.202Z","caller":"raft/raft.go:711","msg":"d9f962a0ba698696 became follower at term 2"}
+2021-08-20T05:02:30.2035789Z {"level":"info","ts":"2021-08-20T05:02:30.202Z","caller":"raft/node.go:325","msg":"raft.node: d9f962a0ba698696 elected leader 93ccda9956d988f4 at term 2"}
+2021-08-20T05:02:30.2036932Z 2021-08-20 05:02:30.202777 I | rafthttp: peer d9f962a0ba698696 became active
+2021-08-20T05:02:30.2037921Z 2021-08-20 05:02:30.203332 I | rafthttp: peer 93ccda9956d988f4 became active
+2021-08-20T05:02:30.2047838Z 2021-08-20 05:02:30.204335 I | rafthttp: established a TCP streaming connection with peer d9f962a0ba698696 (stream Message writer)
+2021-08-20T05:02:30.2049399Z 2021-08-20 05:02:30.204541 I | rafthttp: established a TCP streaming connection with peer d9f962a0ba698696 (stream MsgApp v2 writer)
+2021-08-20T05:02:30.2050888Z 2021-08-20 05:02:30.204581 I | rafthttp: established a TCP streaming connection with peer 93ccda9956d988f4 (stream Message reader)
+2021-08-20T05:02:30.2054153Z 2021-08-20 05:02:30.204634 I | rafthttp: established a TCP streaming connection with peer 93ccda9956d988f4 (stream MsgApp v2 reader)
+2021-08-20T05:02:30.2056577Z {"level":"info","ts":"2021-08-20T05:02:30.205Z","caller":"raft/raft.go:1550","msg":"d9f962a0ba698696 switched to configuration voters=(10650127570946328820)"}
+2021-08-20T05:02:30.2058073Z 2021-08-20 05:02:30.205308 I | etcdserver/membership: added member 93ccda9956d988f4 [http://127.0.0.1:50000] to cluster 6a4ade671189dc2f
+2021-08-20T05:02:30.2059351Z 2021-08-20 05:02:30.205408 N | etcdserver/membership: set the initial cluster version to 3.4
+2021-08-20T05:02:30.2065098Z {"level":"info","ts":"2021-08-20T05:02:30.206Z","caller":"raft/raft.go:1550","msg":"d9f962a0ba698696 switched to configuration voters=(10650127570946328820 15706693617893082774)"}
+2021-08-20T05:02:30.2067937Z 2021-08-20 05:02:30.206200 I | etcdserver/membership: added member d9f962a0ba698696 [http://127.0.0.1:50001] to cluster 6a4ade671189dc2f
+2021-08-20T05:02:30.2069490Z 2021-08-20 05:02:30.206564 I | etcdserver: published {Name:node-1 ClientURLs:[http://127.0.0.1:40001]} to cluster 6a4ade671189dc2f
+2021-08-20T05:02:30.2070600Z 2021-08-20 05:02:30.206577 I | embed: ready to serve client requests
+2021-08-20T05:02:30.2075254Z 2021/08/20 05:02:30.207295 [info] prophet: create etcd v3 client with endpoints [http://127.0.0.1:40001]
+2021-08-20T05:02:30.2084314Z 2021-08-20 05:02:30.207940 N | embed: serving insecure client requests on 127.0.0.1:40001, this is strongly discouraged!
+2021-08-20T05:02:30.2093701Z 2021/08/20 05:02:30.209070 [info] prophet: net application started
+2021-08-20T05:02:30.2094421Z 2021/08/20 05:02:30.209144 [info] prophet: start system time monitor 
+2021-08-20T05:02:30.2103967Z 2021/08/20 05:02:30.209738 [info] prophet: [prophet-leader/node-1]/loop: current leader is [��涕Ӷ�node-0127.0.0.1:30000]
+2021-08-20T05:02:30.2105463Z 2021/08/20 05:02:30.209751 [info] prophet: [prophet-leader/node-1]/loop: start watch leader ��涕Ӷ�node-0127.0.0.1:30000
+2021-08-20T05:02:30.2106542Z 2021/08/20 05:02:30.209757 [info] prophet: ********node-1 become to follower now********
+2021-08-20T05:02:30.2108558Z 2021/08/20 05:02:30.209799 [info] prophet: client start init connection to leader 127.0.0.1:30000
+2021-08-20T05:02:30.2109366Z 2021/08/20 05:02:30.209882 [info] prophet: client read loop started 
+2021-08-20T05:02:30.2110026Z 2021/08/20 05:02:30.209893 [info] prophet: client started
+2021-08-20T05:02:30.2110769Z 2021/08/20 05:02:30.209897 [info] [raftstore]: *********Become prophet follower*********
+2021-08-20T05:02:30.2111551Z 2021/08/20 05:02:30.209911 [info] [raftstore]: begin to bootstrap the cluster
+2021-08-20T05:02:30.2112802Z 2021/08/20 05:02:30.209931 [info] [raftstore]: raftstore init with store raftAddr:"127.0.0.1:10001" clientAddr:"127.0.0.1:20001" labels:<key:"c" value:"1" > startTime:1629435750 deployPath:"not set" 
+2021-08-20T05:02:30.2113990Z 2021/08/20 05:02:30.209937 [info] [raftstore]: begin to create local store metadata
+2021-08-20T05:02:30.2114814Z 2021/08/20 05:02:30.209993 [info] prophet: client start connect to leader 127.0.0.1:30000
+2021-08-20T05:02:30.2115661Z 2021/08/20 05:02:30.210001 [info] prophet: client read loop actived, ready to read from leader
+2021-08-20T05:02:30.2116470Z 2021/08/20 05:02:30.210043 [info] prophet: session 3[127.0.0.1:39722] connected
+2021-08-20T05:02:30.2117193Z 2021/08/20 05:02:30.210142 [info] [raftstore]: create local store with id 5
+2021-08-20T05:02:30.2117995Z 2021/08/20 05:02:30.210729 [info] [raftstore]: the cluster already bootstrap: true
+2021-08-20T05:02:30.2134635Z 2021/08/20 05:02:30.213236 [info] prophet: container 5 limit added
+2021-08-20T05:02:30.2138431Z 2021/08/20 05:02:30.213640 [info] [raftstore]: prophet started
+2021-08-20T05:02:30.2141325Z 2021/08/20 05:02:30.213946 [info] [transport]: net application started
+2021-08-20T05:02:30.2146805Z 2021/08/20 05:02:30.214186 [info] [raftstore]: start listen at 127.0.0.1:10001 for raft
+2021-08-20T05:02:30.2150156Z 2021/08/20 05:02:30.214216 [info] [raftstore]: raft shards workers started
+2021-08-20T05:02:30.2152116Z 2021/08/20 05:02:30.214233 [info] [raftstore]: starts with 0 shards, including 0 tombstones and 0 applying shards
+2021-08-20T05:02:30.2153084Z 2021/08/20 05:02:30.214244 [info] [raftstore]: cleanup possible garbage data complete
+2021-08-20T05:02:30.2153966Z 2021/08/20 05:02:30.214256 [info] [raftstore]: raft worker 0/0 start
+2021-08-20T05:02:30.2154715Z 2021/08/20 05:02:30.213679 [info] prophet: container 5 heartbeat stream binded
+2021-08-20T05:02:30.2155443Z 2021/08/20 05:02:30.214260 [info] [raftstore]: shards started
+2021-08-20T05:02:30.2156166Z 2021/08/20 05:02:30.214300 [info] [raftstore]: shard timer based tasks started
+2021-08-20T05:02:30.2156902Z 2021/08/20 05:02:30.214322 [info] [raftstore]: net application started
+2021-08-20T05:02:30.2157819Z 2021/08/20 05:02:30.214329 [info] [raftstore]: start listen at 127.0.0.1:20001 for client
+2021-08-20T05:02:30.2158526Z 2021/08/20 05:02:30.214356 [info] [raftstore]: router started
+2021-08-20T05:02:30.2159311Z 2021/08/20 05:02:30.214690 [info] prophet: client start init connection to leader 127.0.0.1:30000
+2021-08-20T05:02:30.2160122Z 2021/08/20 05:02:30.214807 [info] [raftstore]: router event loop task started
+2021-08-20T05:02:30.2160928Z 2021/08/20 05:02:30.214869 [info] prophet: client start connect to leader 127.0.0.1:30000
+2021-08-20T05:02:30.2161769Z 2021/08/20 05:02:30.214875 [info] prophet: watcher init leader connection 127.0.0.1:30000 succeed
+2021-08-20T05:02:30.2162596Z 2021/08/20 05:02:30.215069 [info] prophet: session 4[127.0.0.1:39724] connected
+2021-08-20T05:02:30.2174769Z 2021/08/20 05:02:30.216511 [info] prophet: new watcher 127.0.0.1:39724 added
+2021-08-20T05:02:30.2175498Z 2021/08/20 05:02:30.216662 [info] [raftstore]: start init event
+2021-08-20T05:02:30.2176207Z 2021/08/20 05:02:30.216734 [info] [raftstore]: begin start raftstore
+2021-08-20T05:02:30.2177077Z 2021/08/20 05:02:30.216744 [info] [raftstore]: begin to start prophet
+2021-08-20T05:02:30.2185348Z 2021-08-20 05:02:30.218030 W | etcdserver: not healthy for reconfigure, rejecting member add {ID:4404fac019241d2e RaftAttributes:{PeerURLs:[http://127.0.0.1:50002] IsLearner:false} Attributes:{Name: ClientURLs:[]}}
+2021-08-20T05:02:30.2188556Z {"level":"warn","ts":"2021-08-20T05:02:30.218Z","caller":"clientv3/retry_interceptor.go:62","msg":"retrying of unary invoker failed","target":"endpoint://client-b9851494-78a3-4dee-92ea-bf4715e41772/127.0.0.1:40000","attempt":0,"error":"rpc error: code = Unavailable desc = etcdserver: unhealthy cluster"}
+2021-08-20T05:02:30.2190669Z 2021/08/20 05:02:30.218291 [error] prophet: add member to embed etcd failed with etcdserver: unhealthy cluster, retry later
+2021-08-20T05:02:30.2891842Z 2021/08/20 05:02:30.288512 [info] prophet: resource 2 add operator add-rule-peer {add peer: container [5]} (kind:resource,replica, resource:2(1,1), createAt:2021-08-20 05:02:30.288482433 +0000 UTC m=+78.967424219, startAt:0001-01-01 00:00:00 +0000 UTC, currentStep:0, steps:[add learner peer 6 on container 5, promote learner peer 6 on container 5 to voter]), 
+2021-08-20T05:02:30.2895466Z 2021/08/20 05:02:30.288541 [info] prophet: resource 2 send schedule command, step add learner peer 6 on container 5, source create
+2021-08-20T05:02:30.2897597Z 2021/08/20 05:02:30.289346 [info] [raftstore]: shard-2 AddLearnerNode peer {ID:6 ContainerID:5 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}
+2021-08-20T05:02:30.2912029Z 2021/08/20 05:02:30.290193 [info] [raftstore]: shard-2 propose conf change peer [{ChangeType:AddLearnerNode Peer:{ID:6 ContainerID:5 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}]
+2021-08-20T05:02:30.2915156Z 2021/08/20 05:02:30.290389 [info] [raftstore]: shard 2 do apply change peer changeType:AddLearnerNode peer:<id:6 containerID:5 role:Learner >  at epoch {ConfVer:1 Version:1 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, peers [{ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}]
+2021-08-20T05:02:30.2918981Z 2021/08/20 05:02:30.290412 [info] [raftstore]: shard-2 add learner peer {ID:6 ContainerID:5 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} successfully, peers [{ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:6 ContainerID:5 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}]
+2021-08-20T05:02:30.2921125Z 2021/08/20 05:02:30.290475 [info] prophet: resource 2 send schedule command, step add learner peer 6 on container 5, source heartbeat
+2021-08-20T05:02:30.2922873Z 2021/08/20 05:02:30.290693 [info] [raftstore]: shard-2 AddLearnerNode peer {ID:6 ContainerID:5 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}
+2021-08-20T05:02:30.2945389Z 2021-08-20 05:02:30.294295 I | rafthttp: established a TCP streaming connection with peer 93ccda9956d988f4 (stream Message writer)
+2021-08-20T05:02:30.2947047Z 2021-08-20 05:02:30.294329 I | rafthttp: established a TCP streaming connection with peer d9f962a0ba698696 (stream MsgApp v2 reader)
+2021-08-20T05:02:30.2948526Z 2021-08-20 05:02:30.294530 I | rafthttp: established a TCP streaming connection with peer 93ccda9956d988f4 (stream MsgApp v2 writer)
+2021-08-20T05:02:30.2950022Z 2021-08-20 05:02:30.294676 I | rafthttp: established a TCP streaming connection with peer d9f962a0ba698696 (stream Message reader)
+2021-08-20T05:02:30.3024166Z {"level":"info","ts":"2021-08-20T05:02:30.300Z","caller":"raft/raft.go:1550","msg":"3 switched to configuration voters=(3) learners=(6)"}
+2021-08-20T05:02:30.3027811Z 2021/08/20 05:02:30.301195 [info] [raftstore]: shard 2 notify pd with {Transition:ConfChangeTransitionAuto Changes:[{Type:ConfChangeAddLearnerNode NodeID:6 XXX_unrecognized:[]}] Context:[10 32 10 16 118 85 224 210 90 238 70 16 177 119 209 194 176 179 48 164 16 2 26 4 8 3 16 1 42 4 8 1 16 1 26 14 8 1 18 10 8 3 18 6 8 6 16 5 24 1] XXX_unrecognized:[]} with changes [{ChangeType:AddLearnerNode Peer:{ID:6 ContainerID:5 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}] at epoch {ConfVer:2 Version:1 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}
+2021-08-20T05:02:30.3032965Z 2021/08/20 05:02:30.301248 [info] [raftstore]: shard 2 applied changes [{ChangeType:AddLearnerNode Peer:{ID:6 ContainerID:5 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}] at epoch {ConfVer:2 Version:1 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, new peers [{ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:6 ContainerID:5 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}]
+2021-08-20T05:02:30.3037093Z 2021/08/20 05:02:30.301311 [info] [raftstore]: shard-2 propose conf change peer [{ChangeType:AddLearnerNode Peer:{ID:6 ContainerID:5 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}]
+2021-08-20T05:02:30.3040416Z 2021/08/20 05:02:30.301615 [info] [raftstore]: shard 2 do apply change peer changeType:AddLearnerNode peer:<id:6 containerID:5 role:Learner >  at epoch {ConfVer:2 Version:1 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, peers [{ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:6 ContainerID:5 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}]
+2021-08-20T05:02:30.3042920Z 2021/08/20 05:02:30.301830 [info] prophet: [prophet-leader/node-1]/watch: leader updated to ��涕Ӷ�node-0127.0.0.1:30000
+2021-08-20T05:02:30.3043838Z 2021/08/20 05:02:30.301863 [info] prophet: resource 2 ConfVer changed from 1 to 2
+2021-08-20T05:02:30.3044626Z 2021/08/20 05:02:30.303683 [info] [transport]: connected to store 5
+2021-08-20T05:02:30.3045387Z 2021/08/20 05:02:30.303911 [info] [transport]: session 1[127.0.0.1:49948] connected
+2021-08-20T05:02:30.3061505Z 2021/08/20 05:02:30.304069 [info] [raftstore]: shard 2 target peer doesn't exist, peer=<{ID:6 ContainerID:5 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}> message=<MsgApp>
+2021-08-20T05:02:30.3063226Z 2021/08/20 05:02:30.304200 [info] [raftstore]: shard 2 replicate peer {ID:6 ContainerID:5 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}
+2021-08-20T05:02:30.3064989Z 2021/08/20 05:02:30.304336 [info] [raftstore]: shard 2 init with raft local state {HardState:{Term:0 Vote:0 Commit:0 XXX_unrecognized:[]} LastIndex:0 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}
+2021-08-20T05:02:30.3067326Z 2021/08/20 05:02:30.304455 [info] [raftstore]: shard 2 init raft apply state, state=<{AppliedIndex:0 TruncatedState:{Index:0 Term:0 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}>
+2021-08-20T05:02:30.3068777Z 2021/08/20 05:02:30.304574 [info] [raftstore]: shard 2 init last term, last term=<0>
+2021-08-20T05:02:30.3070019Z {"level":"info","ts":"2021-08-20T05:02:30.304Z","caller":"raft/raft.go:1550","msg":"6 switched to configuration voters=()"}
+2021-08-20T05:02:30.3071330Z {"level":"info","ts":"2021-08-20T05:02:30.304Z","caller":"raft/raft.go:711","msg":"6 became follower at term 0"}
+2021-08-20T05:02:30.3072762Z {"level":"info","ts":"2021-08-20T05:02:30.304Z","caller":"raft/raft.go:388","msg":"newRaft 6 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0]"}
+2021-08-20T05:02:30.3076502Z 2021/08/20 05:02:30.305091 [info] [raftstore]: shard 2 added with peer {ID:6 ContainerID:5 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, epoch {ConfVer:2 Version:1 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, peers [{ID:6 ContainerID:5 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}], raft worker 0, apply worker apply-0-0
+2021-08-20T05:02:30.3079421Z {"level":"info","ts":"2021-08-20T05:02:30.305Z","caller":"raft/raft.go:870","msg":"6 [term: 0] received a MsgHeartbeat message with higher term from 3 [term: 6]"}
+2021-08-20T05:02:30.3080709Z {"level":"info","ts":"2021-08-20T05:02:30.305Z","caller":"raft/raft.go:711","msg":"6 became follower at term 6"}
+2021-08-20T05:02:30.3081891Z 2021/08/20 05:02:30.305493 [info] prophet: resource 2 send schedule command, step promote learner peer 6 on container 5 to voter, source heartbeat
+2021-08-20T05:02:30.3083070Z 2021/08/20 05:02:30.305689 [error] [raftstore]: >>>>>>>>>>>> shard 2 peer 6 skip with no delegates, 0 commits, result <nil>
+2021-08-20T05:02:30.3084641Z 2021/08/20 05:02:30.305913 [info] [raftstore]: shard-2 AddNode peer {ID:6 ContainerID:5 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}
+2021-08-20T05:02:30.3147379Z 2021/08/20 05:02:30.309030 [info] [transport]: connected to store 1
+2021-08-20T05:02:30.3148217Z 2021/08/20 05:02:30.309062 [info] [transport]: session 1[127.0.0.1:34358] connected
+2021-08-20T05:02:30.3150438Z 2021/08/20 05:02:30.309132 [info] [raftstore]: shard-2 propose conf change peer [{ChangeType:AddNode Peer:{ID:6 ContainerID:5 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}]
+2021-08-20T05:02:30.3153466Z 2021/08/20 05:02:30.309207 [info] [raftstore]: shard 2 do apply change peer peer:<id:6 containerID:5 >  at epoch {ConfVer:2 Version:1 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, peers [{ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:6 ContainerID:5 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}]
+2021-08-20T05:02:30.3157413Z 2021/08/20 05:02:30.309218 [info] [raftstore]: shard-2 add peer {ID:6 ContainerID:5 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} successfully, peers [{ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:6 ContainerID:5 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}]
+2021-08-20T05:02:30.3159386Z 2021/08/20 05:02:30.309258 [error] [raftstore]: >>>>>>>>>>>> shard 2 peer 6 skip with no delegates, 0 commits, result <nil>
+2021-08-20T05:02:30.3160682Z {"level":"info","ts":"2021-08-20T05:02:30.309Z","caller":"raft/raft.go:1550","msg":"3 switched to configuration voters=(3 6)"}
+2021-08-20T05:02:30.3164168Z 2021/08/20 05:02:30.309287 [info] [raftstore]: shard 2 notify pd with {Transition:ConfChangeTransitionAuto Changes:[{Type:ConfChangeAddNode NodeID:6 XXX_unrecognized:[]}] Context:[10 32 10 16 79 84 229 44 124 118 68 203 131 154 41 66 158 80 22 202 16 2 26 4 8 3 16 1 42 4 8 2 16 1 26 10 8 1 18 6 18 4 8 6 16 5] XXX_unrecognized:[]} with changes [{ChangeType:AddNode Peer:{ID:6 ContainerID:5 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}] at epoch {ConfVer:3 Version:1 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}
+2021-08-20T05:02:30.3168912Z 2021/08/20 05:02:30.309300 [info] [raftstore]: shard 2 applied changes [{ChangeType:AddNode Peer:{ID:6 ContainerID:5 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}] at epoch {ConfVer:3 Version:1 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, new peers [{ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:6 ContainerID:5 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}]
+2021-08-20T05:02:30.3171488Z 2021/08/20 05:02:30.309366 [error] [raftstore]: >>>>>>>>>>>> shard 2 peer 6 skip with no delegates, 0 commits, result <nil>
+2021-08-20T05:02:30.3185798Z {"level":"error","ts":"2021-08-20T05:02:30.309Z","caller":"raft/log.go:354","msg":"3 >>>>>>>>>>>>>>>> [1:10:6)","stacktrace":"go.etcd.io/etcd/pkg/logutil.(*zapRaftLogger).Errorf\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/pkg/logutil/zap_raft.go:69\ngo.etcd.io/etcd/raft.(*raftLog).mustCheckOutOfBounds\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/log.go:354\ngo.etcd.io/etcd/raft.(*raftLog).slice\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/log.go:308\ngo.etcd.io/etcd/raft.(*raftLog).entries\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/log.go:258\ngo.etcd.io/etcd/raft.(*raft).maybeSendAppend\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/raft.go:459\ngo.etcd.io/etcd/raft.(*raft).sendAppend\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/raft.go:442\ngo.etcd.io/etcd/raft.stepLeader\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/raft.go:1150\ngo.etcd.io/etcd/raft.(*raft).Step\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/raft.go:995\ngo.etcd.io/etcd/raft.(*RawNode).Step\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/rawnode.go:114\ngithub.com/matrixorigin/matrixcube/raftstore.(*peerReplica).handleStep\n\t/home/runner/work/matrixcube/matrixcube/raftstore/peer_event_loop.go:257\ngithub.com/matrixorigin/matrixcube/raftstore.(*peerReplica).handleEvent\n\t/home/runner/work/matrixcube/matrixcube/raftstore/peer_event_loop.go:183\ngithub.com/matrixorigin/matrixcube/raftstore.(*store).runPRTask.func1.1\n\t/home/runner/work/matrixcube/matrixcube/raftstore/store.go:420\nsync.(*Map).Range\n\t/opt/hostedtoolcache/go/1.16.7/x64/src/sync/map.go:345\ngithub.com/matrixorigin/matrixcube/raftstore.(*store).runPRTask.func1\n\t/home/runner/work/matrixcube/matrixcube/raftstore/store.go:418\ngithub.com/matrixorigin/matrixcube/raftstore.(*store).runPRTask\n\t/home/runner/work/matrixcube/matrixcube/raftstore/store.go:443\ngithub.com/matrixorigin/matrixcube/raftstore.(*store).startRaftWorkers.func1\n\t/home/runner/work/matrixcube/matrixcube/raftstore/store.go:406\ngithub.com/fagongzi/util/task.(*Runner).RunCancelableTask.func1\n\t/home/runner/work/matrixcube/matrixcube/vendor/github.com/fagongzi/util/task/task.go:350"}
+2021-08-20T05:02:30.3194952Z 2021/08/20 05:02:30.309391 [info] [raftstore]: shard 2 start snapshot, epoch=<{ConfVer:3 Version:1 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}>
+2021-08-20T05:02:30.3196049Z 2021/08/20 05:02:30.309484 [info] prophet: resource 2 ConfVer changed from 2 to 3
+2021-08-20T05:02:30.3197029Z 2021/08/20 05:02:30.309716 [info] [raftstore]: shard 2 snapshot created, epoch=<confVer:3 version:1 > term=<6> index=<9> 
+2021-08-20T05:02:30.3211453Z {"level":"error","ts":"2021-08-20T05:02:30.309Z","caller":"raft/log.go:354","msg":"3 >>>>>>>>>>>>>>>> [1:10:6)","stacktrace":"go.etcd.io/etcd/pkg/logutil.(*zapRaftLogger).Errorf\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/pkg/logutil/zap_raft.go:69\ngo.etcd.io/etcd/raft.(*raftLog).mustCheckOutOfBounds\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/log.go:354\ngo.etcd.io/etcd/raft.(*raftLog).slice\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/log.go:308\ngo.etcd.io/etcd/raft.(*raftLog).entries\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/log.go:258\ngo.etcd.io/etcd/raft.(*raft).maybeSendAppend\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/raft.go:459\ngo.etcd.io/etcd/raft.(*raft).sendAppend\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/raft.go:442\ngo.etcd.io/etcd/raft.stepLeader\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/raft.go:1208\ngo.etcd.io/etcd/raft.(*raft).Step\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/raft.go:995\ngo.etcd.io/etcd/raft.(*RawNode).Step\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/rawnode.go:114\ngithub.com/matrixorigin/matrixcube/raftstore.(*peerReplica).handleStep\n\t/home/runner/work/matrixcube/matrixcube/raftstore/peer_event_loop.go:257\ngithub.com/matrixorigin/matrixcube/raftstore.(*peerReplica).handleEvent\n\t/home/runner/work/matrixcube/matrixcube/raftstore/peer_event_loop.go:183\ngithub.com/matrixorigin/matrixcube/raftstore.(*store).runPRTask.func1.1\n\t/home/runner/work/matrixcube/matrixcube/raftstore/store.go:420\nsync.(*Map).Range\n\t/opt/hostedtoolcache/go/1.16.7/x64/src/sync/map.go:345\ngithub.com/matrixorigin/matrixcube/raftstore.(*store).runPRTask.func1\n\t/home/runner/work/matrixcube/matrixcube/raftstore/store.go:418\ngithub.com/matrixorigin/matrixcube/raftstore.(*store).runPRTask\n\t/home/runner/work/matrixcube/matrixcube/raftstore/store.go:443\ngithub.com/matrixorigin/matrixcube/raftstore.(*store).startRaftWorkers.func1\n\t/home/runner/work/matrixcube/matrixcube/raftstore/store.go:406\ngithub.com/fagongzi/util/task.(*Runner).RunCancelableTask.func1\n\t/home/runner/work/matrixcube/matrixcube/vendor/github.com/fagongzi/util/task/task.go:350"}
+2021-08-20T05:02:30.3220124Z 2021/08/20 05:02:30.309805 [info] [transport]: shard 2 start send pending snap, epoch=<confVer:3 version:1 > term=<6> index=<9>
+2021-08-20T05:02:30.3221925Z 2021/08/20 05:02:30.310245 [info] [raftstore]: shard 2 try to send snap, header=<shard:<id:2 start:"a" end:"b" epoch:<confVer:3 version:1 > peers:<id:3 containerID:1 > peers:<id:6 containerID:5 > > from:<id:3 containerID:1 > to:<id:6 containerID:5 role:Learner > term:6 index:9 >,size=<138>
+2021-08-20T05:02:30.3223209Z 2021/08/20 05:02:30.310795 [info] [raftstore]: shard 2 send snap complete
+2021-08-20T05:02:30.3224192Z 2021/08/20 05:02:30.310811 [info] [transport]: shard 2 pending snap sent succ, size=<138>, epoch=<confVer:3 version:1 > term=<6> index=<9>
+2021-08-20T05:02:30.3225989Z {"level":"info","ts":"2021-08-20T05:02:30.312Z","caller":"raft/log.go:301","msg":"log [committed=0, applied=0, unstable.offset=1, len(unstable.Entries)=0] starts to restore snapshot [index: 9, term: 6]"}
+2021-08-20T05:02:30.3227540Z {"level":"info","ts":"2021-08-20T05:02:30.312Z","caller":"raft/raft.go:1550","msg":"6 switched to configuration voters=(3 6)"}
+2021-08-20T05:02:30.3228996Z {"level":"info","ts":"2021-08-20T05:02:30.312Z","caller":"raft/raft.go:1503","msg":"6 [commit: 9, lastindex: 9, lastterm: 6] restored snapshot [index: 9, term: 6]"}
+2021-08-20T05:02:30.3230398Z {"level":"info","ts":"2021-08-20T05:02:30.312Z","caller":"raft/raft.go:1420","msg":"6 [commit: 9] restored snapshot [index: 9, term: 6]"}
+2021-08-20T05:02:30.3231280Z 2021/08/20 05:02:30.312448 [info] [raftstore]: shard 2 begin to apply snapshot
+2021-08-20T05:02:30.3232080Z 2021/08/20 05:02:30.312461 [info] [raftstore]: shard 2 clear 0 meta keys and 0 raft keys
+2021-08-20T05:02:30.3296088Z 2021/08/20 05:02:30.312476 [info] [raftstore]: shard 2 apply snapshot state completed, apply state {AppliedIndex:9 TruncatedState:{Index:9 Term:6 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}
+2021-08-20T05:02:30.3297828Z 2021/08/20 05:02:30.312493 [error] [raftstore]: >>>>>>>>>>>> shard 2 peer 6 start applying snapshot
+2021-08-20T05:02:30.3298893Z 2021/08/20 05:02:30.312593 [error] [raftstore]: >>>>>>>>>>>> shard 2 peer 6 add registration job by handleRaftReadyApply
+2021-08-20T05:02:30.3302030Z 2021/08/20 05:02:30.312623 [info] [raftstore]: shard 2 snapshot is applied, shard=<{ID:2 Start:[97] End:[98] Epoch:{ConfVer:3 Version:1 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} State:Running Peers:[{ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:6 ContainerID:5 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}] DisableSplit:false Group:0 Unique: RuleGroups:[] Data:[] XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}>
+2021-08-20T05:02:30.3308734Z 2021/08/20 05:02:30.312656 [info] [raftstore]: shard 2 shard changed after apply snapshot, from=<{ID:2 Start:[97] End:[98] Epoch:{ConfVer:2 Version:1 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} State:Running Peers:[{ID:6 ContainerID:5 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}] DisableSplit:false Group:0 Unique: RuleGroups:[] Data:[] XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}> to=<{ID:2 Start:[97] End:[98] Epoch:{ConfVer:3 Version:1 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} State:Running Peers:[{ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:6 ContainerID:5 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}] DisableSplit:false Group:0 Unique: RuleGroups:[] Data:[] XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}>
+2021-08-20T05:02:30.3312646Z 2021/08/20 05:02:30.312667 [error] [raftstore]: >>>>>>>>>>>> shard 2 peer 6 AdvanceApply with 9
+2021-08-20T05:02:30.3313483Z 2021/08/20 05:02:30.312893 [info] [raftstore]: shard 2 begin apply snapshot data
+2021-08-20T05:02:30.3315746Z 2021/08/20 05:02:30.313324 [info] [raftstore]: shard 2 delete exists snap gz file /tmp/cube/node-1/snapshots/2_6_9.gz, header is shard:<id:2 start:"a" end:"b" epoch:<confVer:3 version:1 > peers:<id:3 containerID:1 > peers:<id:6 containerID:5 > > from:<> to:<> term:6 index:9 
+2021-08-20T05:02:30.3317261Z 2021/08/20 05:02:30.313367 [info] [raftstore]: shard 2 apply snapshot data complete, {Term:6 Vote:0 Commit:9 XXX_unrecognized:[]}
+2021-08-20T05:02:30.3318501Z 2021/08/20 05:02:30.313377 [error] [raftstore]: >>>>>>>>>>>> shard 2 peer 6 add registration job by handleRaftReadyApply, completed
+2021-08-20T05:02:30.3321387Z 2021/08/20 05:02:30.313475 [info] prophet: resource 2 operator(add-rule-peer {add peer: container [5]} (kind:resource,replica, resource:2(1,1), createAt:2021-08-20 05:02:30.288482433 +0000 UTC m=+78.967424219, startAt:2021-08-20 05:02:30.288531434 +0000 UTC m=+78.967473120, currentStep:2, steps:[add learner peer 6 on container 5, promote learner peer 6 on container 5 to voter]) finished) finish, takes 24.918407ms, 
+2021-08-20T05:02:30.7192403Z 2021-08-20 05:02:30.718585 W | etcdserver: not healthy for reconfigure, rejecting member add {ID:4404fac019241d2e RaftAttributes:{PeerURLs:[http://127.0.0.1:50002] IsLearner:false} Attributes:{Name: ClientURLs:[]}}
+2021-08-20T05:02:30.7196341Z {"level":"warn","ts":"2021-08-20T05:02:30.718Z","caller":"clientv3/retry_interceptor.go:62","msg":"retrying of unary invoker failed","target":"endpoint://client-b9851494-78a3-4dee-92ea-bf4715e41772/127.0.0.1:40000","attempt":0,"error":"rpc error: code = Unavailable desc = etcdserver: unhealthy cluster"}
+2021-08-20T05:02:30.7198832Z 2021/08/20 05:02:30.718864 [error] prophet: add member to embed etcd failed with etcdserver: unhealthy cluster, retry later
+2021-08-20T05:02:31.2206419Z 2021-08-20 05:02:31.220158 W | etcdserver: not healthy for reconfigure, rejecting member add {ID:3da7ac3083e5725e RaftAttributes:{PeerURLs:[http://127.0.0.1:50002] IsLearner:false} Attributes:{Name: ClientURLs:[]}}
+2021-08-20T05:02:31.2210718Z {"level":"warn","ts":"2021-08-20T05:02:31.220Z","caller":"clientv3/retry_interceptor.go:62","msg":"retrying of unary invoker failed","target":"endpoint://client-b9851494-78a3-4dee-92ea-bf4715e41772/127.0.0.1:40000","attempt":0,"error":"rpc error: code = Unavailable desc = etcdserver: unhealthy cluster"}
+2021-08-20T05:02:31.2213321Z 2021/08/20 05:02:31.220448 [error] prophet: add member to embed etcd failed with etcdserver: unhealthy cluster, retry later
+2021-08-20T05:02:31.7220058Z 2021-08-20 05:02:31.721617 W | etcdserver: not healthy for reconfigure, rejecting member add {ID:3da7ac3083e5725e RaftAttributes:{PeerURLs:[http://127.0.0.1:50002] IsLearner:false} Attributes:{Name: ClientURLs:[]}}
+2021-08-20T05:02:31.7224267Z {"level":"warn","ts":"2021-08-20T05:02:31.721Z","caller":"clientv3/retry_interceptor.go:62","msg":"retrying of unary invoker failed","target":"endpoint://client-b9851494-78a3-4dee-92ea-bf4715e41772/127.0.0.1:40000","attempt":0,"error":"rpc error: code = Unavailable desc = etcdserver: unhealthy cluster"}
+2021-08-20T05:02:31.7227279Z 2021/08/20 05:02:31.721963 [error] prophet: add member to embed etcd failed with etcdserver: unhealthy cluster, retry later
+2021-08-20T05:02:32.2231145Z 2021-08-20 05:02:32.222725 W | etcdserver: not healthy for reconfigure, rejecting member add {ID:fc323df02b15b843 RaftAttributes:{PeerURLs:[http://127.0.0.1:50002] IsLearner:false} Attributes:{Name: ClientURLs:[]}}
+2021-08-20T05:02:32.2235061Z {"level":"warn","ts":"2021-08-20T05:02:32.222Z","caller":"clientv3/retry_interceptor.go:62","msg":"retrying of unary invoker failed","target":"endpoint://client-b9851494-78a3-4dee-92ea-bf4715e41772/127.0.0.1:40000","attempt":0,"error":"rpc error: code = Unavailable desc = etcdserver: unhealthy cluster"}
+2021-08-20T05:02:32.2237496Z 2021/08/20 05:02:32.223116 [error] prophet: add member to embed etcd failed with etcdserver: unhealthy cluster, retry later
+2021-08-20T05:02:32.7248322Z 2021-08-20 05:02:32.724424 W | etcdserver: not healthy for reconfigure, rejecting member add {ID:fc323df02b15b843 RaftAttributes:{PeerURLs:[http://127.0.0.1:50002] IsLearner:false} Attributes:{Name: ClientURLs:[]}}
+2021-08-20T05:02:32.7252075Z {"level":"warn","ts":"2021-08-20T05:02:32.724Z","caller":"clientv3/retry_interceptor.go:62","msg":"retrying of unary invoker failed","target":"endpoint://client-b9851494-78a3-4dee-92ea-bf4715e41772/127.0.0.1:40000","attempt":0,"error":"rpc error: code = Unavailable desc = etcdserver: unhealthy cluster"}
+2021-08-20T05:02:32.7254510Z 2021/08/20 05:02:32.724933 [error] prophet: add member to embed etcd failed with etcdserver: unhealthy cluster, retry later
+2021-08-20T05:02:33.2262878Z 2021-08-20 05:02:33.225591 W | etcdserver: not healthy for reconfigure, rejecting member add {ID:6c5aa9bbdba1b43b RaftAttributes:{PeerURLs:[http://127.0.0.1:50002] IsLearner:false} Attributes:{Name: ClientURLs:[]}}
+2021-08-20T05:02:33.2266788Z {"level":"warn","ts":"2021-08-20T05:02:33.226Z","caller":"clientv3/retry_interceptor.go:62","msg":"retrying of unary invoker failed","target":"endpoint://client-b9851494-78a3-4dee-92ea-bf4715e41772/127.0.0.1:40000","attempt":0,"error":"rpc error: code = Unavailable desc = etcdserver: unhealthy cluster"}
+2021-08-20T05:02:33.2269261Z 2021/08/20 05:02:33.226437 [error] prophet: add member to embed etcd failed with etcdserver: unhealthy cluster, retry later
+2021-08-20T05:02:33.7281885Z 2021-08-20 05:02:33.727757 W | etcdserver: not healthy for reconfigure, rejecting member add {ID:6c5aa9bbdba1b43b RaftAttributes:{PeerURLs:[http://127.0.0.1:50002] IsLearner:false} Attributes:{Name: ClientURLs:[]}}
+2021-08-20T05:02:33.7286691Z {"level":"warn","ts":"2021-08-20T05:02:33.727Z","caller":"clientv3/retry_interceptor.go:62","msg":"retrying of unary invoker failed","target":"endpoint://client-b9851494-78a3-4dee-92ea-bf4715e41772/127.0.0.1:40000","attempt":0,"error":"rpc error: code = Unavailable desc = etcdserver: unhealthy cluster"}
+2021-08-20T05:02:33.7289709Z 2021/08/20 05:02:33.728040 [error] prophet: add member to embed etcd failed with etcdserver: unhealthy cluster, retry later
+2021-08-20T05:02:34.2288398Z 2021-08-20 05:02:34.228402 W | etcdserver: not healthy for reconfigure, rejecting member add {ID:14f9a14f08c9b298 RaftAttributes:{PeerURLs:[http://127.0.0.1:50002] IsLearner:false} Attributes:{Name: ClientURLs:[]}}
+2021-08-20T05:02:34.2292169Z {"level":"warn","ts":"2021-08-20T05:02:34.228Z","caller":"clientv3/retry_interceptor.go:62","msg":"retrying of unary invoker failed","target":"endpoint://client-b9851494-78a3-4dee-92ea-bf4715e41772/127.0.0.1:40000","attempt":0,"error":"rpc error: code = Unavailable desc = etcdserver: unhealthy cluster"}
+2021-08-20T05:02:34.2294604Z 2021/08/20 05:02:34.228816 [error] prophet: add member to embed etcd failed with etcdserver: unhealthy cluster, retry later
+2021-08-20T05:02:34.7301105Z 2021-08-20 05:02:34.729623 W | etcdserver: not healthy for reconfigure, rejecting member add {ID:14f9a14f08c9b298 RaftAttributes:{PeerURLs:[http://127.0.0.1:50002] IsLearner:false} Attributes:{Name: ClientURLs:[]}}
+2021-08-20T05:02:34.7309283Z {"level":"warn","ts":"2021-08-20T05:02:34.730Z","caller":"clientv3/retry_interceptor.go:62","msg":"retrying of unary invoker failed","target":"endpoint://client-b9851494-78a3-4dee-92ea-bf4715e41772/127.0.0.1:40000","attempt":0,"error":"rpc error: code = Unavailable desc = etcdserver: unhealthy cluster"}
+2021-08-20T05:02:34.7311835Z 2021/08/20 05:02:34.730516 [error] prophet: add member to embed etcd failed with etcdserver: unhealthy cluster, retry later
+2021-08-20T05:02:35.2326139Z {"level":"info","ts":"2021-08-20T05:02:35.232Z","caller":"raft/raft.go:1550","msg":"93ccda9956d988f4 switched to configuration voters=(6339623173320530923 10650127570946328820 15706693617893082774)"}
+2021-08-20T05:02:35.2328976Z 2021-08-20 05:02:35.232355 I | etcdserver/membership: added member 57faddaff79adbeb [http://127.0.0.1:50002] to cluster 6a4ade671189dc2f
+2021-08-20T05:02:35.2330704Z 2021-08-20 05:02:35.232388 I | rafthttp: starting peer 57faddaff79adbeb...
+2021-08-20T05:02:35.2332301Z 2021-08-20 05:02:35.232403 I | rafthttp: started HTTP pipelining with peer 57faddaff79adbeb
+2021-08-20T05:02:35.2335793Z {"level":"info","ts":"2021-08-20T05:02:35.233Z","caller":"raft/raft.go:1550","msg":"d9f962a0ba698696 switched to configuration voters=(6339623173320530923 10650127570946328820 15706693617893082774)"}
+2021-08-20T05:02:35.2338734Z 2021-08-20 05:02:35.233674 I | rafthttp: started peer 57faddaff79adbeb
+2021-08-20T05:02:35.2340169Z 2021-08-20 05:02:35.233779 I | rafthttp: added peer 57faddaff79adbeb
+2021-08-20T05:02:35.2341720Z 2021-08-20 05:02:35.233864 I | rafthttp: started streaming with peer 57faddaff79adbeb (writer)
+2021-08-20T05:02:35.2343100Z 2021-08-20 05:02:35.233872 I | rafthttp: started streaming with peer 57faddaff79adbeb (writer)
+2021-08-20T05:02:35.2344593Z 2021-08-20 05:02:35.233883 I | rafthttp: started streaming with peer 57faddaff79adbeb (stream MsgApp v2 reader)
+2021-08-20T05:02:35.2346154Z 2021-08-20 05:02:35.234039 I | rafthttp: started streaming with peer 57faddaff79adbeb (stream Message reader)
+2021-08-20T05:02:35.2347822Z [WARNING] Deprecated '--logger=capnslog' flag is set; use '--logger=zap' flag instead
+2021-08-20T05:02:35.2350006Z 2021-08-20 05:02:35.234654 I | embed: pprof is enabled under /debug/pprof
+2021-08-20T05:02:35.2351068Z 2021-08-20 05:02:35.234741 I | embed: name = node-2
+2021-08-20T05:02:35.2352060Z 2021-08-20 05:02:35.234749 I | embed: data dir = /tmp/cube/node-2/prophet
+2021-08-20T05:02:35.2353165Z 2021-08-20 05:02:35.234752 I | embed: member dir = /tmp/cube/node-2/prophet/member
+2021-08-20T05:02:35.2354337Z 2021-08-20 05:02:35.234755 I | embed: heartbeat = 100ms
+2021-08-20T05:02:35.2355525Z 2021-08-20 05:02:35.234758 I | embed: election = 3000ms
+2021-08-20T05:02:35.2356456Z 2021-08-20 05:02:35.234761 I | embed: snapshot count = 100000
+2021-08-20T05:02:35.2357560Z 2021-08-20 05:02:35.234778 I | embed: advertise client URLs = http://127.0.0.1:40002
+2021-08-20T05:02:35.2378767Z 2021-08-20 05:02:35.235424 I | etcdserver/membership: added member 57faddaff79adbeb [http://127.0.0.1:50002] to cluster 6a4ade671189dc2f
+2021-08-20T05:02:35.2380377Z 2021-08-20 05:02:35.235439 I | rafthttp: starting peer 57faddaff79adbeb...
+2021-08-20T05:02:35.2381485Z 2021-08-20 05:02:35.235451 I | rafthttp: started HTTP pipelining with peer 57faddaff79adbeb
+2021-08-20T05:02:35.2382508Z 2021-08-20 05:02:35.236777 I | rafthttp: started peer 57faddaff79adbeb
+2021-08-20T05:02:35.2383439Z 2021-08-20 05:02:35.236802 I | rafthttp: added peer 57faddaff79adbeb
+2021-08-20T05:02:35.2384505Z 2021-08-20 05:02:35.236848 I | rafthttp: started streaming with peer 57faddaff79adbeb (writer)
+2021-08-20T05:02:35.2385642Z 2021-08-20 05:02:35.236859 I | rafthttp: started streaming with peer 57faddaff79adbeb (writer)
+2021-08-20T05:02:35.2386898Z 2021-08-20 05:02:35.236873 I | rafthttp: started streaming with peer 57faddaff79adbeb (stream MsgApp v2 reader)
+2021-08-20T05:02:35.2388200Z 2021-08-20 05:02:35.236995 I | rafthttp: started streaming with peer 57faddaff79adbeb (stream Message reader)
+2021-08-20T05:02:35.2405452Z 2021-08-20 05:02:35.240355 I | etcdserver: starting member 57faddaff79adbeb in cluster 6a4ade671189dc2f
+2021-08-20T05:02:35.2407401Z {"level":"info","ts":"2021-08-20T05:02:35.240Z","caller":"raft/raft.go:1550","msg":"57faddaff79adbeb switched to configuration voters=()"}
+2021-08-20T05:02:35.2410290Z {"level":"info","ts":"2021-08-20T05:02:35.240Z","caller":"raft/raft.go:711","msg":"57faddaff79adbeb became follower at term 0"}
+2021-08-20T05:02:35.2412455Z {"level":"info","ts":"2021-08-20T05:02:35.240Z","caller":"raft/raft.go:388","msg":"newRaft 57faddaff79adbeb [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0]"}
+2021-08-20T05:02:35.2418209Z 2021-08-20 05:02:35.241653 W | auth: simple token is not cryptographically signed
+2021-08-20T05:02:35.2436757Z 2021-08-20 05:02:35.242761 I | rafthttp: started HTTP pipelining with peer 93ccda9956d988f4
+2021-08-20T05:02:35.2437935Z 2021-08-20 05:02:35.242785 I | rafthttp: started HTTP pipelining with peer d9f962a0ba698696
+2021-08-20T05:02:35.2438944Z 2021-08-20 05:02:35.242794 I | rafthttp: starting peer 93ccda9956d988f4...
+2021-08-20T05:02:35.2480678Z 2021-08-20 05:02:35.242806 I | rafthttp: started HTTP pipelining with peer 93ccda9956d988f4
+2021-08-20T05:02:35.2482164Z 2021-08-20 05:02:35.243175 I | rafthttp: started streaming with peer 93ccda9956d988f4 (writer)
+2021-08-20T05:02:35.2484292Z 2021-08-20 05:02:35.243980 I | rafthttp: started peer 93ccda9956d988f4
+2021-08-20T05:02:35.2485191Z 2021-08-20 05:02:35.243992 I | rafthttp: added peer 93ccda9956d988f4
+2021-08-20T05:02:35.2486122Z 2021-08-20 05:02:35.243998 I | rafthttp: starting peer d9f962a0ba698696...
+2021-08-20T05:02:35.2487155Z 2021-08-20 05:02:35.244011 I | rafthttp: started HTTP pipelining with peer d9f962a0ba698696
+2021-08-20T05:02:35.2490973Z 2021-08-20 05:02:35.245174 I | rafthttp: started peer d9f962a0ba698696
+2021-08-20T05:02:35.2491914Z 2021-08-20 05:02:35.245183 I | rafthttp: added peer d9f962a0ba698696
+2021-08-20T05:02:35.2493038Z 2021-08-20 05:02:35.245190 I | etcdserver: starting server... [version: 3.4.15, cluster version: to_be_decided]
+2021-08-20T05:02:35.2495331Z 2021-08-20 05:02:35.245596 I | rafthttp: started streaming with peer 93ccda9956d988f4 (writer)
+2021-08-20T05:02:35.2496562Z 2021-08-20 05:02:35.245611 I | rafthttp: started streaming with peer 93ccda9956d988f4 (stream MsgApp v2 reader)
+2021-08-20T05:02:35.2497813Z 2021-08-20 05:02:35.245710 I | rafthttp: started streaming with peer 93ccda9956d988f4 (stream Message reader)
+2021-08-20T05:02:35.2498987Z 2021-08-20 05:02:35.245792 I | rafthttp: started streaming with peer d9f962a0ba698696 (writer)
+2021-08-20T05:02:35.2500096Z 2021-08-20 05:02:35.245800 I | rafthttp: started streaming with peer d9f962a0ba698696 (writer)
+2021-08-20T05:02:35.2501287Z 2021-08-20 05:02:35.245811 I | rafthttp: started streaming with peer d9f962a0ba698696 (stream MsgApp v2 reader)
+2021-08-20T05:02:35.2502535Z 2021-08-20 05:02:35.245871 I | rafthttp: started streaming with peer d9f962a0ba698696 (stream Message reader)
+2021-08-20T05:02:35.2503723Z 2021-08-20 05:02:35.246419 I | embed: listening for peers on 127.0.0.1:50002
+2021-08-20T05:02:35.2504706Z 2021-08-20 05:02:35.246565 I | rafthttp: peer d9f962a0ba698696 became active
+2021-08-20T05:02:35.2506009Z 2021-08-20 05:02:35.246574 I | rafthttp: established a TCP streaming connection with peer d9f962a0ba698696 (stream Message writer)
+2021-08-20T05:02:35.2507492Z 2021-08-20 05:02:35.246951 I | rafthttp: established a TCP streaming connection with peer d9f962a0ba698696 (stream MsgApp v2 writer)
+2021-08-20T05:02:35.2508653Z 2021-08-20 05:02:35.246985 I | rafthttp: peer 57faddaff79adbeb became active
+2021-08-20T05:02:35.2509979Z 2021-08-20 05:02:35.246993 I | rafthttp: established a TCP streaming connection with peer 57faddaff79adbeb (stream MsgApp v2 reader)
+2021-08-20T05:02:35.2511490Z 2021-08-20 05:02:35.247238 I | rafthttp: established a TCP streaming connection with peer 57faddaff79adbeb (stream Message reader)
+2021-08-20T05:02:35.2512993Z 2021-08-20 05:02:35.247580 I | rafthttp: established a TCP streaming connection with peer 57faddaff79adbeb (stream Message writer)
+2021-08-20T05:02:35.2514839Z 2021-08-20 05:02:35.247804 I | rafthttp: established a TCP streaming connection with peer d9f962a0ba698696 (stream Message reader)
+2021-08-20T05:02:35.2516346Z 2021-08-20 05:02:35.248144 I | rafthttp: established a TCP streaming connection with peer 57faddaff79adbeb (stream MsgApp v2 writer)
+2021-08-20T05:02:35.2517843Z 2021-08-20 05:02:35.248214 I | rafthttp: established a TCP streaming connection with peer d9f962a0ba698696 (stream MsgApp v2 reader)
+2021-08-20T05:02:35.2519026Z 2021-08-20 05:02:35.248746 I | rafthttp: peer 57faddaff79adbeb became active
+2021-08-20T05:02:35.2520359Z 2021-08-20 05:02:35.248795 I | rafthttp: established a TCP streaming connection with peer 57faddaff79adbeb (stream MsgApp v2 writer)
+2021-08-20T05:02:35.2521861Z 2021-08-20 05:02:35.248903 I | rafthttp: established a TCP streaming connection with peer 57faddaff79adbeb (stream Message writer)
+2021-08-20T05:02:35.2523044Z 2021-08-20 05:02:35.248948 I | rafthttp: peer 93ccda9956d988f4 became active
+2021-08-20T05:02:35.2524337Z 2021-08-20 05:02:35.248967 I | rafthttp: established a TCP streaming connection with peer 93ccda9956d988f4 (stream MsgApp v2 reader)
+2021-08-20T05:02:35.2525801Z 2021-08-20 05:02:35.249340 I | rafthttp: established a TCP streaming connection with peer 93ccda9956d988f4 (stream Message reader)
+2021-08-20T05:02:35.2554948Z 2021-08-20 05:02:35.254840 I | etcdserver: d9f962a0ba698696 initialized peer connection; fast-forwarding 28 ticks (election ticks 30) with 2 active peer(s)
+2021-08-20T05:02:35.2786109Z {"level":"info","ts":"2021-08-20T05:02:35.278Z","caller":"raft/raft.go:870","msg":"57faddaff79adbeb [term: 0] received a MsgHeartbeat message with higher term from 93ccda9956d988f4 [term: 2]"}
+2021-08-20T05:02:35.2788161Z {"level":"info","ts":"2021-08-20T05:02:35.278Z","caller":"raft/raft.go:711","msg":"57faddaff79adbeb became follower at term 2"}
+2021-08-20T05:02:35.2789906Z {"level":"info","ts":"2021-08-20T05:02:35.278Z","caller":"raft/node.go:325","msg":"raft.node: 57faddaff79adbeb elected leader 93ccda9956d988f4 at term 2"}
+2021-08-20T05:02:35.2808765Z {"level":"info","ts":"2021-08-20T05:02:35.280Z","caller":"raft/raft.go:1550","msg":"57faddaff79adbeb switched to configuration voters=(10650127570946328820)"}
+2021-08-20T05:02:35.2810574Z 2021-08-20 05:02:35.280456 I | etcdserver/membership: added member 93ccda9956d988f4 [http://127.0.0.1:50000] to cluster 6a4ade671189dc2f
+2021-08-20T05:02:35.2812027Z 2021-08-20 05:02:35.280560 N | etcdserver/membership: set the initial cluster version to 3.4
+2021-08-20T05:02:35.2817320Z {"level":"info","ts":"2021-08-20T05:02:35.281Z","caller":"raft/raft.go:1550","msg":"57faddaff79adbeb switched to configuration voters=(10650127570946328820 15706693617893082774)"}
+2021-08-20T05:02:35.2819165Z 2021-08-20 05:02:35.281491 I | etcdserver/membership: added member d9f962a0ba698696 [http://127.0.0.1:50001] to cluster 6a4ade671189dc2f
+2021-08-20T05:02:35.2825006Z {"level":"info","ts":"2021-08-20T05:02:35.282Z","caller":"raft/raft.go:1550","msg":"57faddaff79adbeb switched to configuration voters=(6339623173320530923 10650127570946328820 15706693617893082774)"}
+2021-08-20T05:02:35.2827186Z 2021-08-20 05:02:35.282380 I | etcdserver/membership: added member 57faddaff79adbeb [http://127.0.0.1:50002] to cluster 6a4ade671189dc2f
+2021-08-20T05:02:35.2830156Z 2021-08-20 05:02:35.282795 I | etcdserver: published {Name:node-2 ClientURLs:[http://127.0.0.1:40002]} to cluster 6a4ade671189dc2f
+2021-08-20T05:02:35.2831441Z 2021-08-20 05:02:35.282811 I | embed: ready to serve client requests
+2021-08-20T05:02:35.2836085Z 2021-08-20 05:02:35.283390 N | embed: serving insecure client requests on 127.0.0.1:40002, this is strongly discouraged!
+2021-08-20T05:02:35.2837311Z 2021/08/20 05:02:35.283395 [info] prophet: create etcd v3 client with endpoints [http://127.0.0.1:40002]
+2021-08-20T05:02:35.2851592Z 2021/08/20 05:02:35.284997 [info] prophet: net application started
+2021-08-20T05:02:35.2852347Z 2021/08/20 05:02:35.285059 [info] prophet: start system time monitor 
+2021-08-20T05:02:35.2861405Z 2021/08/20 05:02:35.285865 [info] prophet: [prophet-leader/node-2]/loop: current leader is [��涕Ӷ�node-0127.0.0.1:30000]
+2021-08-20T05:02:35.2862939Z 2021/08/20 05:02:35.285873 [info] prophet: [prophet-leader/node-2]/loop: start watch leader ��涕Ӷ�node-0127.0.0.1:30000
+2021-08-20T05:02:35.2864199Z 2021/08/20 05:02:35.285877 [info] prophet: ********node-2 become to follower now********
+2021-08-20T05:02:35.2865080Z 2021/08/20 05:02:35.285928 [info] prophet: client read loop started 
+2021-08-20T05:02:35.2865781Z 2021/08/20 05:02:35.286084 [info] prophet: client started
+2021-08-20T05:02:35.2866742Z 2021/08/20 05:02:35.286206 [info] [raftstore]: *********Become prophet follower*********
+2021-08-20T05:02:35.2867526Z 2021/08/20 05:02:35.286326 [info] [raftstore]: begin to bootstrap the cluster
+2021-08-20T05:02:35.2868800Z 2021/08/20 05:02:35.286456 [info] [raftstore]: raftstore init with store raftAddr:"127.0.0.1:10002" clientAddr:"127.0.0.1:20002" labels:<key:"c" value:"2" > startTime:1629435755 deployPath:"not set" 
+2021-08-20T05:02:35.2869874Z 2021/08/20 05:02:35.286570 [info] [raftstore]: begin to create local store metadata
+2021-08-20T05:02:35.2875574Z 2021/08/20 05:02:35.287038 [info] prophet: client start init connection to leader 127.0.0.1:30000
+2021-08-20T05:02:35.2876450Z 2021/08/20 05:02:35.287179 [info] prophet: client start connect to leader 127.0.0.1:30000
+2021-08-20T05:02:35.2877313Z 2021/08/20 05:02:35.287189 [info] prophet: client read loop actived, ready to read from leader
+2021-08-20T05:02:35.2878110Z 2021/08/20 05:02:35.287190 [info] prophet: session 5[127.0.0.1:39788] connected
+2021-08-20T05:02:35.2878844Z 2021/08/20 05:02:35.287308 [info] [raftstore]: create local store with id 7
+2021-08-20T05:02:35.2887790Z 2021/08/20 05:02:35.288339 [info] [raftstore]: the cluster already bootstrap: true
+2021-08-20T05:02:35.2901020Z 2021/08/20 05:02:35.289940 [info] prophet: container 7 limit added
+2021-08-20T05:02:35.2903598Z 2021/08/20 05:02:35.290220 [info] [raftstore]: prophet started
+2021-08-20T05:02:35.2905910Z 2021/08/20 05:02:35.290448 [info] [transport]: net application started
+2021-08-20T05:02:35.2906673Z 2021/08/20 05:02:35.290458 [info] [raftstore]: start listen at 127.0.0.1:10002 for raft
+2021-08-20T05:02:35.2907420Z 2021/08/20 05:02:35.290462 [info] [raftstore]: raft shards workers started
+2021-08-20T05:02:35.2908353Z 2021/08/20 05:02:35.290468 [info] [raftstore]: starts with 0 shards, including 0 tombstones and 0 applying shards
+2021-08-20T05:02:35.2909275Z 2021/08/20 05:02:35.290471 [info] [raftstore]: cleanup possible garbage data complete
+2021-08-20T05:02:35.2910012Z 2021/08/20 05:02:35.290472 [info] [raftstore]: shards started
+2021-08-20T05:02:35.2912137Z 2021/08/20 05:02:35.291050 [info] [raftstore]: shard timer based tasks started
+2021-08-20T05:02:35.2912924Z 2021/08/20 05:02:35.290654 [info] prophet: container 7 heartbeat stream binded
+2021-08-20T05:02:35.2913959Z 2021/08/20 05:02:35.290946 [info] [raftstore]: raft worker 0/0 start
+2021-08-20T05:02:35.2914681Z 2021/08/20 05:02:35.291065 [info] [raftstore]: net application started
+2021-08-20T05:02:35.2919965Z 2021/08/20 05:02:35.291067 [info] [raftstore]: start listen at 127.0.0.1:20002 for client
+2021-08-20T05:02:35.2920678Z 2021/08/20 05:02:35.291079 [info] [raftstore]: router started
+2021-08-20T05:02:35.2921505Z 2021/08/20 05:02:35.291371 [info] prophet: client start init connection to leader 127.0.0.1:30000
+2021-08-20T05:02:35.2922554Z 2021/08/20 05:02:35.291453 [info] [raftstore]: router event loop task started
+2021-08-20T05:02:35.2923355Z 2021/08/20 05:02:35.291619 [info] prophet: client start connect to leader 127.0.0.1:30000
+2021-08-20T05:02:35.2924198Z 2021/08/20 05:02:35.291645 [info] prophet: watcher init leader connection 127.0.0.1:30000 succeed
+2021-08-20T05:02:35.2925085Z 2021/08/20 05:02:35.291924 [info] prophet: session 6[127.0.0.1:39790] connected
+2021-08-20T05:02:35.2932784Z 2021/08/20 05:02:35.292808 [info] prophet: new watcher 127.0.0.1:39790 added
+2021-08-20T05:02:35.2934574Z 2021/08/20 05:02:35.293326 [info] [raftstore]: start init event
+2021-08-20T05:02:35.2967864Z 2021-08-20 05:02:35.296561 I | etcdserver: 57faddaff79adbeb initialized peer connection; fast-forwarding 28 ticks (election ticks 30) with 2 active peer(s)
+2021-08-20T05:02:35.3121276Z 2021/08/20 05:02:35.311659 [info] prophet: resource 2 add operator add-rule-peer {add peer: container [7]} (kind:resource,replica, resource:2(1,3), createAt:2021-08-20 05:02:35.311634095 +0000 UTC m=+83.990575881, startAt:0001-01-01 00:00:00 +0000 UTC, currentStep:0, steps:[add learner peer 8 on container 7, promote learner peer 8 on container 7 to voter]), 
+2021-08-20T05:02:35.3123080Z 2021/08/20 05:02:35.311677 [info] prophet: resource 2 send schedule command, step add learner peer 8 on container 7, source create
+2021-08-20T05:02:35.3124855Z 2021/08/20 05:02:35.311822 [info] [raftstore]: shard-2 AddLearnerNode peer {ID:8 ContainerID:7 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}
+2021-08-20T05:02:35.3207964Z 2021/08/20 05:02:35.320449 [info] [raftstore]: shard-2 propose conf change peer [{ChangeType:AddLearnerNode Peer:{ID:8 ContainerID:7 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}]
+2021-08-20T05:02:35.3224484Z 2021/08/20 05:02:35.321248 [info] [raftstore]: shard 2 do apply change peer changeType:AddLearnerNode peer:<id:8 containerID:7 role:Learner >  at epoch {ConfVer:3 Version:1 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, peers [{ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:6 ContainerID:5 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}]
+2021-08-20T05:02:35.3229346Z 2021/08/20 05:02:35.321270 [info] [raftstore]: shard-2 add learner peer {ID:8 ContainerID:7 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} successfully, peers [{ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:6 ContainerID:5 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:8 ContainerID:7 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}]
+2021-08-20T05:02:35.3261353Z {"level":"info","ts":"2021-08-20T05:02:35.321Z","caller":"raft/raft.go:1550","msg":"3 switched to configuration voters=(3 6) learners=(8)"}
+2021-08-20T05:02:35.3265084Z 2021/08/20 05:02:35.321370 [info] [raftstore]: shard 2 notify pd with {Transition:ConfChangeTransitionAuto Changes:[{Type:ConfChangeAddLearnerNode NodeID:8 XXX_unrecognized:[]}] Context:[10 32 10 16 71 105 120 122 192 240 77 170 145 2 117 91 140 77 215 234 16 2 26 4 8 3 16 1 42 4 8 3 16 1 26 14 8 1 18 10 8 3 18 6 8 8 16 7 24 1] XXX_unrecognized:[]} with changes [{ChangeType:AddLearnerNode Peer:{ID:8 ContainerID:7 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}] at epoch {ConfVer:4 Version:1 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}
+2021-08-20T05:02:35.3270732Z 2021/08/20 05:02:35.321392 [info] [raftstore]: shard 2 applied changes [{ChangeType:AddLearnerNode Peer:{ID:8 ContainerID:7 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}] at epoch {ConfVer:4 Version:1 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, new peers [{ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:6 ContainerID:5 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:8 ContainerID:7 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}]
+2021-08-20T05:02:35.3275440Z 2021/08/20 05:02:35.321465 [info] [raftstore]: shard 2 do apply change peer changeType:AddLearnerNode peer:<id:8 containerID:7 role:Learner >  at epoch {ConfVer:3 Version:1 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, peers [{ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:6 ContainerID:5 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}]
+2021-08-20T05:02:35.3280118Z 2021/08/20 05:02:35.321484 [info] [raftstore]: shard-2 add learner peer {ID:8 ContainerID:7 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} successfully, peers [{ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:6 ContainerID:5 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:8 ContainerID:7 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}]
+2021-08-20T05:02:35.3284281Z {"level":"info","ts":"2021-08-20T05:02:35.321Z","caller":"raft/raft.go:1550","msg":"6 switched to configuration voters=(3 6) learners=(8)"}
+2021-08-20T05:02:35.3288128Z 2021/08/20 05:02:35.321556 [info] [raftstore]: shard 2 applied changes [{ChangeType:AddLearnerNode Peer:{ID:8 ContainerID:7 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}] at epoch {ConfVer:4 Version:1 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, new peers [{ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:6 ContainerID:5 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:8 ContainerID:7 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}]
+2021-08-20T05:02:35.3291927Z 2021/08/20 05:02:35.321602 [info] prophet: resource 2 ConfVer changed from 3 to 4
+2021-08-20T05:02:35.3293139Z 2021/08/20 05:02:35.323038 [info] prophet: resource 2 send schedule command, step promote learner peer 8 on container 7 to voter, source heartbeat
+2021-08-20T05:02:35.3294122Z 2021/08/20 05:02:35.323246 [info] [transport]: connected to store 7
+2021-08-20T05:02:35.3294853Z 2021/08/20 05:02:35.323409 [info] [transport]: session 1[127.0.0.1:42088] connected
+2021-08-20T05:02:35.3296540Z 2021/08/20 05:02:35.323570 [info] [raftstore]: shard 2 target peer doesn't exist, peer=<{ID:8 ContainerID:7 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}> message=<MsgApp>
+2021-08-20T05:02:35.3298433Z 2021/08/20 05:02:35.323662 [info] [raftstore]: shard-2 AddNode peer {ID:8 ContainerID:7 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}
+2021-08-20T05:02:35.3299962Z 2021/08/20 05:02:35.323784 [info] [raftstore]: shard 2 replicate peer {ID:8 ContainerID:7 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}
+2021-08-20T05:02:35.3301712Z 2021/08/20 05:02:35.323825 [info] [raftstore]: shard 2 init with raft local state {HardState:{Term:0 Vote:0 Commit:0 XXX_unrecognized:[]} LastIndex:0 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}
+2021-08-20T05:02:35.3303938Z 2021/08/20 05:02:35.323836 [info] [raftstore]: shard 2 init raft apply state, state=<{AppliedIndex:0 TruncatedState:{Index:0 Term:0 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}>
+2021-08-20T05:02:35.3305581Z 2021/08/20 05:02:35.323948 [info] [raftstore]: shard 2 init last term, last term=<0>
+2021-08-20T05:02:35.3306835Z {"level":"info","ts":"2021-08-20T05:02:35.323Z","caller":"raft/raft.go:1550","msg":"8 switched to configuration voters=()"}
+2021-08-20T05:02:35.3308043Z {"level":"info","ts":"2021-08-20T05:02:35.324Z","caller":"raft/raft.go:711","msg":"8 became follower at term 0"}
+2021-08-20T05:02:35.3309463Z {"level":"info","ts":"2021-08-20T05:02:35.324Z","caller":"raft/raft.go:388","msg":"newRaft 8 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0]"}
+2021-08-20T05:02:35.3311719Z 2021/08/20 05:02:35.324167 [info] [raftstore]: shard-2 propose conf change peer [{ChangeType:AddNode Peer:{ID:8 ContainerID:7 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}]
+2021-08-20T05:02:35.3315941Z 2021/08/20 05:02:35.324356 [info] [raftstore]: shard 2 added with peer {ID:8 ContainerID:7 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, epoch {ConfVer:4 Version:1 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, peers [{ID:8 ContainerID:7 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}], raft worker 0, apply worker apply-0-0
+2021-08-20T05:02:35.3318873Z {"level":"info","ts":"2021-08-20T05:02:35.324Z","caller":"raft/raft.go:870","msg":"8 [term: 0] received a MsgHeartbeat message with higher term from 3 [term: 6]"}
+2021-08-20T05:02:35.3320183Z {"level":"info","ts":"2021-08-20T05:02:35.324Z","caller":"raft/raft.go:711","msg":"8 became follower at term 6"}
+2021-08-20T05:02:35.3321186Z 2021/08/20 05:02:35.324673 [error] [raftstore]: >>>>>>>>>>>> shard 2 peer 8 skip with no delegates, 0 commits, result <nil>
+2021-08-20T05:02:35.3324095Z 2021/08/20 05:02:35.324764 [info] [raftstore]: shard 2 do apply change peer peer:<id:8 containerID:7 >  at epoch {ConfVer:4 Version:1 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, peers [{ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:6 ContainerID:5 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:8 ContainerID:7 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}]
+2021-08-20T05:02:35.3328668Z 2021/08/20 05:02:35.324826 [info] [raftstore]: shard-2 add peer {ID:8 ContainerID:7 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} successfully, peers [{ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:6 ContainerID:5 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:8 ContainerID:7 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}]
+2021-08-20T05:02:35.3331203Z {"level":"info","ts":"2021-08-20T05:02:35.324Z","caller":"raft/raft.go:1550","msg":"3 switched to configuration voters=(3 6 8)"}
+2021-08-20T05:02:35.3334545Z 2021/08/20 05:02:35.324978 [info] [raftstore]: shard 2 notify pd with {Transition:ConfChangeTransitionAuto Changes:[{Type:ConfChangeAddNode NodeID:8 XXX_unrecognized:[]}] Context:[10 32 10 16 228 252 213 216 45 16 70 168 186 88 21 115 44 154 19 61 16 2 26 4 8 3 16 1 42 4 8 4 16 1 26 10 8 1 18 6 18 4 8 8 16 7] XXX_unrecognized:[]} with changes [{ChangeType:AddNode Peer:{ID:8 ContainerID:7 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}] at epoch {ConfVer:5 Version:1 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}
+2021-08-20T05:02:35.3339795Z 2021/08/20 05:02:35.325034 [info] [raftstore]: shard 2 applied changes [{ChangeType:AddNode Peer:{ID:8 ContainerID:7 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}] at epoch {ConfVer:5 Version:1 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, new peers [{ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:6 ContainerID:5 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:8 ContainerID:7 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}]
+2021-08-20T05:02:35.3342686Z 2021/08/20 05:02:35.325172 [error] [raftstore]: >>>>>>>>>>>> shard 2 peer 8 skip with no delegates, 0 commits, result <nil>
+2021-08-20T05:02:35.3343591Z 2021/08/20 05:02:35.325243 [info] prophet: resource 2 ConfVer changed from 4 to 5
+2021-08-20T05:02:35.3346535Z 2021/08/20 05:02:35.325398 [info] [raftstore]: shard 2 do apply change peer peer:<id:8 containerID:7 >  at epoch {ConfVer:4 Version:1 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, peers [{ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:6 ContainerID:5 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:8 ContainerID:7 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}]
+2021-08-20T05:02:35.3352076Z 2021/08/20 05:02:35.325418 [info] [raftstore]: shard-2 add peer {ID:8 ContainerID:7 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} successfully, peers [{ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:6 ContainerID:5 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:8 ContainerID:7 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}]
+2021-08-20T05:02:35.3354849Z {"level":"info","ts":"2021-08-20T05:02:35.325Z","caller":"raft/raft.go:1550","msg":"6 switched to configuration voters=(3 6 8)"}
+2021-08-20T05:02:35.3358577Z 2021/08/20 05:02:35.325565 [info] [raftstore]: shard 2 applied changes [{ChangeType:AddNode Peer:{ID:8 ContainerID:7 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}] at epoch {ConfVer:5 Version:1 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, new peers [{ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:6 ContainerID:5 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:8 ContainerID:7 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}]
+2021-08-20T05:02:35.3363177Z 2021/08/20 05:02:35.326983 [info] prophet: resource 2 operator(add-rule-peer {add peer: container [7]} (kind:resource,replica, resource:2(1,3), createAt:2021-08-20 05:02:35.311634095 +0000 UTC m=+83.990575881, startAt:2021-08-20 05:02:35.311669495 +0000 UTC m=+83.990611181, currentStep:2, steps:[add learner peer 8 on container 7, promote learner peer 8 on container 7 to voter]) finished) finish, takes 15.297689ms, 
+2021-08-20T05:02:35.3364724Z 2021/08/20 05:02:35.327501 [info] [transport]: connected to store 1
+2021-08-20T05:02:35.3365456Z 2021/08/20 05:02:35.327530 [info] [transport]: session 2[127.0.0.1:34418] connected
+2021-08-20T05:02:35.3379626Z {"level":"error","ts":"2021-08-20T05:02:35.328Z","caller":"raft/log.go:354","msg":"3 >>>>>>>>>>>>>>>> [1:12:6)","stacktrace":"go.etcd.io/etcd/pkg/logutil.(*zapRaftLogger).Errorf\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/pkg/logutil/zap_raft.go:69\ngo.etcd.io/etcd/raft.(*raftLog).mustCheckOutOfBounds\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/log.go:354\ngo.etcd.io/etcd/raft.(*raftLog).slice\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/log.go:308\ngo.etcd.io/etcd/raft.(*raftLog).entries\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/log.go:258\ngo.etcd.io/etcd/raft.(*raft).maybeSendAppend\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/raft.go:459\ngo.etcd.io/etcd/raft.(*raft).sendAppend\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/raft.go:442\ngo.etcd.io/etcd/raft.stepLeader\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/raft.go:1150\ngo.etcd.io/etcd/raft.(*raft).Step\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/raft.go:995\ngo.etcd.io/etcd/raft.(*RawNode).Step\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/rawnode.go:114\ngithub.com/matrixorigin/matrixcube/raftstore.(*peerReplica).handleStep\n\t/home/runner/work/matrixcube/matrixcube/raftstore/peer_event_loop.go:257\ngithub.com/matrixorigin/matrixcube/raftstore.(*peerReplica).handleEvent\n\t/home/runner/work/matrixcube/matrixcube/raftstore/peer_event_loop.go:183\ngithub.com/matrixorigin/matrixcube/raftstore.(*store).runPRTask.func1.1\n\t/home/runner/work/matrixcube/matrixcube/raftstore/store.go:420\nsync.(*Map).Range\n\t/opt/hostedtoolcache/go/1.16.7/x64/src/sync/map.go:345\ngithub.com/matrixorigin/matrixcube/raftstore.(*store).runPRTask.func1\n\t/home/runner/work/matrixcube/matrixcube/raftstore/store.go:418\ngithub.com/matrixorigin/matrixcube/raftstore.(*store).runPRTask\n\t/home/runner/work/matrixcube/matrixcube/raftstore/store.go:443\ngithub.com/matrixorigin/matrixcube/raftstore.(*store).startRaftWorkers.func1\n\t/home/runner/work/matrixcube/matrixcube/raftstore/store.go:406\ngithub.com/fagongzi/util/task.(*Runner).RunCancelableTask.func1\n\t/home/runner/work/matrixcube/matrixcube/vendor/github.com/fagongzi/util/task/task.go:350"}
+2021-08-20T05:02:35.3388542Z 2021/08/20 05:02:35.328578 [info] [raftstore]: shard 2 start snapshot, epoch=<{ConfVer:5 Version:1 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}>
+2021-08-20T05:02:35.3389807Z 2021/08/20 05:02:35.328992 [info] [raftstore]: shard 2 snapshot created, epoch=<confVer:5 version:1 > term=<6> index=<11> 
+2021-08-20T05:02:35.3390874Z 2021/08/20 05:02:35.329023 [error] [raftstore]: >>>>>>>>>>>> shard 2 peer 8 skip with no delegates, 0 commits, result <nil>
+2021-08-20T05:02:35.3392335Z 2021-08-20 05:02:35.334494 I | rafthttp: established a TCP streaming connection with peer 93ccda9956d988f4 (stream Message writer)
+2021-08-20T05:02:35.3394030Z 2021-08-20 05:02:35.334675 I | rafthttp: established a TCP streaming connection with peer 57faddaff79adbeb (stream Message reader)
+2021-08-20T05:02:35.3395566Z 2021-08-20 05:02:35.335008 I | rafthttp: established a TCP streaming connection with peer 93ccda9956d988f4 (stream MsgApp v2 writer)
+2021-08-20T05:02:35.3397067Z 2021-08-20 05:02:35.335179 I | rafthttp: established a TCP streaming connection with peer 57faddaff79adbeb (stream MsgApp v2 reader)
+2021-08-20T05:02:35.3429332Z 2021/08/20 05:02:35.342741 [info] prophet: [prophet-leader/node-2]/watch: leader updated to ��涕Ӷ�node-0127.0.0.1:30000
+2021-08-20T05:02:35.3947074Z 2021/08/20 05:02:35.394361 [info] prophet: resource 9 created with peers [{ID:10 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:11 ContainerID:5 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:12 ContainerID:7 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}]
+2021-08-20T05:02:35.3966431Z 2021/08/20 05:02:35.396283 [info] [raftstore]: shard 9 init with raft local state {HardState:{Term:5 Vote:0 Commit:5 XXX_unrecognized:[]} LastIndex:5 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}
+2021-08-20T05:02:35.3968645Z 2021/08/20 05:02:35.396344 [info] [raftstore]: shard 9 init raft apply state, state=<{AppliedIndex:5 TruncatedState:{Index:5 Term:5 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}>
+2021-08-20T05:02:35.3970112Z 2021/08/20 05:02:35.396359 [info] [raftstore]: shard 9 init last term, last term=<5>
+2021-08-20T05:02:35.3971720Z {"level":"info","ts":"2021-08-20T05:02:35.396Z","caller":"raft/raft.go:1550","msg":"c switched to configuration voters=(10 11 12)"}
+2021-08-20T05:02:35.3973272Z 2021/08/20 05:02:35.396440 [info] [raftstore]: shard 9 init with raft local state {HardState:{Term:5 Vote:0 Commit:5 XXX_unrecognized:[]} LastIndex:5 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}
+2021-08-20T05:02:35.3975055Z {"level":"info","ts":"2021-08-20T05:02:35.396Z","caller":"raft/raft.go:711","msg":"c became follower at term 5"}
+2021-08-20T05:02:35.3976635Z {"level":"info","ts":"2021-08-20T05:02:35.396Z","caller":"raft/raft.go:388","msg":"newRaft c [peers: [a,b,c], term: 5, commit: 5, applied: 5, lastindex: 5, lastterm: 5]"}
+2021-08-20T05:02:35.3980761Z 2021/08/20 05:02:35.397103 [info] [raftstore]: shard 9 added with peer {ID:12 ContainerID:7 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, epoch {ConfVer:3 Version:0 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, peers [{ID:10 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:11 ContainerID:5 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:12 ContainerID:7 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}], raft worker 0, apply worker apply-0-0
+2021-08-20T05:02:35.3983968Z 2021/08/20 05:02:35.397280 [info] [raftstore]: create init shard id:9 start:"b" end:"c" epoch:<confVer:3 > state:WaittingCreate peers:<id:10 containerID:1 > peers:<id:11 containerID:5 > peers:<id:12 containerID:7 > unique:"abc" 
+2021-08-20T05:02:35.3985438Z 2021/08/20 05:02:35.397425 [error] [raftstore]: >>>>>>>>>>>> shard 9 peer 12 add registration job by doCreate
+2021-08-20T05:02:35.3986467Z 2021/08/20 05:02:35.397580 [error] [raftstore]: >>>>>>>>>>>> shard 9 peer 12 add registration job by doCreate, completed
+2021-08-20T05:02:35.3988288Z 2021/08/20 05:02:35.397730 [info] [raftstore]: shard 9 init raft apply state, state=<{AppliedIndex:5 TruncatedState:{Index:5 Term:5 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}>
+2021-08-20T05:02:35.3990367Z 2021/08/20 05:02:35.396292 [info] [raftstore]: shard 9 init with raft local state {HardState:{Term:5 Vote:0 Commit:5 XXX_unrecognized:[]} LastIndex:5 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}
+2021-08-20T05:02:35.3992485Z 2021/08/20 05:02:35.398022 [info] [raftstore]: shard 9 init raft apply state, state=<{AppliedIndex:5 TruncatedState:{Index:5 Term:5 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}>
+2021-08-20T05:02:35.3994190Z 2021/08/20 05:02:35.398168 [info] [raftstore]: shard 9 init last term, last term=<5>
+2021-08-20T05:02:35.3995496Z {"level":"info","ts":"2021-08-20T05:02:35.398Z","caller":"raft/raft.go:1550","msg":"b switched to configuration voters=(10 11 12)"}
+2021-08-20T05:02:35.3996756Z {"level":"info","ts":"2021-08-20T05:02:35.398Z","caller":"raft/raft.go:711","msg":"b became follower at term 5"}
+2021-08-20T05:02:35.3998194Z {"level":"info","ts":"2021-08-20T05:02:35.398Z","caller":"raft/raft.go:388","msg":"newRaft b [peers: [a,b,c], term: 5, commit: 5, applied: 5, lastindex: 5, lastterm: 5]"}
+2021-08-20T05:02:35.3999191Z 2021/08/20 05:02:35.398002 [info] [raftstore]: shard 9 init last term, last term=<5>
+2021-08-20T05:02:35.4000409Z {"level":"info","ts":"2021-08-20T05:02:35.399Z","caller":"raft/raft.go:1550","msg":"a switched to configuration voters=(10 11 12)"}
+2021-08-20T05:02:35.4001630Z {"level":"info","ts":"2021-08-20T05:02:35.399Z","caller":"raft/raft.go:711","msg":"a became follower at term 5"}
+2021-08-20T05:02:35.4005571Z 2021/08/20 05:02:35.398864 [info] [raftstore]: shard 9 added with peer {ID:11 ContainerID:5 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, epoch {ConfVer:3 Version:0 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, peers [{ID:10 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:11 ContainerID:5 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:12 ContainerID:7 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}], raft worker 0, apply worker apply-0-0
+2021-08-20T05:02:35.4008885Z 2021/08/20 05:02:35.399533 [info] [raftstore]: create init shard id:9 start:"b" end:"c" epoch:<confVer:3 > state:WaittingCreate peers:<id:10 containerID:1 > peers:<id:11 containerID:5 > peers:<id:12 containerID:7 > unique:"abc" 
+2021-08-20T05:02:35.4010241Z 2021/08/20 05:02:35.399673 [error] [raftstore]: >>>>>>>>>>>> shard 9 peer 11 add registration job by doCreate
+2021-08-20T05:02:35.4011481Z 2021/08/20 05:02:35.399743 [error] [raftstore]: >>>>>>>>>>>> shard 9 peer 11 add registration job by doCreate, completed
+2021-08-20T05:02:35.4013536Z {"level":"info","ts":"2021-08-20T05:02:35.399Z","caller":"raft/raft.go:388","msg":"newRaft a [peers: [a,b,c], term: 5, commit: 5, applied: 5, lastindex: 5, lastterm: 5]"}
+2021-08-20T05:02:35.4015063Z 2021/08/20 05:02:35.400025 [info] [raftstore]: shard 9 try to campaign leader, because first peer of dynamically created
+2021-08-20T05:02:35.4016400Z {"level":"info","ts":"2021-08-20T05:02:35.400Z","caller":"raft/raft.go:934","msg":"a is starting a new election at term 5"}
+2021-08-20T05:02:35.4017838Z {"level":"info","ts":"2021-08-20T05:02:35.400Z","caller":"raft/raft.go:724","msg":"a became candidate at term 6"}
+2021-08-20T05:02:35.4019124Z {"level":"info","ts":"2021-08-20T05:02:35.400Z","caller":"raft/raft.go:835","msg":"a received MsgVoteResp from a at term 6"}
+2021-08-20T05:02:35.4021036Z {"level":"info","ts":"2021-08-20T05:02:35.400Z","caller":"raft/raft.go:822","msg":"a [logterm: 5, index: 5] sent MsgVote request to b at term 6"}
+2021-08-20T05:02:35.4022425Z {"level":"info","ts":"2021-08-20T05:02:35.400Z","caller":"raft/raft.go:822","msg":"a [logterm: 5, index: 5] sent MsgVote request to c at term 6"}
+2021-08-20T05:02:35.4026500Z 2021/08/20 05:02:35.401126 [info] [raftstore]: shard 9 added with peer {ID:10 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, epoch {ConfVer:3 Version:0 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, peers [{ID:10 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:11 ContainerID:5 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:12 ContainerID:7 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}], raft worker 0, apply worker apply-0-0
+2021-08-20T05:02:35.4029695Z 2021/08/20 05:02:35.401466 [info] [raftstore]: create init shard id:9 start:"b" end:"c" epoch:<confVer:3 > state:WaittingCreate peers:<id:10 containerID:1 > peers:<id:11 containerID:5 > peers:<id:12 containerID:7 > unique:"abc" 
+2021-08-20T05:02:35.4031038Z 2021/08/20 05:02:35.401712 [error] [raftstore]: >>>>>>>>>>>> shard 9 peer 10 add registration job by doCreate
+2021-08-20T05:02:35.4032045Z 2021/08/20 05:02:35.401205 [error] [raftstore]: >>>>>>>>>>>> shard 9 peer 10 skip with no delegates, 0 commits, result <nil>
+2021-08-20T05:02:35.4033106Z 2021/08/20 05:02:35.401947 [error] [raftstore]: >>>>>>>>>>>> shard 9 peer 10 add registration job by doCreate, completed
+2021-08-20T05:02:36.1800644Z 2021/08/20 05:02:36.179747 [error] [raftstore]: >>>>>>>>>>>> shard 2 peer 8 skip with no delegates, 0 commits, result <nil>
+2021-08-20T05:02:36.1820129Z {"level":"error","ts":"2021-08-20T05:02:36.179Z","caller":"raft/log.go:354","msg":"3 >>>>>>>>>>>>>>>> [1:12:6)","stacktrace":"go.etcd.io/etcd/pkg/logutil.(*zapRaftLogger).Errorf\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/pkg/logutil/zap_raft.go:69\ngo.etcd.io/etcd/raft.(*raftLog).mustCheckOutOfBounds\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/log.go:354\ngo.etcd.io/etcd/raft.(*raftLog).slice\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/log.go:308\ngo.etcd.io/etcd/raft.(*raftLog).entries\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/log.go:258\ngo.etcd.io/etcd/raft.(*raft).maybeSendAppend\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/raft.go:459\ngo.etcd.io/etcd/raft.(*raft).sendAppend\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/raft.go:442\ngo.etcd.io/etcd/raft.stepLeader\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/raft.go:1208\ngo.etcd.io/etcd/raft.(*raft).Step\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/raft.go:995\ngo.etcd.io/etcd/raft.(*RawNode).Step\n\t/home/runner/work/matrixcube/matrixcube/vendor/go.etcd.io/etcd/raft/rawnode.go:114\ngithub.com/matrixorigin/matrixcube/raftstore.(*peerReplica).handleStep\n\t/home/runner/work/matrixcube/matrixcube/raftstore/peer_event_loop.go:257\ngithub.com/matrixorigin/matrixcube/raftstore.(*peerReplica).handleEvent\n\t/home/runner/work/matrixcube/matrixcube/raftstore/peer_event_loop.go:183\ngithub.com/matrixorigin/matrixcube/raftstore.(*store).runPRTask.func1.1\n\t/home/runner/work/matrixcube/matrixcube/raftstore/store.go:420\nsync.(*Map).Range\n\t/opt/hostedtoolcache/go/1.16.7/x64/src/sync/map.go:345\ngithub.com/matrixorigin/matrixcube/raftstore.(*store).runPRTask.func1\n\t/home/runner/work/matrixcube/matrixcube/raftstore/store.go:418\ngithub.com/matrixorigin/matrixcube/raftstore.(*store).runPRTask\n\t/home/runner/work/matrixcube/matrixcube/raftstore/store.go:443\ngithub.com/matrixorigin/matrixcube/raftstore.(*store).startRaftWorkers.func1\n\t/home/runner/work/matrixcube/matrixcube/raftstore/store.go:406\ngithub.com/fagongzi/util/task.(*Runner).RunCancelableTask.func1\n\t/home/runner/work/matrixcube/matrixcube/vendor/github.com/fagongzi/util/task/task.go:350"}
+2021-08-20T05:02:36.1830503Z 2021/08/20 05:02:36.180323 [info] [transport]: shard 2 start send pending snap, epoch=<confVer:5 version:1 > term=<6> index=<11>
+2021-08-20T05:02:36.1832741Z 2021/08/20 05:02:36.181145 [info] [raftstore]: shard 2 try to send snap, header=<shard:<id:2 start:"a" end:"b" epoch:<confVer:5 version:1 > peers:<id:3 containerID:1 > peers:<id:6 containerID:5 > peers:<id:8 containerID:7 > > from:<id:3 containerID:1 > to:<id:8 containerID:7 role:Learner > term:6 index:11 >,size=<136>
+2021-08-20T05:02:36.1834432Z 2021/08/20 05:02:36.181196 [info] [raftstore]: shard 2 send snap complete
+2021-08-20T05:02:36.1835584Z 2021/08/20 05:02:36.181212 [info] [transport]: shard 2 pending snap sent succ, size=<136>, epoch=<confVer:5 version:1 > term=<6> index=<11>
+2021-08-20T05:02:36.1836595Z 2021/08/20 05:02:36.181484 [info] [transport]: connected to store 7
+2021-08-20T05:02:36.1837454Z 2021/08/20 05:02:36.181649 [info] [transport]: session 2[127.0.0.1:42096] connected
+2021-08-20T05:02:36.1839397Z {"level":"info","ts":"2021-08-20T05:02:36.181Z","caller":"raft/log.go:301","msg":"log [committed=0, applied=0, unstable.offset=1, len(unstable.Entries)=0] starts to restore snapshot [index: 11, term: 6]"}
+2021-08-20T05:02:36.1841203Z {"level":"info","ts":"2021-08-20T05:02:36.181Z","caller":"raft/raft.go:1550","msg":"8 switched to configuration voters=(3 6 8)"}
+2021-08-20T05:02:36.1842913Z {"level":"info","ts":"2021-08-20T05:02:36.181Z","caller":"raft/raft.go:1503","msg":"8 [commit: 11, lastindex: 11, lastterm: 6] restored snapshot [index: 11, term: 6]"}
+2021-08-20T05:02:36.1844544Z {"level":"info","ts":"2021-08-20T05:02:36.182Z","caller":"raft/raft.go:1420","msg":"8 [commit: 11] restored snapshot [index: 11, term: 6]"}
+2021-08-20T05:02:36.1845550Z 2021/08/20 05:02:36.182100 [info] [raftstore]: shard 2 begin to apply snapshot
+2021-08-20T05:02:36.1846460Z 2021/08/20 05:02:36.182131 [info] [raftstore]: shard 2 clear 0 meta keys and 0 raft keys
+2021-08-20T05:02:36.1848547Z 2021/08/20 05:02:36.182177 [info] [raftstore]: shard 2 apply snapshot state completed, apply state {AppliedIndex:11 TruncatedState:{Index:11 Term:6 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}
+2021-08-20T05:02:36.1850337Z 2021/08/20 05:02:36.182220 [error] [raftstore]: >>>>>>>>>>>> shard 2 peer 8 start applying snapshot
+2021-08-20T05:02:36.1851289Z 2021/08/20 05:02:36.182256 [info] [raftstore]: shard 2 begin apply snapshot data
+2021-08-20T05:02:36.1852450Z 2021/08/20 05:02:36.182384 [error] [raftstore]: >>>>>>>>>>>> shard 2 peer 8 add registration job by handleRaftReadyApply
+2021-08-20T05:02:36.1856694Z 2021/08/20 05:02:36.182439 [info] [raftstore]: shard 2 snapshot is applied, shard=<{ID:2 Start:[97] End:[98] Epoch:{ConfVer:5 Version:1 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} State:Running Peers:[{ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:6 ContainerID:5 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:8 ContainerID:7 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}] DisableSplit:false Group:0 Unique: RuleGroups:[] Data:[] XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}>
+2021-08-20T05:02:36.1865328Z 2021/08/20 05:02:36.182503 [info] [raftstore]: shard 2 shard changed after apply snapshot, from=<{ID:2 Start:[97] End:[98] Epoch:{ConfVer:4 Version:1 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} State:Running Peers:[{ID:8 ContainerID:7 Role:Learner XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}] DisableSplit:false Group:0 Unique: RuleGroups:[] Data:[] XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}> to=<{ID:2 Start:[97] End:[98] Epoch:{ConfVer:5 Version:1 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} State:Running Peers:[{ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:6 ContainerID:5 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} {ID:8 ContainerID:7 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}] DisableSplit:false Group:0 Unique: RuleGroups:[] Data:[] XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}>
+2021-08-20T05:02:36.1870191Z 2021/08/20 05:02:36.182544 [error] [raftstore]: >>>>>>>>>>>> shard 2 peer 8 AdvanceApply with 11
+2021-08-20T05:02:36.1872640Z 2021/08/20 05:02:36.183051 [info] [raftstore]: shard 2 delete exists snap gz file /tmp/cube/node-2/snapshots/2_6_11.gz, header is shard:<id:2 start:"a" end:"b" epoch:<confVer:4 version:1 > peers:<id:8 containerID:7 role:Learner > peers:<id:3 containerID:1 > > from:<> to:<> term:6 index:11 
+2021-08-20T05:02:36.1874697Z 2021/08/20 05:02:36.183183 [info] [raftstore]: shard 2 apply snapshot data complete, {Term:6 Vote:0 Commit:11 XXX_unrecognized:[]}
+2021-08-20T05:02:36.1876128Z 2021/08/20 05:02:36.183212 [error] [raftstore]: >>>>>>>>>>>> shard 2 peer 8 add registration job by handleRaftReadyApply, completed
+2021-08-20T05:02:40.5514616Z     testutil.go:743: 
+2021-08-20T05:02:40.5515292Z         	Error Trace:	testutil.go:743
+2021-08-20T05:02:40.5515885Z         	            				store_test.go:213
+2021-08-20T05:02:40.5516360Z         	Error:      	
+2021-08-20T05:02:40.5516934Z         	Test:       	TestSpeedupAddShard
+2021-08-20T05:02:40.5517708Z         	Messages:   	wait shard state changed to Running timeout
+2021-08-20T05:02:40.5519800Z 2021/08/20 05:02:40.551711 [error] prophet: client read resp from leader 127.0.0.1:30000 failed with read tcp 127.0.0.1:39688->127.0.0.1:30000: use of closed network connection
+2021-08-20T05:02:40.5520910Z 2021/08/20 05:02:40.551867 [error] prophet: client read loop stopped
+2021-08-20T05:02:40.5525543Z 2021/08/20 05:02:40.552342 [error] prophet: session 4[127.0.0.1:39724] read failed with read tcp 127.0.0.1:30000->127.0.0.1:39724: use of closed network connection
+2021-08-20T05:02:40.5529317Z 2021/08/20 05:02:40.552728 [error] prophet: session 5[127.0.0.1:39788] read failed with read tcp 127.0.0.1:30000->127.0.0.1:39788: use of closed network connection
+2021-08-20T05:02:40.5532577Z 2021/08/20 05:02:40.553098 [error] prophet: session 2[127.0.0.1:39690] read failed with read tcp 127.0.0.1:30000->127.0.0.1:39690: use of closed network connection
+2021-08-20T05:02:40.5535473Z 2021/08/20 05:02:40.553389 [error] prophet: session 3[127.0.0.1:39722] read failed with read tcp 127.0.0.1:30000->127.0.0.1:39722: use of closed network connection
+2021-08-20T05:02:40.5538333Z 2021/08/20 05:02:40.553680 [error] prophet: session 6[127.0.0.1:39790] read failed with read tcp 127.0.0.1:30000->127.0.0.1:39790: use of closed network connection
+2021-08-20T05:02:40.5547418Z 2021/08/20 05:02:40.554576 [error] prophet: watcher read events failed with EOF
+2021-08-20T05:02:40.5548331Z 2021/08/20 05:02:40.554586 [error] prophet: reset watcher conn failed with <nil>, retry later
+2021-08-20T05:02:40.5549259Z 2021/08/20 05:02:40.554593 [error] prophet: client read resp from leader 127.0.0.1:30000 failed with EOF
+2021-08-20T05:02:40.5551612Z 2021/08/20 05:02:40.555056 [info] prophet: client start init connection to leader 127.0.0.1:30000
+2021-08-20T05:02:40.5554515Z 2021/08/20 05:02:40.555343 [error] prophet: watcher read events failed with EOF
+2021-08-20T05:02:40.5555401Z 2021/08/20 05:02:40.555353 [error] prophet: reset watcher conn failed with <nil>, retry later
+2021-08-20T05:02:40.5556313Z 2021/08/20 05:02:40.555373 [error] prophet: client read resp from leader 127.0.0.1:30000 failed with EOF
+2021-08-20T05:02:40.5558948Z 2021/08/20 05:02:40.555777 [info] prophet: client start init connection to leader 127.0.0.1:30000
+2021-08-20T05:02:40.5561173Z 2021/08/20 05:02:40.556022 [error] prophet: watcher read events failed with EOF
+2021-08-20T05:02:40.5562064Z 2021/08/20 05:02:40.556030 [error] prophet: reset watcher conn failed with <nil>, retry later
+2021-08-20T05:02:40.5576180Z 2021/08/20 05:02:40.557464 [error] prophet: init leader conn failed with dial tcp 127.0.0.1:30000: connect: connection refused, retry later
+2021-08-20T05:02:40.5577417Z 2021/08/20 05:02:40.557483 [error] prophet: init leader conn failed with dial tcp 127.0.0.1:30000: connect: connection refused, retry later
+2021-08-20T05:02:40.5584120Z 2021/08/20 05:02:40.558253 [info] prophet: [prophet-leader/node-0]/lease: closed
+2021-08-20T05:02:40.5589301Z 2021/08/20 05:02:40.558772 [info] prophet: [prophet-leader/node-0]/keepalive: exit with context done
+2021-08-20T05:02:40.5591940Z 2021/08/20 05:02:40.559068 [info] prophet: [prophet-leader/node-0]/lease: exit with context done
+2021-08-20T05:02:40.5594711Z 2021/08/20 05:02:40.559318 [error] prophet: [prophet-leader/node-0]/lease: keep lease exit
+2021-08-20T05:02:40.5596814Z 2021/08/20 05:02:40.559589 [info] prophet: patrol resources has been stopped 
+2021-08-20T05:02:40.5598942Z 2021/08/20 05:02:40.559617 [info] prophet: drive push operator has been stopped 
+2021-08-20T05:02:40.5599723Z 2021/08/20 05:02:40.559813 [info] prophet: coordinator is stopping
+2021-08-20T05:02:40.5601785Z 2021/08/20 05:02:40.560093 [info] prophet: coordinator has been stopped
+2021-08-20T05:02:40.5605514Z 2021-08-20 05:02:40.560384 I | etcdserver: 93ccda9956d988f4 starts leadership transfer from 93ccda9956d988f4 to d9f962a0ba698696
+2021-08-20T05:02:40.5608655Z {"level":"info","ts":"2021-08-20T05:02:40.560Z","caller":"raft/raft.go:1278","msg":"93ccda9956d988f4 [term 2] starts to transfer leadership to d9f962a0ba698696"}
+2021-08-20T05:02:40.5611530Z {"level":"info","ts":"2021-08-20T05:02:40.560Z","caller":"raft/raft.go:1284","msg":"93ccda9956d988f4 sends MsgTimeoutNow to d9f962a0ba698696 immediately as d9f962a0ba698696 already has up-to-date log"}
+2021-08-20T05:02:40.5616065Z 2021/08/20 05:02:40.561337 [info] prophet: [prophet-leader/node-2]/watch: leader deleted
+2021-08-20T05:02:40.5617244Z 2021/08/20 05:02:40.561417 [info] prophet: [prophet-leader/node-1]/watch: leader deleted
+2021-08-20T05:02:40.5618923Z {"level":"info","ts":"2021-08-20T05:02:40.561Z","caller":"raft/raft.go:1372","msg":"d9f962a0ba698696 [term 2] received MsgTimeoutNow from 93ccda9956d988f4 and starts an election to get leadership."}
+2021-08-20T05:02:40.5622636Z {"level":"info","ts":"2021-08-20T05:02:40.561Z","caller":"raft/raft.go:724","msg":"d9f962a0ba698696 became candidate at term 3"}
+2021-08-20T05:02:40.5624131Z {"level":"info","ts":"2021-08-20T05:02:40.562Z","caller":"raft/raft.go:835","msg":"d9f962a0ba698696 received MsgVoteResp from d9f962a0ba698696 at term 3"}
+2021-08-20T05:02:40.5625758Z {"level":"info","ts":"2021-08-20T05:02:40.562Z","caller":"raft/raft.go:822","msg":"d9f962a0ba698696 [logterm: 2, index: 31] sent MsgVote request to 57faddaff79adbeb at term 3"}
+2021-08-20T05:02:40.5627810Z {"level":"info","ts":"2021-08-20T05:02:40.562Z","caller":"raft/raft.go:822","msg":"d9f962a0ba698696 [logterm: 2, index: 31] sent MsgVote request to 93ccda9956d988f4 at term 3"}
+2021-08-20T05:02:40.5629387Z {"level":"info","ts":"2021-08-20T05:02:40.562Z","caller":"raft/node.go:331","msg":"raft.node: d9f962a0ba698696 lost leader 93ccda9956d988f4 at term 3"}
+2021-08-20T05:02:40.5638588Z 2021/08/20 05:02:40.563591 [info] prophet: [prophet-leader/node-2]/loop: leader ��涕Ӷ�node-0127.0.0.1:30000 was out
+2021-08-20T05:02:40.5639902Z 2021/08/20 05:02:40.563704 [info] prophet: [prophet-leader/node-1]/loop: leader ��涕Ӷ�node-0127.0.0.1:30000 was out
+2021-08-20T05:02:40.5646419Z {"level":"info","ts":"2021-08-20T05:02:40.564Z","caller":"raft/raft.go:870","msg":"93ccda9956d988f4 [term: 2] received a MsgVote message with higher term from d9f962a0ba698696 [term: 3]"}
+2021-08-20T05:02:40.5647952Z {"level":"info","ts":"2021-08-20T05:02:40.564Z","caller":"raft/raft.go:711","msg":"93ccda9956d988f4 became follower at term 3"}
+2021-08-20T05:02:40.5649753Z {"level":"info","ts":"2021-08-20T05:02:40.564Z","caller":"raft/raft.go:971","msg":"93ccda9956d988f4 [logterm: 2, index: 31, vote: 0] cast MsgVote for d9f962a0ba698696 [logterm: 2, index: 31] at term 3"}
+2021-08-20T05:02:40.5651486Z {"level":"info","ts":"2021-08-20T05:02:40.564Z","caller":"raft/node.go:331","msg":"raft.node: 93ccda9956d988f4 lost leader 93ccda9956d988f4 at term 3"}
+2021-08-20T05:02:40.5656268Z {"level":"info","ts":"2021-08-20T05:02:40.565Z","caller":"raft/raft.go:870","msg":"57faddaff79adbeb [term: 2] received a MsgVote message with higher term from d9f962a0ba698696 [term: 3]"}
+2021-08-20T05:02:40.5657823Z {"level":"info","ts":"2021-08-20T05:02:40.565Z","caller":"raft/raft.go:711","msg":"57faddaff79adbeb became follower at term 3"}
+2021-08-20T05:02:40.5659484Z {"level":"info","ts":"2021-08-20T05:02:40.565Z","caller":"raft/raft.go:971","msg":"57faddaff79adbeb [logterm: 2, index: 31, vote: 0] cast MsgVote for d9f962a0ba698696 [logterm: 2, index: 31] at term 3"}
+2021-08-20T05:02:40.5661114Z {"level":"info","ts":"2021-08-20T05:02:40.565Z","caller":"raft/node.go:331","msg":"raft.node: 57faddaff79adbeb lost leader 93ccda9956d988f4 at term 3"}
+2021-08-20T05:02:40.5666050Z {"level":"info","ts":"2021-08-20T05:02:40.566Z","caller":"raft/raft.go:835","msg":"d9f962a0ba698696 received MsgVoteResp from 57faddaff79adbeb at term 3"}
+2021-08-20T05:02:40.5667675Z {"level":"info","ts":"2021-08-20T05:02:40.566Z","caller":"raft/raft.go:1319","msg":"d9f962a0ba698696 has received 2 MsgVoteResp votes and 0 vote rejections"}
+2021-08-20T05:02:40.5669044Z {"level":"info","ts":"2021-08-20T05:02:40.566Z","caller":"raft/raft.go:776","msg":"d9f962a0ba698696 became leader at term 3"}
+2021-08-20T05:02:40.5670466Z {"level":"info","ts":"2021-08-20T05:02:40.566Z","caller":"raft/node.go:325","msg":"raft.node: d9f962a0ba698696 elected leader d9f962a0ba698696 at term 3"}
+2021-08-20T05:02:40.5676660Z {"level":"info","ts":"2021-08-20T05:02:40.567Z","caller":"raft/raft.go:1382","msg":"93ccda9956d988f4 no leader at term 3; dropping index reading msg"}
+2021-08-20T05:02:40.5678337Z {"level":"info","ts":"2021-08-20T05:02:40.567Z","caller":"raft/node.go:325","msg":"raft.node: 93ccda9956d988f4 elected leader d9f962a0ba698696 at term 3"}
+2021-08-20T05:02:40.5679905Z {"level":"info","ts":"2021-08-20T05:02:40.567Z","caller":"raft/node.go:325","msg":"raft.node: 57faddaff79adbeb elected leader d9f962a0ba698696 at term 3"}
+2021-08-20T05:02:40.5690460Z {"level":"warn","ts":"2021-08-20T05:02:40.568Z","caller":"clientv3/retry_interceptor.go:62","msg":"retrying of unary invoker failed","target":"endpoint://client-60bf76ac-f5b4-4432-8722-0a7907401f04/127.0.0.1:40001","attempt":0,"error":"rpc error: code = Unavailable desc = etcdserver: leader changed"}
+2021-08-20T05:02:40.5704566Z {"level":"warn","ts":"2021-08-20T05:02:40.569Z","caller":"clientv3/retry_interceptor.go:62","msg":"retrying of unary invoker failed","target":"endpoint://client-9341d0db-1a23-401a-8900-f1c208b42c42/127.0.0.1:40002","attempt":0,"error":"rpc error: code = Unavailable desc = etcdserver: leader changed"}
+2021-08-20T05:02:40.5933402Z 2021/08/20 05:02:40.592708 [info] prophet: [prophet-leader/node-1]/campaign: load expect leader: []
+2021-08-20T05:02:40.5934775Z 2021/08/20 05:02:40.592786 [info] prophet: [prophet-leader/node-1]/campaign: start
+2021-08-20T05:02:40.5983285Z 2021/08/20 05:02:40.597998 [info] prophet: [prophet-leader/node-1]/campaign: grant lease ok
+2021-08-20T05:02:40.6004069Z 2021/08/20 05:02:40.600111 [error] [raftstore]: shard 2 heartbeat to prophet failed with client is closed
+2021-08-20T05:02:40.6013912Z 2021/08/20 05:02:40.601073 [info] prophet: [prophet-leader/node-1]/campaign: completed, start keepalive
+2021-08-20T05:02:40.6017215Z 2021/08/20 05:02:40.601470 [info] prophet: ********node-1 become to leader now********
+2021-08-20T05:02:40.6023000Z 2021/08/20 05:02:40.602004 [info] prophet: [prophet-leader/node-2]/campaign: load expect leader: []
+2021-08-20T05:02:40.6026206Z 2021/08/20 05:02:40.602369 [info] prophet: [prophet-leader/node-2]/campaign: start
+2021-08-20T05:02:40.6055843Z 2021/08/20 05:02:40.605308 [info] prophet: [prophet-leader/node-2]/campaign: grant lease ok
+2021-08-20T05:02:40.6087795Z 2021/08/20 05:02:40.608622 [info] prophet: [prophet-leader/node-2]/lease: closed
+2021-08-20T05:02:40.6090734Z 2021/08/20 05:02:40.608914 [error] prophet: [prophet-leader/node-2]/loop: campaign leader failed with campaign leader failed, other server may campaign ok
+2021-08-20T05:02:40.6101407Z 2021/08/20 05:02:40.610028 [info] prophet: load 3 containers, cost 8.073397ms
+2021-08-20T05:02:40.6107971Z 2021/08/20 05:02:40.610653 [info] prophet: load 1 resources, cost 389.005µs
+2021-08-20T05:02:40.6117696Z 2021/08/20 05:02:40.611652 [info] [raftstore]: *********Become prophet leader*********
+2021-08-20T05:02:40.6120574Z 2021/08/20 05:02:40.611956 [info] prophet: coordinator starts to collect cluster information 
+2021-08-20T05:02:40.6125932Z 2021/08/20 05:02:40.612493 [info] prophet: load 0 jobs
+2021-08-20T05:02:40.6600495Z 2021/08/20 05:02:40.659818 [info] prophet: [prophet-leader/node-0]/loop: exit
+2021-08-20T05:02:40.6614865Z 2021-08-20 05:02:40.661290 I | etcdserver: 93ccda9956d988f4 finished leadership transfer from 93ccda9956d988f4 to d9f962a0ba698696 (took 100.904008ms)
+2021-08-20T05:02:40.6618091Z 2021-08-20 05:02:40.661681 I | rafthttp: stopping peer d9f962a0ba698696...
+2021-08-20T05:02:40.6624888Z 2021-08-20 05:02:40.662281 I | rafthttp: closed the TCP streaming connection with peer d9f962a0ba698696 (stream MsgApp v2 writer)
+2021-08-20T05:02:40.6627893Z 2021-08-20 05:02:40.662651 I | rafthttp: stopped streaming with peer d9f962a0ba698696 (writer)
+2021-08-20T05:02:40.6634506Z 2021-08-20 05:02:40.663239 I | rafthttp: closed the TCP streaming connection with peer d9f962a0ba698696 (stream Message writer)
+2021-08-20T05:02:40.6637440Z 2021-08-20 05:02:40.663622 I | rafthttp: stopped streaming with peer d9f962a0ba698696 (writer)
+2021-08-20T05:02:40.6640644Z 2021-08-20 05:02:40.663932 I | rafthttp: stopped HTTP pipelining with peer d9f962a0ba698696
+2021-08-20T05:02:40.6643968Z 2021-08-20 05:02:40.664245 W | rafthttp: lost the TCP streaming connection with peer d9f962a0ba698696 (stream MsgApp v2 reader)
+2021-08-20T05:02:40.6646611Z 2021-08-20 05:02:40.664535 E | rafthttp: failed to read d9f962a0ba698696 on stream MsgApp v2 (context canceled)
+2021-08-20T05:02:40.6649114Z 2021-08-20 05:02:40.664788 I | rafthttp: peer d9f962a0ba698696 became inactive (message send to peer failed)
+2021-08-20T05:02:40.6651762Z 2021-08-20 05:02:40.665049 I | rafthttp: stopped streaming with peer d9f962a0ba698696 (stream MsgApp v2 reader)
+2021-08-20T05:02:40.6654893Z 2021-08-20 05:02:40.665342 W | rafthttp: lost the TCP streaming connection with peer d9f962a0ba698696 (stream Message reader)
+2021-08-20T05:02:40.6658727Z 2021-08-20 05:02:40.665627 I | rafthttp: stopped streaming with peer d9f962a0ba698696 (stream Message reader)
+2021-08-20T05:02:40.6662090Z 2021-08-20 05:02:40.665995 I | rafthttp: stopped peer d9f962a0ba698696
+2021-08-20T05:02:40.6665356Z 2021-08-20 05:02:40.666319 I | rafthttp: stopping peer 57faddaff79adbeb...
+2021-08-20T05:02:40.6672393Z 2021-08-20 05:02:40.666928 I | rafthttp: closed the TCP streaming connection with peer 57faddaff79adbeb (stream MsgApp v2 writer)
+2021-08-20T05:02:40.6676377Z 2021-08-20 05:02:40.667396 I | rafthttp: stopped streaming with peer 57faddaff79adbeb (writer)
+2021-08-20T05:02:40.6683895Z 2021-08-20 05:02:40.668096 I | rafthttp: closed the TCP streaming connection with peer 57faddaff79adbeb (stream Message writer)
+2021-08-20T05:02:40.6687504Z 2021-08-20 05:02:40.668521 I | rafthttp: stopped streaming with peer 57faddaff79adbeb (writer)
+2021-08-20T05:02:40.6701240Z 2021-08-20 05:02:40.669857 I | rafthttp: stopped HTTP pipelining with peer 57faddaff79adbeb
+2021-08-20T05:02:40.6705499Z 2021-08-20 05:02:40.670285 W | rafthttp: lost the TCP streaming connection with peer 57faddaff79adbeb (stream MsgApp v2 reader)
+2021-08-20T05:02:40.6709434Z 2021-08-20 05:02:40.670680 E | rafthttp: failed to read 57faddaff79adbeb on stream MsgApp v2 (context canceled)
+2021-08-20T05:02:40.6713000Z 2021-08-20 05:02:40.671063 I | rafthttp: peer 57faddaff79adbeb became inactive (message send to peer failed)
+2021-08-20T05:02:40.6717100Z 2021-08-20 05:02:40.671462 I | rafthttp: stopped streaming with peer 57faddaff79adbeb (stream MsgApp v2 reader)
+2021-08-20T05:02:40.6721319Z 2021-08-20 05:02:40.671873 W | rafthttp: lost the TCP streaming connection with peer 57faddaff79adbeb (stream Message reader)
+2021-08-20T05:02:40.6724349Z 2021-08-20 05:02:40.672201 I | rafthttp: stopped streaming with peer 57faddaff79adbeb (stream Message reader)
+2021-08-20T05:02:40.6727107Z 2021-08-20 05:02:40.672498 I | rafthttp: stopped peer 57faddaff79adbeb
+2021-08-20T05:02:40.6741787Z 2021-08-20 05:02:40.673891 W | rafthttp: lost the TCP streaming connection with peer 93ccda9956d988f4 (stream Message reader)
+2021-08-20T05:02:40.6746228Z 2021-08-20 05:02:40.674354 W | rafthttp: lost the TCP streaming connection with peer 93ccda9956d988f4 (stream MsgApp v2 reader)
+2021-08-20T05:02:40.6750211Z 2021-08-20 05:02:40.674755 W | rafthttp: lost the TCP streaming connection with peer 93ccda9956d988f4 (stream Message reader)
+2021-08-20T05:02:40.6754429Z 2021-08-20 05:02:40.675155 W | rafthttp: lost the TCP streaming connection with peer 93ccda9956d988f4 (stream MsgApp v2 reader)
+2021-08-20T05:02:40.6758817Z 2021-08-20 05:02:40.675603 E | rafthttp: failed to dial 93ccda9956d988f4 on stream MsgApp v2 (dial tcp 127.0.0.1:50000: connect: connection refused)
+2021-08-20T05:02:40.6761831Z 2021-08-20 05:02:40.675949 I | rafthttp: peer 93ccda9956d988f4 became inactive (message send to peer failed)
+2021-08-20T05:02:40.6765513Z 2021-08-20 05:02:40.676288 E | rafthttp: failed to dial 93ccda9956d988f4 on stream MsgApp v2 (dial tcp 127.0.0.1:50000: connect: connection refused)
+2021-08-20T05:02:40.6768491Z 2021-08-20 05:02:40.676616 I | rafthttp: peer 93ccda9956d988f4 became inactive (message send to peer failed)
+2021-08-20T05:02:40.6804090Z 2021/08/20 05:02:40.680172 [info] [raftstore]: shard 2 handle serve raft stopped
+2021-08-20T05:02:40.6806582Z 2021/08/20 05:02:40.680464 [info] [raftstore]: shard 9 handle serve raft stopped
+2021-08-20T05:02:40.6810835Z 2021/08/20 05:02:40.680716 [info] [raftstore]: handle resource heartbeat resp task stopped
+2021-08-20T05:02:40.6811689Z 2021/08/20 05:02:40.680748 [info] [raftstore]: raft worker worker 0/0 exit
+2021-08-20T05:02:40.6812413Z 2021/08/20 05:02:40.680756 [info] [raftstore]: timer based tasks stopped
+2021-08-20T05:02:40.6818381Z 2021/08/20 05:02:40.680723 [info] [raftstore]: router event loop task stopped
+2021-08-20T05:02:40.6819121Z 2021/08/20 05:02:40.681376 [info] [transport]: transfer stopped
+2021-08-20T05:02:40.6819841Z 2021/08/20 05:02:40.681395 [info] [transport]: send snapshot worker stopped
+2021-08-20T05:02:40.6820617Z 2021/08/20 05:02:40.681402 [info] [transport]: send snapshot worker stopped
+2021-08-20T05:02:40.6821385Z 2021/08/20 05:02:40.681407 [info] [transport]: send snapshot worker stopped
+2021-08-20T05:02:40.6822146Z 2021/08/20 05:02:40.681411 [info] [transport]: send snapshot worker stopped
+2021-08-20T05:02:40.6823062Z 2021/08/20 05:02:40.681416 [info] [transport]: send snapshot worker stopped
+2021-08-20T05:02:40.6823843Z 2021/08/20 05:02:40.681418 [info] [transport]: send snapshot worker stopped
+2021-08-20T05:02:40.6824600Z 2021/08/20 05:02:40.681422 [info] [transport]: send snapshot worker stopped
+2021-08-20T05:02:40.6825408Z 2021/08/20 05:02:40.681425 [info] [transport]: send snapshot worker stopped
+2021-08-20T05:02:40.6826136Z 2021/08/20 05:02:40.681428 [info] [transport]: send raft worker stopped
+2021-08-20T05:02:40.6827639Z 2021/08/20 05:02:40.681492 [error] [transport]: session 2[127.0.0.1:34418] read failed with read tcp 127.0.0.1:10000->127.0.0.1:34418: use of closed network connection
+2021-08-20T05:02:40.6829130Z 2021/08/20 05:02:40.681530 [error] [transport]: session 1[127.0.0.1:34358] read failed with read tcp 127.0.0.1:10000->127.0.0.1:34358: use of closed network connection
+2021-08-20T05:02:40.6864244Z 2021/08/20 05:02:40.685674 [info] prophet: [prophet-leader/node-1]/lease: closed
+2021-08-20T05:02:40.6865468Z 2021/08/20 05:02:40.685743 [info] prophet: [prophet-leader/node-1]/keepalive: exit with context done
+2021-08-20T05:02:40.6866844Z 2021/08/20 05:02:40.685761 [info] prophet: [prophet-leader/node-1]/lease: exit with context done
+2021-08-20T05:02:40.6867990Z 2021/08/20 05:02:40.685776 [error] prophet: [prophet-leader/node-1]/lease: keep lease exit
+2021-08-20T05:02:40.6868822Z 2021/08/20 05:02:40.685784 [info] prophet: coordinator stops running 
+2021-08-20T05:02:40.6869552Z 2021/08/20 05:02:40.685786 [info] prophet: coordinator is stopping
+2021-08-20T05:02:40.6870283Z 2021/08/20 05:02:40.685788 [info] prophet: coordinator has been stopped
+2021-08-20T05:02:40.6871851Z 2021-08-20 05:02:40.685820 I | etcdserver: d9f962a0ba698696 starts leadership transfer from d9f962a0ba698696 to 57faddaff79adbeb
+2021-08-20T05:02:40.6875080Z {"level":"info","ts":"2021-08-20T05:02:40.685Z","caller":"raft/raft.go:1278","msg":"d9f962a0ba698696 [term 3] starts to transfer leadership to 57faddaff79adbeb"}
+2021-08-20T05:02:40.6877260Z {"level":"info","ts":"2021-08-20T05:02:40.685Z","caller":"raft/raft.go:1284","msg":"d9f962a0ba698696 sends MsgTimeoutNow to 57faddaff79adbeb immediately as 57faddaff79adbeb already has up-to-date log"}
+2021-08-20T05:02:40.6880385Z {"level":"info","ts":"2021-08-20T05:02:40.686Z","caller":"raft/raft.go:1372","msg":"57faddaff79adbeb [term 3] received MsgTimeoutNow from d9f962a0ba698696 and starts an election to get leadership."}
+2021-08-20T05:02:40.6882280Z {"level":"info","ts":"2021-08-20T05:02:40.686Z","caller":"raft/raft.go:724","msg":"57faddaff79adbeb became candidate at term 4"}
+2021-08-20T05:02:40.6884006Z {"level":"info","ts":"2021-08-20T05:02:40.686Z","caller":"raft/raft.go:835","msg":"57faddaff79adbeb received MsgVoteResp from 57faddaff79adbeb at term 4"}
+2021-08-20T05:02:40.6886533Z {"level":"info","ts":"2021-08-20T05:02:40.686Z","caller":"raft/raft.go:822","msg":"57faddaff79adbeb [logterm: 3, index: 38] sent MsgVote request to 93ccda9956d988f4 at term 4"}
+2021-08-20T05:02:40.6888415Z {"level":"info","ts":"2021-08-20T05:02:40.686Z","caller":"raft/raft.go:822","msg":"57faddaff79adbeb [logterm: 3, index: 38] sent MsgVote request to d9f962a0ba698696 at term 4"}
+2021-08-20T05:02:40.6890122Z {"level":"info","ts":"2021-08-20T05:02:40.686Z","caller":"raft/node.go:331","msg":"raft.node: 57faddaff79adbeb lost leader d9f962a0ba698696 at term 4"}
+2021-08-20T05:02:40.6891830Z {"level":"info","ts":"2021-08-20T05:02:40.687Z","caller":"raft/raft.go:870","msg":"d9f962a0ba698696 [term: 3] received a MsgVote message with higher term from 57faddaff79adbeb [term: 4]"}
+2021-08-20T05:02:40.6893286Z {"level":"info","ts":"2021-08-20T05:02:40.687Z","caller":"raft/raft.go:711","msg":"d9f962a0ba698696 became follower at term 4"}
+2021-08-20T05:02:40.6894932Z {"level":"info","ts":"2021-08-20T05:02:40.687Z","caller":"raft/raft.go:971","msg":"d9f962a0ba698696 [logterm: 3, index: 38, vote: 0] cast MsgVote for 57faddaff79adbeb [logterm: 3, index: 38] at term 4"}
+2021-08-20T05:02:40.6896642Z {"level":"info","ts":"2021-08-20T05:02:40.687Z","caller":"raft/node.go:331","msg":"raft.node: d9f962a0ba698696 lost leader d9f962a0ba698696 at term 4"}
+2021-08-20T05:02:40.6898178Z {"level":"info","ts":"2021-08-20T05:02:40.687Z","caller":"raft/raft.go:835","msg":"57faddaff79adbeb received MsgVoteResp from d9f962a0ba698696 at term 4"}
+2021-08-20T05:02:40.6899776Z {"level":"info","ts":"2021-08-20T05:02:40.688Z","caller":"raft/raft.go:1319","msg":"57faddaff79adbeb has received 2 MsgVoteResp votes and 0 vote rejections"}
+2021-08-20T05:02:40.6901186Z {"level":"info","ts":"2021-08-20T05:02:40.688Z","caller":"raft/raft.go:776","msg":"57faddaff79adbeb became leader at term 4"}
+2021-08-20T05:02:40.6902659Z {"level":"info","ts":"2021-08-20T05:02:40.688Z","caller":"raft/node.go:325","msg":"raft.node: 57faddaff79adbeb elected leader 57faddaff79adbeb at term 4"}
+2021-08-20T05:02:40.6904236Z {"level":"info","ts":"2021-08-20T05:02:40.688Z","caller":"raft/node.go:325","msg":"raft.node: d9f962a0ba698696 elected leader 57faddaff79adbeb at term 4"}
+2021-08-20T05:02:40.7584311Z 2021/08/20 05:02:40.757849 [info] prophet: client start init connection to leader 127.0.0.1:30000
+2021-08-20T05:02:40.7585675Z 2021/08/20 05:02:40.758042 [error] prophet: reset leader connection failed with client is closed
+2021-08-20T05:02:40.7586617Z 2021/08/20 05:02:40.758078 [error] prophet: client read loop stopped
+2021-08-20T05:02:40.7589620Z 2021/08/20 05:02:40.758759 [error] prophet: init leader conn failed with dial tcp 127.0.0.1:30000: connect: connection refused, retry later
+2021-08-20T05:02:40.7865107Z 2021-08-20 05:02:40.786218 I | etcdserver: d9f962a0ba698696 finished leadership transfer from d9f962a0ba698696 to 57faddaff79adbeb (took 100.393902ms)
+2021-08-20T05:02:40.7867189Z 2021/08/20 05:02:40.786254 [info] prophet: [prophet-leader/node-1]/loop: exit
+2021-08-20T05:02:40.7868689Z 2021-08-20 05:02:40.786292 I | rafthttp: stopped HTTP pipelining with peer 93ccda9956d988f4
+2021-08-20T05:02:40.7870243Z 2021-08-20 05:02:40.786301 I | rafthttp: stopping peer 93ccda9956d988f4...
+2021-08-20T05:02:40.7872074Z 2021-08-20 05:02:40.786587 I | rafthttp: closed the TCP streaming connection with peer 93ccda9956d988f4 (stream MsgApp v2 writer)
+2021-08-20T05:02:40.7873712Z 2021-08-20 05:02:40.786592 I | rafthttp: stopped streaming with peer 93ccda9956d988f4 (writer)
+2021-08-20T05:02:40.7875623Z 2021-08-20 05:02:40.786893 I | rafthttp: closed the TCP streaming connection with peer 93ccda9956d988f4 (stream Message writer)
+2021-08-20T05:02:40.7877421Z 2021-08-20 05:02:40.786901 I | rafthttp: stopped streaming with peer 93ccda9956d988f4 (writer)
+2021-08-20T05:02:40.7879092Z 2021-08-20 05:02:40.786985 I | rafthttp: stopped HTTP pipelining with peer 93ccda9956d988f4
+2021-08-20T05:02:40.7880594Z 2021-08-20 05:02:40.786996 I | rafthttp: stopped streaming with peer 93ccda9956d988f4 (stream MsgApp v2 reader)
+2021-08-20T05:02:40.7882086Z 2021-08-20 05:02:40.787003 I | rafthttp: stopped streaming with peer 93ccda9956d988f4 (stream Message reader)
+2021-08-20T05:02:40.7883326Z 2021-08-20 05:02:40.787007 I | rafthttp: stopped peer 93ccda9956d988f4
+2021-08-20T05:02:40.7884506Z 2021-08-20 05:02:40.787010 I | rafthttp: stopping peer 57faddaff79adbeb...
+2021-08-20T05:02:40.7886069Z 2021-08-20 05:02:40.787287 I | rafthttp: closed the TCP streaming connection with peer 57faddaff79adbeb (stream MsgApp v2 writer)
+2021-08-20T05:02:40.7888483Z 2021-08-20 05:02:40.787295 I | rafthttp: stopped streaming with peer 57faddaff79adbeb (writer)
+2021-08-20T05:02:40.7890061Z 2021-08-20 05:02:40.787597 I | rafthttp: closed the TCP streaming connection with peer 57faddaff79adbeb (stream Message writer)
+2021-08-20T05:02:40.7891466Z 2021-08-20 05:02:40.787606 I | rafthttp: stopped streaming with peer 57faddaff79adbeb (writer)
+2021-08-20T05:02:40.7892761Z 2021-08-20 05:02:40.787665 I | rafthttp: stopped HTTP pipelining with peer 57faddaff79adbeb
+2021-08-20T05:02:40.7894240Z 2021-08-20 05:02:40.787706 W | rafthttp: lost the TCP streaming connection with peer 57faddaff79adbeb (stream MsgApp v2 reader)
+2021-08-20T05:02:40.7895890Z 2021-08-20 05:02:40.787712 E | rafthttp: failed to read 57faddaff79adbeb on stream MsgApp v2 (context canceled)
+2021-08-20T05:02:40.7897349Z 2021-08-20 05:02:40.787715 I | rafthttp: peer 57faddaff79adbeb became inactive (message send to peer failed)
+2021-08-20T05:02:40.7898780Z 2021-08-20 05:02:40.787730 I | rafthttp: stopped streaming with peer 57faddaff79adbeb (stream MsgApp v2 reader)
+2021-08-20T05:02:40.7900331Z 2021-08-20 05:02:40.787754 W | rafthttp: lost the TCP streaming connection with peer 57faddaff79adbeb (stream Message reader)
+2021-08-20T05:02:40.7901796Z 2021-08-20 05:02:40.787758 I | rafthttp: stopped streaming with peer 57faddaff79adbeb (stream Message reader)
+2021-08-20T05:02:40.7903009Z 2021-08-20 05:02:40.787763 I | rafthttp: stopped peer 57faddaff79adbeb
+2021-08-20T05:02:40.7912523Z 2021-08-20 05:02:40.791036 W | rafthttp: lost the TCP streaming connection with peer d9f962a0ba698696 (stream Message reader)
+2021-08-20T05:02:40.7916888Z 2021-08-20 05:02:40.791513 W | rafthttp: lost the TCP streaming connection with peer d9f962a0ba698696 (stream MsgApp v2 reader)
+2021-08-20T05:02:40.7921108Z 2021-08-20 05:02:40.791923 E | rafthttp: failed to dial d9f962a0ba698696 on stream MsgApp v2 (dial tcp 127.0.0.1:50001: connect: connection refused)
+2021-08-20T05:02:40.7924666Z 2021-08-20 05:02:40.792269 I | rafthttp: peer d9f962a0ba698696 became inactive (message send to peer failed)
+2021-08-20T05:02:40.7951332Z 2021/08/20 05:02:40.794963 [info] [raftstore]: shard 2 handle serve raft stopped
+2021-08-20T05:02:40.7955036Z 2021/08/20 05:02:40.795353 [info] [raftstore]: shard 9 handle serve raft stopped
+2021-08-20T05:02:40.7959220Z 2021/08/20 05:02:40.795740 [info] [raftstore]: handle resource heartbeat resp task stopped
+2021-08-20T05:02:40.7960036Z 2021/08/20 05:02:40.795741 [info] [raftstore]: raft worker worker 0/0 exit
+2021-08-20T05:02:40.7960755Z 2021/08/20 05:02:40.795745 [info] [raftstore]: timer based tasks stopped
+2021-08-20T05:02:40.7961514Z 2021/08/20 05:02:40.795746 [info] [raftstore]: router event loop task stopped
+2021-08-20T05:02:40.7964464Z 2021/08/20 05:02:40.796283 [info] [transport]: send snapshot worker stopped
+2021-08-20T05:02:40.7965293Z 2021/08/20 05:02:40.796295 [info] [transport]: send snapshot worker stopped
+2021-08-20T05:02:40.7966115Z 2021/08/20 05:02:40.796300 [info] [transport]: send snapshot worker stopped
+2021-08-20T05:02:40.7967176Z 2021/08/20 05:02:40.796305 [info] [transport]: send snapshot worker stopped
+2021-08-20T05:02:40.7967955Z 2021/08/20 05:02:40.796309 [info] [transport]: send snapshot worker stopped
+2021-08-20T05:02:40.7968721Z 2021/08/20 05:02:40.796314 [info] [transport]: send snapshot worker stopped
+2021-08-20T05:02:40.7969493Z 2021/08/20 05:02:40.796319 [info] [transport]: send snapshot worker stopped
+2021-08-20T05:02:40.7970242Z 2021/08/20 05:02:40.796324 [info] [transport]: send snapshot worker stopped
+2021-08-20T05:02:40.7970988Z 2021/08/20 05:02:40.796331 [info] [transport]: send raft worker stopped
+2021-08-20T05:02:40.7971673Z 2021/08/20 05:02:40.796519 [info] [transport]: transfer stopped
+2021-08-20T05:02:40.7973688Z 2021/08/20 05:02:40.796689 [error] [transport]: session 1[127.0.0.1:49948] read failed with read tcp 127.0.0.1:10001->127.0.0.1:49948: use of closed network connection
+2021-08-20T05:02:40.9416988Z 2021-08-20 05:02:40.941315 W | rafthttp: lost the TCP streaming connection with peer 93ccda9956d988f4 (stream Message writer)
+2021-08-20T05:02:40.9597298Z 2021/08/20 05:02:40.959393 [error] prophet: reset leader connection failed with client is closed
+2021-08-20T05:02:40.9606369Z 2021/08/20 05:02:40.959463 [error] prophet: client read loop stopped
+2021-08-20T05:02:41.0420287Z 2021-08-20 05:02:41.041808 W | rafthttp: failed to process raft message (raft: stopped)
+2021-08-20T05:02:41.1421583Z 2021-08-20 05:02:41.141879 W | rafthttp: lost the TCP streaming connection with peer d9f962a0ba698696 (stream Message writer)
+2021-08-20T05:02:41.1426855Z 2021-08-20 05:02:41.142452 W | rafthttp: failed to process raft message (raft: stopped)
+2021-08-20T05:02:41.2415255Z 2021-08-20 05:02:41.241225 W | rafthttp: failed to process raft message (raft: stopped)
+2021-08-20T05:02:41.2420821Z 2021-08-20 05:02:41.241889 W | rafthttp: failed to process raft message (raft: stopped)
+2021-08-20T05:02:41.2914614Z 2021/08/20 05:02:41.291251 [error] [raftstore]: send store heartbeat failed with client is closed
+2021-08-20T05:02:41.3803714Z 2021/08/20 05:02:41.380196 [info] [raftstore]: shard 9 raft tick stopped
+2021-08-20T05:02:41.3806341Z 2021/08/20 05:02:41.380528 [info] [raftstore]: shard 9 raft tick stopped
+2021-08-20T05:02:41.8078557Z {"level":"warn","ts":"2021-08-20T05:02:41.807Z","caller":"clientv3/retry_interceptor.go:62","msg":"retrying of unary invoker failed","target":"endpoint://client-9341d0db-1a23-401a-8900-f1c208b42c42/127.0.0.1:40002","attempt":0,"error":"rpc error: code = DeadlineExceeded desc = context deadline exceeded"}
+2021-08-20T05:02:41.8082906Z 2021/08/20 05:02:41.808131 [info] prophet: [prophet-leader/node-2]/lease: close failed with context deadline exceeded
+2021-08-20T05:02:41.8276273Z 2021-08-20 05:02:41.827415 W | etcdserver: 57faddaff79adbeb failed to transfer leadership (etcdserver: unhealthy cluster)
+2021-08-20T05:02:41.8280051Z 2021-08-20 05:02:41.827861 I | rafthttp: stopped HTTP pipelining with peer 93ccda9956d988f4
+2021-08-20T05:02:41.8282741Z 2021-08-20 05:02:41.828145 I | rafthttp: stopped HTTP pipelining with peer d9f962a0ba698696
+2021-08-20T05:02:41.8285171Z 2021-08-20 05:02:41.828404 I | rafthttp: stopping peer 93ccda9956d988f4...
+2021-08-20T05:02:41.8291292Z 2021-08-20 05:02:41.828930 I | rafthttp: closed the TCP streaming connection with peer 93ccda9956d988f4 (stream MsgApp v2 writer)
+2021-08-20T05:02:41.8294008Z 2021-08-20 05:02:41.829273 I | rafthttp: stopped streaming with peer 93ccda9956d988f4 (writer)
+2021-08-20T05:02:41.8297099Z 2021-08-20 05:02:41.829572 I | rafthttp: stopped streaming with peer 93ccda9956d988f4 (writer)
+2021-08-20T05:02:41.8299777Z 2021-08-20 05:02:41.829851 I | rafthttp: stopped HTTP pipelining with peer 93ccda9956d988f4
+2021-08-20T05:02:41.8302451Z 2021-08-20 05:02:41.830110 I | rafthttp: stopped streaming with peer 93ccda9956d988f4 (stream MsgApp v2 reader)
+2021-08-20T05:02:41.8305228Z 2021-08-20 05:02:41.830387 I | rafthttp: stopped streaming with peer 93ccda9956d988f4 (stream Message reader)
+2021-08-20T05:02:41.8307686Z 2021-08-20 05:02:41.830658 I | rafthttp: stopped peer 93ccda9956d988f4
+2021-08-20T05:02:41.8309997Z 2021-08-20 05:02:41.830889 I | rafthttp: stopping peer d9f962a0ba698696...
+2021-08-20T05:02:41.8316549Z 2021-08-20 05:02:41.831461 I | rafthttp: closed the TCP streaming connection with peer d9f962a0ba698696 (stream MsgApp v2 writer)
+2021-08-20T05:02:41.8319856Z 2021-08-20 05:02:41.831801 I | rafthttp: stopped streaming with peer d9f962a0ba698696 (writer)
+2021-08-20T05:02:41.8323768Z 2021-08-20 05:02:41.832126 I | rafthttp: stopped streaming with peer d9f962a0ba698696 (writer)
+2021-08-20T05:02:41.8327925Z 2021-08-20 05:02:41.832529 I | rafthttp: stopped HTTP pipelining with peer d9f962a0ba698696
+2021-08-20T05:02:41.8331670Z 2021-08-20 05:02:41.832914 I | rafthttp: stopped streaming with peer d9f962a0ba698696 (stream MsgApp v2 reader)
+2021-08-20T05:02:41.8335449Z 2021-08-20 05:02:41.833295 I | rafthttp: stopped streaming with peer d9f962a0ba698696 (stream Message reader)
+2021-08-20T05:02:41.8338957Z 2021-08-20 05:02:41.833671 I | rafthttp: stopped peer d9f962a0ba698696
+2021-08-20T05:02:41.8476381Z 2021/08/20 05:02:41.847506 [info] [raftstore]: shard 2 handle serve raft stopped
+2021-08-20T05:02:41.8478547Z 2021/08/20 05:02:41.847769 [info] [raftstore]: shard 9 handle serve raft stopped
+2021-08-20T05:02:41.8481139Z 2021/08/20 05:02:41.847992 [info] [raftstore]: handle resource heartbeat resp task stopped
+2021-08-20T05:02:41.8482230Z 2021/08/20 05:02:41.848014 [info] [raftstore]: timer based tasks stopped
+2021-08-20T05:02:41.8483153Z 2021/08/20 05:02:41.848025 [info] [raftstore]: raft worker worker 0/0 exit
+2021-08-20T05:02:41.8485323Z 2021/08/20 05:02:41.848422 [info] [raftstore]: router event loop task stopped
+2021-08-20T05:02:41.8490756Z 2021/08/20 05:02:41.848668 [info] [transport]: send snapshot worker stopped
+2021-08-20T05:02:41.8491780Z 2021/08/20 05:02:41.848684 [info] [transport]: send snapshot worker stopped
+2021-08-20T05:02:41.8492683Z 2021/08/20 05:02:41.848689 [info] [transport]: send snapshot worker stopped
+2021-08-20T05:02:41.8493534Z 2021/08/20 05:02:41.848694 [info] [transport]: send snapshot worker stopped
+2021-08-20T05:02:41.8494403Z 2021/08/20 05:02:41.848703 [info] [transport]: send snapshot worker stopped
+2021-08-20T05:02:41.8495267Z 2021/08/20 05:02:41.848705 [info] [transport]: send snapshot worker stopped
+2021-08-20T05:02:41.8496056Z 2021/08/20 05:02:41.848710 [info] [transport]: transfer stopped
+2021-08-20T05:02:41.8496862Z 2021/08/20 05:02:41.848715 [info] [transport]: send raft worker stopped
+2021-08-20T05:02:41.8497983Z --- FAIL: TestSpeedupAddShard (13.68s)

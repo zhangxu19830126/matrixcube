@@ -62,6 +62,9 @@ func (pr *peerReplica) doPostApply(result asyncApplyResult) {
 	pr.ps.appliedIndexTerm = result.appliedIndexTerm
 	pr.rn.AdvanceApply(result.applyState.AppliedIndex)
 
+	logger.Errorf(">>>>>>>>>>>> shard %d peer %d AdvanceApply with %d",
+		pr.shardID, pr.peer.ID, result.applyState.AppliedIndex)
+
 	logger.Debugf("shard %d async apply committied entries finished at %d, last %d",
 		pr.shardID,
 		result.applyState.AppliedIndex,

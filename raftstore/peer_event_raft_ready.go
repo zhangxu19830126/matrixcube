@@ -18,6 +18,7 @@ import (
 	"time"
 
 	"github.com/fagongzi/util/protoc"
+	"github.com/matrixorigin/matrixcube/components/prophet/pb/metapb"
 	"github.com/matrixorigin/matrixcube/metric"
 	"github.com/matrixorigin/matrixcube/pb"
 	"github.com/matrixorigin/matrixcube/pb/bhmetapb"
@@ -318,6 +319,8 @@ func (pr *peerReplica) handleRaftReadyApply(ctx *readyContext, rd *raft.Ready) {
 
 	result := pr.doApplySnapshot(ctx, rd)
 	if !pr.isLeader() {
+		logger.Errorf(">>>>>>>>>>>> shard %d peer %d send %d msgs",
+			pr.shardID, pr.peer.ID, len(rd.Messages))
 		pr.send(rd.Messages)
 	}
 
@@ -458,14 +461,25 @@ func (pr *peerReplica) send(msgs []raftpb.Message) {
 		err := pr.sendRaftMsg(msg)
 		if err != nil {
 			// We don't care that the message is sent failed, so here just log this error
-			logger.Debugf("shard %d send msg failure, from_peer=<%d> to_peer=<%d>, errors:\n%s",
+			logger.Errorf("shard %d peer %d send msg failure, from_peer=<%d> to_peer=<%d>, errors:\n%s",
 				pr.shardID,
+				pr.peer.ID,
 				msg.From,
 				msg.To,
 				err)
 		}
 		pr.metrics.ready.message++
 	}
+}
+
+func (pr *peerReplica) getPeerByID(id uint64) (metapb.Peer, bool) {
+	for idx := range pr.ps.shard.Peers {
+		if pr.ps.shard.Peers[idx].ID == id {
+			return pr.ps.shard.Peers[idx], true
+		}
+	}
+
+	return metapb.Peer{}, false
 }
 
 func (pr *peerReplica) sendRaftMsg(msg raftpb.Message) error {
@@ -479,7 +493,13 @@ func (pr *peerReplica) sendRaftMsg(msg raftpb.Message) error {
 	sendMsg.From = pr.peer
 	sendMsg.To, _ = pr.store.getPeer(msg.To)
 	if sendMsg.To.ID == 0 {
-		return fmt.Errorf("can not found peer<%d>", msg.To)
+		sendMsg.To, _ = pr.getPeerByID(msg.To)
+		if sendMsg.To.ID == 0 {
+			logger.Fatalf("shard %d peer %d missing peer %d",
+				pr.shardID,
+				pr.peer.ID,
+				msg.To)
+		}
 	}
 
 	// There could be two cases:

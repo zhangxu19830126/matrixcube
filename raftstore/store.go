@@ -590,9 +590,10 @@ func (s *store) addPR(pr *peerReplica) bool {
 		return false
 	}
 
-	logger.Infof("shard %d added with peer %+v, epoch %+v, peers %+v, raft worker %d, apply worker %s",
+	logger.Infof("shard %d peer %d raft %x added, epoch %+v, peers %+v, raft worker %d, apply worker %s",
 		pr.shardID,
-		pr.peer,
+		pr.peer.ID,
+		pr.peer.ID,
 		pr.ps.shard.Epoch,
 		pr.ps.shard.Peers,
 		pr.eventWorker,

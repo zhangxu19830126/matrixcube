@@ -744,6 +744,7 @@ func (c *TestRaftCluster) WaitShardStateChangedTo(t *testing.T, id uint64, to me
 		default:
 			res, err := c.GetProphet().GetStorage().GetResource(id)
 			assert.NoError(t, err)
+			logger.Errorf(">>>>>>>>>>>>>> %+v", res)
 			if res != nil && res.State() == to {
 				return
 			}

@@ -1,0 +1,941 @@
+2021-08-20T04:48:53.3729682Z Found online and idle hosted runner in the current repository's organization account that matches the required labels: 'ubuntu-latest'
+2021-08-20T04:48:53.4761020Z Waiting for a Hosted runner in the 'organization' to pick this job...
+2021-08-20T04:48:54.2679175Z Job is waiting for a hosted runner to come online.
+2021-08-20T04:48:57.6047025Z Job is about to start running on the hosted runner: GitHub Actions 4 (hosted)
+2021-08-20T04:49:00.7660462Z Current runner version: '2.280.3'
+2021-08-20T04:49:00.7690242Z ##[group]Operating System
+2021-08-20T04:49:00.7691062Z Ubuntu
+2021-08-20T04:49:00.7691704Z 20.04.2
+2021-08-20T04:49:00.7692058Z LTS
+2021-08-20T04:49:00.7692493Z ##[endgroup]
+2021-08-20T04:49:00.7692945Z ##[group]Virtual Environment
+2021-08-20T04:49:00.7693517Z Environment: ubuntu-20.04
+2021-08-20T04:49:00.7694027Z Version: 20210816.1
+2021-08-20T04:49:00.7694848Z Included Software: https://github.com/actions/virtual-environments/blob/ubuntu20/20210816.1/images/linux/Ubuntu2004-README.md
+2021-08-20T04:49:00.7696026Z Image Release: https://github.com/actions/virtual-environments/releases/tag/ubuntu20%2F20210816.1
+2021-08-20T04:49:00.7696740Z ##[endgroup]
+2021-08-20T04:49:00.7697284Z ##[group]Virtual Environment Provisioner
+2021-08-20T04:49:00.7697813Z 1.0.0.0-master-20210802-2
+2021-08-20T04:49:00.7698327Z ##[endgroup]
+2021-08-20T04:49:00.7699415Z ##[group]GITHUB_TOKEN Permissions
+2021-08-20T04:49:00.7700565Z Contents: read
+2021-08-20T04:49:00.7701097Z Metadata: read
+2021-08-20T04:49:00.7701634Z ##[endgroup]
+2021-08-20T04:49:00.7704336Z Prepare workflow directory
+2021-08-20T04:49:00.8290619Z Prepare all required actions
+2021-08-20T04:49:00.8299311Z Getting action download info
+2021-08-20T04:49:01.1289522Z Download action repository 'actions/checkout@v2' (SHA:5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f)
+2021-08-20T04:49:03.3015288Z Download action repository 'actions/setup-node@v2' (SHA:25316bbc1f10ac9d8798711f44914b1cf3c4e954)
+2021-08-20T04:49:03.7304913Z Download action repository 'actions/setup-go@v2' (SHA:37335c7bb261b353407cff977110895fa0b4f7d8)
+2021-08-20T04:49:04.1988021Z ##[group]Run actions/checkout@v2
+2021-08-20T04:49:04.1988629Z with:
+2021-08-20T04:49:04.1989166Z   repository: matrixorigin/matrixcube
+2021-08-20T04:49:04.1990085Z   token: ***
+2021-08-20T04:49:04.1990465Z   ssh-strict: true
+2021-08-20T04:49:04.1990989Z   persist-credentials: true
+2021-08-20T04:49:04.1991739Z   clean: true
+2021-08-20T04:49:04.1992140Z   fetch-depth: 1
+2021-08-20T04:49:04.1992492Z   lfs: false
+2021-08-20T04:49:04.1992869Z   submodules: false
+2021-08-20T04:49:04.1993212Z ##[endgroup]
+2021-08-20T04:49:04.8215251Z Syncing repository: matrixorigin/matrixcube
+2021-08-20T04:49:04.8220917Z ##[group]Getting Git version info
+2021-08-20T04:49:04.8222838Z Working directory is '/home/runner/work/matrixcube/matrixcube'
+2021-08-20T04:49:04.8224629Z [command]/usr/bin/git version
+2021-08-20T04:49:04.8225352Z git version 2.32.0
+2021-08-20T04:49:04.8228280Z ##[endgroup]
+2021-08-20T04:49:04.8229345Z Deleting the contents of '/home/runner/work/matrixcube/matrixcube'
+2021-08-20T04:49:04.8232587Z ##[group]Initializing the repository
+2021-08-20T04:49:04.8235151Z [command]/usr/bin/git init /home/runner/work/matrixcube/matrixcube
+2021-08-20T04:49:04.8236714Z hint: Using 'master' as the name for the initial branch. This default branch name
+2021-08-20T04:49:04.8238120Z hint: is subject to change. To configure the initial branch name to use in all
+2021-08-20T04:49:04.8239725Z hint: of your new repositories, which will suppress this warning, call:
+2021-08-20T04:49:04.8240666Z hint: 
+2021-08-20T04:49:04.8241690Z hint: 	git config --global init.defaultBranch <name>
+2021-08-20T04:49:04.8242490Z hint: 
+2021-08-20T04:49:04.8243448Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2021-08-20T04:49:04.8244811Z hint: 'development'. The just-created branch can be renamed via this command:
+2021-08-20T04:49:04.8245613Z hint: 
+2021-08-20T04:49:04.8246800Z hint: 	git branch -m <name>
+2021-08-20T04:49:04.8248086Z Initialized empty Git repository in /home/runner/work/matrixcube/matrixcube/.git/
+2021-08-20T04:49:04.8249204Z [command]/usr/bin/git remote add origin https://github.com/matrixorigin/matrixcube
+2021-08-20T04:49:04.8250650Z ##[endgroup]
+2021-08-20T04:49:04.8251996Z ##[group]Disabling automatic garbage collection
+2021-08-20T04:49:04.8253094Z [command]/usr/bin/git config --local gc.auto 0
+2021-08-20T04:49:04.8418210Z ##[endgroup]
+2021-08-20T04:49:04.8423959Z ##[group]Setting up auth
+2021-08-20T04:49:04.8425541Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2021-08-20T04:49:04.8426873Z [command]/usr/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :
+2021-08-20T04:49:04.8428203Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2021-08-20T04:49:04.8429845Z [command]/usr/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :
+2021-08-20T04:49:04.8431775Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2021-08-20T04:49:04.8432825Z ##[endgroup]
+2021-08-20T04:49:04.8433983Z ##[group]Fetching the repository
+2021-08-20T04:49:04.8437036Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +d72c8e3698842e20924ef140976e992b705a89dd:refs/remotes/origin/master
+2021-08-20T04:49:04.9275711Z remote: Enumerating objects: 392, done.        
+2021-08-20T04:49:04.9276826Z remote: Counting objects:   0% (1/392)        
+2021-08-20T04:49:04.9277352Z remote: Counting objects:   1% (4/392)        
+2021-08-20T04:49:04.9277819Z remote: Counting objects:   2% (8/392)        
+2021-08-20T04:49:04.9278299Z remote: Counting objects:   3% (12/392)        
+2021-08-20T04:49:04.9278772Z remote: Counting objects:   4% (16/392)        
+2021-08-20T04:49:04.9279465Z remote: Counting objects:   5% (20/392)        
+2021-08-20T04:49:04.9280557Z remote: Counting objects:   6% (24/392)        
+2021-08-20T04:49:04.9280971Z remote: Counting objects:   7% (28/392)        
+2021-08-20T04:49:04.9281558Z remote: Counting objects:   8% (32/392)        
+2021-08-20T04:49:04.9281995Z remote: Counting objects:   9% (36/392)        
+2021-08-20T04:49:04.9282674Z remote: Counting objects:  10% (40/392)        
+2021-08-20T04:49:04.9283122Z remote: Counting objects:  11% (44/392)        
+2021-08-20T04:49:04.9283576Z remote: Counting objects:  12% (48/392)        
+2021-08-20T04:49:04.9284013Z remote: Counting objects:  13% (51/392)        
+2021-08-20T04:49:04.9284459Z remote: Counting objects:  14% (55/392)        
+2021-08-20T04:49:04.9284891Z remote: Counting objects:  15% (59/392)        
+2021-08-20T04:49:04.9285342Z remote: Counting objects:  16% (63/392)        
+2021-08-20T04:49:04.9289626Z remote: Counting objects:  17% (67/392)        
+2021-08-20T04:49:04.9290099Z remote: Counting objects:  18% (71/392)        
+2021-08-20T04:49:04.9290556Z remote: Counting objects:  19% (75/392)        
+2021-08-20T04:49:04.9290992Z remote: Counting objects:  20% (79/392)        
+2021-08-20T04:49:04.9291442Z remote: Counting objects:  21% (83/392)        
+2021-08-20T04:49:04.9291881Z remote: Counting objects:  22% (87/392)        
+2021-08-20T04:49:04.9292469Z remote: Counting objects:  23% (91/392)        
+2021-08-20T04:49:04.9292917Z remote: Counting objects:  24% (95/392)        
+2021-08-20T04:49:04.9293345Z remote: Counting objects:  25% (98/392)        
+2021-08-20T04:49:04.9293791Z remote: Counting objects:  26% (102/392)        
+2021-08-20T04:49:04.9294223Z remote: Counting objects:  27% (106/392)        
+2021-08-20T04:49:04.9294667Z remote: Counting objects:  28% (110/392)        
+2021-08-20T04:49:04.9295276Z remote: Counting objects:  29% (114/392)        
+2021-08-20T04:49:04.9296079Z remote: Counting objects:  30% (118/392)        
+2021-08-20T04:49:04.9296521Z remote: Counting objects:  31% (122/392)        
+2021-08-20T04:49:04.9296989Z remote: Counting objects:  32% (126/392)        
+2021-08-20T04:49:04.9297448Z remote: Counting objects:  33% (130/392)        
+2021-08-20T04:49:04.9297887Z remote: Counting objects:  34% (134/392)        
+2021-08-20T04:49:04.9298535Z remote: Counting objects:  35% (138/392)        
+2021-08-20T04:49:04.9299117Z remote: Counting objects:  36% (142/392)        
+2021-08-20T04:49:04.9299745Z remote: Counting objects:  37% (146/392)        
+2021-08-20T04:49:04.9300149Z remote: Counting objects:  38% (149/392)        
+2021-08-20T04:49:04.9300571Z remote: Counting objects:  39% (153/392)        
+2021-08-20T04:49:04.9300977Z remote: Counting objects:  40% (157/392)        
+2021-08-20T04:49:04.9301390Z remote: Counting objects:  41% (161/392)        
+2021-08-20T04:49:04.9301811Z remote: Counting objects:  42% (165/392)        
+2021-08-20T04:49:04.9302216Z remote: Counting objects:  43% (169/392)        
+2021-08-20T04:49:04.9302637Z remote: Counting objects:  44% (173/392)        
+2021-08-20T04:49:04.9303048Z remote: Counting objects:  45% (177/392)        
+2021-08-20T04:49:04.9303461Z remote: Counting objects:  46% (181/392)        
+2021-08-20T04:49:04.9303863Z remote: Counting objects:  47% (185/392)        
+2021-08-20T04:49:04.9304275Z remote: Counting objects:  48% (189/392)        
+2021-08-20T04:49:04.9304674Z remote: Counting objects:  49% (193/392)        
+2021-08-20T04:49:04.9305086Z remote: Counting objects:  50% (196/392)        
+2021-08-20T04:49:04.9305509Z remote: Counting objects:  51% (200/392)        
+2021-08-20T04:49:04.9305912Z remote: Counting objects:  52% (204/392)        
+2021-08-20T04:49:04.9306336Z remote: Counting objects:  53% (208/392)        
+2021-08-20T04:49:04.9306742Z remote: Counting objects:  54% (212/392)        
+2021-08-20T04:49:04.9307157Z remote: Counting objects:  55% (216/392)        
+2021-08-20T04:49:04.9307559Z remote: Counting objects:  56% (220/392)        
+2021-08-20T04:49:04.9307974Z remote: Counting objects:  57% (224/392)        
+2021-08-20T04:49:04.9308447Z remote: Counting objects:  58% (228/392)        
+2021-08-20T04:49:04.9308876Z remote: Counting objects:  59% (232/392)        
+2021-08-20T04:49:04.9309279Z remote: Counting objects:  60% (236/392)        
+2021-08-20T04:49:04.9309689Z remote: Counting objects:  61% (240/392)        
+2021-08-20T04:49:04.9310185Z remote: Counting objects:  62% (244/392)        
+2021-08-20T04:49:04.9310592Z remote: Counting objects:  63% (247/392)        
+2021-08-20T04:49:04.9311022Z remote: Counting objects:  64% (251/392)        
+2021-08-20T04:49:04.9311439Z remote: Counting objects:  65% (255/392)        
+2021-08-20T04:49:04.9311844Z remote: Counting objects:  66% (259/392)        
+2021-08-20T04:49:04.9312263Z remote: Counting objects:  67% (263/392)        
+2021-08-20T04:49:04.9312846Z remote: Counting objects:  68% (267/392)        
+2021-08-20T04:49:04.9313283Z remote: Counting objects:  69% (271/392)        
+2021-08-20T04:49:04.9314040Z remote: Counting objects:  70% (275/392)        
+2021-08-20T04:49:04.9314507Z remote: Counting objects:  71% (279/392)        
+2021-08-20T04:49:04.9314948Z remote: Counting objects:  72% (283/392)        
+2021-08-20T04:49:04.9315398Z remote: Counting objects:  73% (287/392)        
+2021-08-20T04:49:04.9315989Z remote: Counting objects:  74% (291/392)        
+2021-08-20T04:49:04.9316433Z remote: Counting objects:  75% (294/392)        
+2021-08-20T04:49:04.9317015Z remote: Counting objects:  76% (298/392)        
+2021-08-20T04:49:04.9317421Z remote: Counting objects:  77% (302/392)        
+2021-08-20T04:49:04.9317840Z remote: Counting objects:  78% (306/392)        
+2021-08-20T04:49:04.9318241Z remote: Counting objects:  79% (310/392)        
+2021-08-20T04:49:04.9318661Z remote: Counting objects:  80% (314/392)        
+2021-08-20T04:49:04.9319836Z remote: Counting objects:  81% (318/392)        
+2021-08-20T04:49:04.9320301Z remote: Counting objects:  82% (322/392)        
+2021-08-20T04:49:04.9320742Z remote: Counting objects:  83% (326/392)        
+2021-08-20T04:49:04.9321672Z remote: Counting objects:  84% (330/392)        
+2021-08-20T04:49:04.9322977Z remote: Counting objects:  85% (334/392)        
+2021-08-20T04:49:04.9323413Z remote: Counting objects:  86% (338/392)        
+2021-08-20T04:49:04.9324659Z remote: Counting objects:  87% (342/392)        
+2021-08-20T04:49:04.9325095Z remote: Counting objects:  88% (345/392)        
+2021-08-20T04:49:04.9325537Z remote: Counting objects:  89% (349/392)        
+2021-08-20T04:49:04.9326285Z remote: Counting objects:  90% (353/392)        
+2021-08-20T04:49:04.9326703Z remote: Counting objects:  91% (357/392)        
+2021-08-20T04:49:04.9327106Z remote: Counting objects:  92% (361/392)        
+2021-08-20T04:49:04.9327522Z remote: Counting objects:  93% (365/392)        
+2021-08-20T04:49:04.9327938Z remote: Counting objects:  94% (369/392)        
+2021-08-20T04:49:04.9328339Z remote: Counting objects:  95% (373/392)        
+2021-08-20T04:49:04.9328751Z remote: Counting objects:  96% (377/392)        
+2021-08-20T04:49:04.9329157Z remote: Counting objects:  97% (381/392)        
+2021-08-20T04:49:04.9329571Z remote: Counting objects:  98% (385/392)        
+2021-08-20T04:49:04.9329972Z remote: Counting objects:  99% (389/392)        
+2021-08-20T04:49:04.9330392Z remote: Counting objects: 100% (392/392)        
+2021-08-20T04:49:04.9330813Z remote: Counting objects: 100% (392/392), done.        
+2021-08-20T04:49:04.9331327Z remote: Compressing objects:   0% (1/349)        
+2021-08-20T04:49:04.9331792Z remote: Compressing objects:   1% (4/349)        
+2021-08-20T04:49:04.9332234Z remote: Compressing objects:   2% (7/349)        
+2021-08-20T04:49:04.9332691Z remote: Compressing objects:   3% (11/349)        
+2021-08-20T04:49:04.9341310Z remote: Compressing objects:   4% (14/349)        
+2021-08-20T04:49:04.9341838Z remote: Compressing objects:   5% (18/349)        
+2021-08-20T04:49:04.9347425Z remote: Compressing objects:   6% (21/349)        
+2021-08-20T04:49:04.9351858Z remote: Compressing objects:   7% (25/349)        
+2021-08-20T04:49:04.9363010Z remote: Compressing objects:   8% (28/349)        
+2021-08-20T04:49:04.9363556Z remote: Compressing objects:   9% (32/349)        
+2021-08-20T04:49:04.9384294Z remote: Compressing objects:  10% (35/349)        
+2021-08-20T04:49:04.9395961Z remote: Compressing objects:  11% (39/349)        
+2021-08-20T04:49:04.9411408Z remote: Compressing objects:  12% (42/349)        
+2021-08-20T04:49:04.9423977Z remote: Compressing objects:  13% (46/349)        
+2021-08-20T04:49:04.9445803Z remote: Compressing objects:  14% (49/349)        
+2021-08-20T04:49:04.9450349Z remote: Compressing objects:  15% (53/349)        
+2021-08-20T04:49:04.9488787Z remote: Compressing objects:  16% (56/349)        
+2021-08-20T04:49:04.9498925Z remote: Compressing objects:  17% (60/349)        
+2021-08-20T04:49:04.9512928Z remote: Compressing objects:  18% (63/349)        
+2021-08-20T04:49:04.9520462Z remote: Compressing objects:  19% (67/349)        
+2021-08-20T04:49:04.9537081Z remote: Compressing objects:  20% (70/349)        
+2021-08-20T04:49:04.9559168Z remote: Compressing objects:  21% (74/349)        
+2021-08-20T04:49:04.9565460Z remote: Compressing objects:  22% (77/349)        
+2021-08-20T04:49:04.9573016Z remote: Compressing objects:  23% (81/349)        
+2021-08-20T04:49:04.9577392Z remote: Compressing objects:  24% (84/349)        
+2021-08-20T04:49:04.9588536Z remote: Compressing objects:  25% (88/349)        
+2021-08-20T04:49:04.9591918Z remote: Compressing objects:  26% (91/349)        
+2021-08-20T04:49:04.9600096Z remote: Compressing objects:  27% (95/349)        
+2021-08-20T04:49:04.9610133Z remote: Compressing objects:  28% (98/349)        
+2021-08-20T04:49:04.9639529Z remote: Compressing objects:  29% (102/349)        
+2021-08-20T04:49:04.9648881Z remote: Compressing objects:  30% (105/349)        
+2021-08-20T04:49:04.9658943Z remote: Compressing objects:  31% (109/349)        
+2021-08-20T04:49:04.9667939Z remote: Compressing objects:  32% (112/349)        
+2021-08-20T04:49:04.9681168Z remote: Compressing objects:  33% (116/349)        
+2021-08-20T04:49:04.9705032Z remote: Compressing objects:  34% (119/349)        
+2021-08-20T04:49:04.9735983Z remote: Compressing objects:  35% (123/349)        
+2021-08-20T04:49:04.9736697Z remote: Compressing objects:  36% (126/349)        
+2021-08-20T04:49:04.9737334Z remote: Compressing objects:  37% (130/349)        
+2021-08-20T04:49:04.9742211Z remote: Compressing objects:  38% (133/349)        
+2021-08-20T04:49:04.9747504Z remote: Compressing objects:  39% (137/349)        
+2021-08-20T04:49:04.9762317Z remote: Compressing objects:  40% (140/349)        
+2021-08-20T04:49:04.9770640Z remote: Compressing objects:  41% (144/349)        
+2021-08-20T04:49:04.9785169Z remote: Compressing objects:  42% (147/349)        
+2021-08-20T04:49:04.9802022Z remote: Compressing objects:  43% (151/349)        
+2021-08-20T04:49:04.9814199Z remote: Compressing objects:  44% (154/349)        
+2021-08-20T04:49:04.9822985Z remote: Compressing objects:  45% (158/349)        
+2021-08-20T04:49:04.9840119Z remote: Compressing objects:  46% (161/349)        
+2021-08-20T04:49:04.9844253Z remote: Compressing objects:  47% (165/349)        
+2021-08-20T04:49:04.9863483Z remote: Compressing objects:  48% (168/349)        
+2021-08-20T04:49:04.9871823Z remote: Compressing objects:  49% (172/349)        
+2021-08-20T04:49:04.9872416Z remote: Compressing objects:  50% (175/349)        
+2021-08-20T04:49:04.9881996Z remote: Compressing objects:  51% (178/349)        
+2021-08-20T04:49:04.9885452Z remote: Compressing objects:  52% (182/349)        
+2021-08-20T04:49:04.9900591Z remote: Compressing objects:  53% (185/349)        
+2021-08-20T04:49:04.9904879Z remote: Compressing objects:  54% (189/349)        
+2021-08-20T04:49:04.9916373Z remote: Compressing objects:  55% (192/349)        
+2021-08-20T04:49:04.9922106Z remote: Compressing objects:  56% (196/349)        
+2021-08-20T04:49:04.9932247Z remote: Compressing objects:  57% (199/349)        
+2021-08-20T04:49:04.9940882Z remote: Compressing objects:  58% (203/349)        
+2021-08-20T04:49:04.9960028Z remote: Compressing objects:  59% (206/349)        
+2021-08-20T04:49:04.9960640Z remote: Compressing objects:  60% (210/349)        
+2021-08-20T04:49:04.9961553Z remote: Compressing objects:  61% (213/349)        
+2021-08-20T04:49:04.9964624Z remote: Compressing objects:  62% (217/349)        
+2021-08-20T04:49:04.9972660Z remote: Compressing objects:  63% (220/349)        
+2021-08-20T04:49:05.0017430Z remote: Compressing objects:  64% (224/349)        
+2021-08-20T04:49:05.0017972Z remote: Compressing objects:  65% (227/349)        
+2021-08-20T04:49:05.0018477Z remote: Compressing objects:  66% (231/349)        
+2021-08-20T04:49:05.0019128Z remote: Compressing objects:  67% (234/349)        
+2021-08-20T04:49:05.0019589Z remote: Compressing objects:  68% (238/349)        
+2021-08-20T04:49:05.0021464Z remote: Compressing objects:  69% (241/349)        
+2021-08-20T04:49:05.0036724Z remote: Compressing objects:  70% (245/349)        
+2021-08-20T04:49:05.0052831Z remote: Compressing objects:  71% (248/349)        
+2021-08-20T04:49:05.0075472Z remote: Compressing objects:  72% (252/349)        
+2021-08-20T04:49:05.0115030Z remote: Compressing objects:  73% (255/349)        
+2021-08-20T04:49:05.0115572Z remote: Compressing objects:  74% (259/349)        
+2021-08-20T04:49:05.0126239Z remote: Compressing objects:  75% (262/349)        
+2021-08-20T04:49:05.0126780Z remote: Compressing objects:  76% (266/349)        
+2021-08-20T04:49:05.0127288Z remote: Compressing objects:  77% (269/349)        
+2021-08-20T04:49:05.0140296Z remote: Compressing objects:  78% (273/349)        
+2021-08-20T04:49:05.0140818Z remote: Compressing objects:  79% (276/349)        
+2021-08-20T04:49:05.0145384Z remote: Compressing objects:  80% (280/349)        
+2021-08-20T04:49:05.0153147Z remote: Compressing objects:  81% (283/349)        
+2021-08-20T04:49:05.0244629Z remote: Compressing objects:  82% (287/349)        
+2021-08-20T04:49:05.0494363Z remote: Compressing objects:  83% (290/349)        
+2021-08-20T04:49:05.0495318Z remote: Compressing objects:  84% (294/349)        
+2021-08-20T04:49:05.0495895Z remote: Compressing objects:  85% (297/349)        
+2021-08-20T04:49:05.0496446Z remote: Compressing objects:  86% (301/349)        
+2021-08-20T04:49:05.0497171Z remote: Compressing objects:  87% (304/349)        
+2021-08-20T04:49:05.0497917Z remote: Compressing objects:  88% (308/349)        
+2021-08-20T04:49:05.0498764Z remote: Compressing objects:  89% (311/349)        
+2021-08-20T04:49:05.0499483Z remote: Compressing objects:  90% (315/349)        
+2021-08-20T04:49:05.0499995Z remote: Compressing objects:  91% (318/349)        
+2021-08-20T04:49:05.0500490Z remote: Compressing objects:  92% (322/349)        
+2021-08-20T04:49:05.0501001Z remote: Compressing objects:  93% (325/349)        
+2021-08-20T04:49:05.0501496Z remote: Compressing objects:  94% (329/349)        
+2021-08-20T04:49:05.0502004Z remote: Compressing objects:  95% (332/349)        
+2021-08-20T04:49:05.0502517Z remote: Compressing objects:  96% (336/349)        
+2021-08-20T04:49:05.0503022Z remote: Compressing objects:  97% (339/349)        
+2021-08-20T04:49:05.0504163Z remote: Compressing objects:  98% (343/349)        
+2021-08-20T04:49:05.0504676Z remote: Compressing objects:  99% (346/349)        
+2021-08-20T04:49:05.0505203Z remote: Compressing objects: 100% (349/349)        
+2021-08-20T04:49:05.0505738Z remote: Compressing objects: 100% (349/349), done.        
+2021-08-20T04:49:05.0524744Z Receiving objects:   0% (1/392)
+2021-08-20T04:49:05.0525268Z Receiving objects:   1% (4/392)
+2021-08-20T04:49:05.0525878Z Receiving objects:   2% (8/392)
+2021-08-20T04:49:05.0526295Z Receiving objects:   3% (12/392)
+2021-08-20T04:49:05.0543173Z Receiving objects:   4% (16/392)
+2021-08-20T04:49:05.0548601Z Receiving objects:   5% (20/392)
+2021-08-20T04:49:05.0551757Z Receiving objects:   6% (24/392)
+2021-08-20T04:49:05.0594522Z Receiving objects:   7% (28/392)
+2021-08-20T04:49:05.0595040Z Receiving objects:   8% (32/392)
+2021-08-20T04:49:05.0603716Z Receiving objects:   9% (36/392)
+2021-08-20T04:49:05.0604626Z Receiving objects:  10% (40/392)
+2021-08-20T04:49:05.0611253Z Receiving objects:  11% (44/392)
+2021-08-20T04:49:05.0611714Z Receiving objects:  12% (48/392)
+2021-08-20T04:49:05.0646453Z Receiving objects:  13% (51/392)
+2021-08-20T04:49:05.0647669Z Receiving objects:  14% (55/392)
+2021-08-20T04:49:05.0655403Z Receiving objects:  15% (59/392)
+2021-08-20T04:49:05.0656107Z Receiving objects:  16% (63/392)
+2021-08-20T04:49:05.0658201Z Receiving objects:  17% (67/392)
+2021-08-20T04:49:05.0659824Z Receiving objects:  18% (71/392)
+2021-08-20T04:49:05.0665563Z Receiving objects:  19% (75/392)
+2021-08-20T04:49:05.0666100Z Receiving objects:  20% (79/392)
+2021-08-20T04:49:05.0697469Z Receiving objects:  21% (83/392)
+2021-08-20T04:49:05.0697985Z Receiving objects:  22% (87/392)
+2021-08-20T04:49:05.0719914Z Receiving objects:  23% (91/392)
+2021-08-20T04:49:05.0722429Z Receiving objects:  24% (95/392)
+2021-08-20T04:49:05.0724806Z Receiving objects:  25% (98/392)
+2021-08-20T04:49:05.0752132Z Receiving objects:  26% (102/392)
+2021-08-20T04:49:05.0756938Z Receiving objects:  27% (106/392)
+2021-08-20T04:49:05.0758982Z Receiving objects:  28% (110/392)
+2021-08-20T04:49:05.0759486Z Receiving objects:  29% (114/392)
+2021-08-20T04:49:05.0760432Z Receiving objects:  30% (118/392)
+2021-08-20T04:49:05.0763815Z Receiving objects:  31% (122/392)
+2021-08-20T04:49:05.0798774Z Receiving objects:  32% (126/392)
+2021-08-20T04:49:05.0804087Z Receiving objects:  33% (130/392)
+2021-08-20T04:49:05.0804637Z Receiving objects:  34% (134/392)
+2021-08-20T04:49:05.0805071Z Receiving objects:  35% (138/392)
+2021-08-20T04:49:05.0812627Z Receiving objects:  36% (142/392)
+2021-08-20T04:49:05.0815207Z Receiving objects:  37% (146/392)
+2021-08-20T04:49:05.0819207Z Receiving objects:  38% (149/392)
+2021-08-20T04:49:05.0819806Z Receiving objects:  39% (153/392)
+2021-08-20T04:49:05.0861153Z Receiving objects:  40% (157/392)
+2021-08-20T04:49:05.0861610Z Receiving objects:  41% (161/392)
+2021-08-20T04:49:05.0862040Z Receiving objects:  42% (165/392)
+2021-08-20T04:49:05.0864436Z Receiving objects:  43% (169/392)
+2021-08-20T04:49:05.0868628Z Receiving objects:  44% (173/392)
+2021-08-20T04:49:05.0872102Z Receiving objects:  45% (177/392)
+2021-08-20T04:49:05.0903060Z Receiving objects:  46% (181/392)
+2021-08-20T04:49:05.0929642Z Receiving objects:  47% (185/392)
+2021-08-20T04:49:05.0930119Z Receiving objects:  48% (189/392)
+2021-08-20T04:49:05.0930531Z Receiving objects:  49% (193/392)
+2021-08-20T04:49:05.0931159Z Receiving objects:  50% (196/392)
+2021-08-20T04:49:05.0931567Z Receiving objects:  51% (200/392)
+2021-08-20T04:49:05.0962246Z Receiving objects:  52% (204/392)
+2021-08-20T04:49:05.0962782Z Receiving objects:  53% (208/392)
+2021-08-20T04:49:05.0963406Z Receiving objects:  54% (212/392)
+2021-08-20T04:49:05.0965489Z Receiving objects:  55% (216/392)
+2021-08-20T04:49:05.0968764Z Receiving objects:  56% (220/392)
+2021-08-20T04:49:05.0969237Z Receiving objects:  57% (224/392)
+2021-08-20T04:49:05.0971448Z Receiving objects:  58% (228/392)
+2021-08-20T04:49:05.0972447Z Receiving objects:  59% (232/392)
+2021-08-20T04:49:05.0972880Z Receiving objects:  60% (236/392)
+2021-08-20T04:49:05.0976266Z Receiving objects:  61% (240/392)
+2021-08-20T04:49:05.0978035Z Receiving objects:  62% (244/392)
+2021-08-20T04:49:05.1006258Z Receiving objects:  63% (247/392)
+2021-08-20T04:49:05.1006755Z Receiving objects:  64% (251/392)
+2021-08-20T04:49:05.1007708Z Receiving objects:  65% (255/392)
+2021-08-20T04:49:05.1012256Z Receiving objects:  66% (259/392)
+2021-08-20T04:49:05.1012711Z Receiving objects:  67% (263/392)
+2021-08-20T04:49:05.1013147Z Receiving objects:  68% (267/392)
+2021-08-20T04:49:05.1013568Z Receiving objects:  69% (271/392)
+2021-08-20T04:49:05.1014001Z Receiving objects:  70% (275/392)
+2021-08-20T04:49:05.1015523Z Receiving objects:  71% (279/392)
+2021-08-20T04:49:05.1016907Z Receiving objects:  72% (283/392)
+2021-08-20T04:49:05.1053470Z Receiving objects:  73% (287/392)
+2021-08-20T04:49:05.1060628Z Receiving objects:  74% (291/392)
+2021-08-20T04:49:05.1061407Z Receiving objects:  75% (294/392)
+2021-08-20T04:49:05.1061846Z Receiving objects:  76% (298/392)
+2021-08-20T04:49:05.1065710Z Receiving objects:  77% (302/392)
+2021-08-20T04:49:05.1070455Z Receiving objects:  78% (306/392)
+2021-08-20T04:49:05.1070884Z Receiving objects:  79% (310/392)
+2021-08-20T04:49:05.1081336Z Receiving objects:  80% (314/392)
+2021-08-20T04:49:05.1082320Z Receiving objects:  81% (318/392)
+2021-08-20T04:49:05.1103001Z Receiving objects:  82% (322/392)
+2021-08-20T04:49:05.1103790Z Receiving objects:  83% (326/392)
+2021-08-20T04:49:05.1110182Z Receiving objects:  84% (330/392)
+2021-08-20T04:49:05.1114126Z Receiving objects:  85% (334/392)
+2021-08-20T04:49:05.1118708Z Receiving objects:  86% (338/392)
+2021-08-20T04:49:05.1121529Z Receiving objects:  87% (342/392)
+2021-08-20T04:49:05.1152998Z Receiving objects:  88% (345/392)
+2021-08-20T04:49:05.1154414Z Receiving objects:  89% (349/392)
+2021-08-20T04:49:05.1155858Z remote: Total 392 (delta 54), reused 99 (delta 25), pack-reused 0        
+2021-08-20T04:49:05.1162621Z Receiving objects:  90% (353/392)
+2021-08-20T04:49:05.1165244Z Receiving objects:  91% (357/392)
+2021-08-20T04:49:05.1166820Z Receiving objects:  92% (361/392)
+2021-08-20T04:49:05.1170843Z Receiving objects:  93% (365/392)
+2021-08-20T04:49:05.1171604Z Receiving objects:  94% (369/392)
+2021-08-20T04:49:05.1172272Z Receiving objects:  95% (373/392)
+2021-08-20T04:49:05.1175480Z Receiving objects:  96% (377/392)
+2021-08-20T04:49:05.1176378Z Receiving objects:  97% (381/392)
+2021-08-20T04:49:05.1177015Z Receiving objects:  98% (385/392)
+2021-08-20T04:49:05.1177642Z Receiving objects:  99% (389/392)
+2021-08-20T04:49:05.1178422Z Receiving objects: 100% (392/392)
+2021-08-20T04:49:05.1179629Z Receiving objects: 100% (392/392), 651.38 KiB | 9.72 MiB/s, done.
+2021-08-20T04:49:05.1183664Z Resolving deltas:   0% (0/54)
+2021-08-20T04:49:05.1184331Z Resolving deltas:   1% (1/54)
+2021-08-20T04:49:05.1185074Z Resolving deltas:   3% (2/54)
+2021-08-20T04:49:05.1185512Z Resolving deltas:   5% (3/54)
+2021-08-20T04:49:05.1186140Z Resolving deltas:   7% (4/54)
+2021-08-20T04:49:05.1186727Z Resolving deltas:   9% (5/54)
+2021-08-20T04:49:05.1189087Z Resolving deltas:  11% (6/54)
+2021-08-20T04:49:05.1189506Z Resolving deltas:  12% (7/54)
+2021-08-20T04:49:05.1189882Z Resolving deltas:  14% (8/54)
+2021-08-20T04:49:05.1190448Z Resolving deltas:  16% (9/54)
+2021-08-20T04:49:05.1190809Z Resolving deltas:  18% (10/54)
+2021-08-20T04:49:05.1191389Z Resolving deltas:  20% (11/54)
+2021-08-20T04:49:05.1191749Z Resolving deltas:  22% (12/54)
+2021-08-20T04:49:05.1192122Z Resolving deltas:  24% (13/54)
+2021-08-20T04:49:05.1192481Z Resolving deltas:  25% (14/54)
+2021-08-20T04:49:05.1193033Z Resolving deltas:  27% (15/54)
+2021-08-20T04:49:05.1193418Z Resolving deltas:  29% (16/54)
+2021-08-20T04:49:05.1202735Z Resolving deltas:  31% (17/54)
+2021-08-20T04:49:05.1203350Z Resolving deltas:  33% (18/54)
+2021-08-20T04:49:05.1203742Z Resolving deltas:  35% (19/54)
+2021-08-20T04:49:05.1204146Z Resolving deltas:  37% (20/54)
+2021-08-20T04:49:05.1204553Z Resolving deltas:  38% (21/54)
+2021-08-20T04:49:05.1204963Z Resolving deltas:  40% (22/54)
+2021-08-20T04:49:05.1205514Z Resolving deltas:  42% (23/54)
+2021-08-20T04:49:05.1207724Z Resolving deltas:  44% (24/54)
+2021-08-20T04:49:05.1208107Z Resolving deltas:  46% (25/54)
+2021-08-20T04:49:05.1208484Z Resolving deltas:  48% (26/54)
+2021-08-20T04:49:05.1208855Z Resolving deltas:  50% (27/54)
+2021-08-20T04:49:05.1209232Z Resolving deltas:  51% (28/54)
+2021-08-20T04:49:05.1209610Z Resolving deltas:  53% (29/54)
+2021-08-20T04:49:05.1209965Z Resolving deltas:  55% (30/54)
+2021-08-20T04:49:05.1210337Z Resolving deltas:  57% (31/54)
+2021-08-20T04:49:05.1210692Z Resolving deltas:  59% (32/54)
+2021-08-20T04:49:05.1211060Z Resolving deltas:  61% (33/54)
+2021-08-20T04:49:05.1211416Z Resolving deltas:  62% (34/54)
+2021-08-20T04:49:05.1211785Z Resolving deltas:  64% (35/54)
+2021-08-20T04:49:05.1212141Z Resolving deltas:  66% (36/54)
+2021-08-20T04:49:05.1214039Z Resolving deltas:  68% (37/54)
+2021-08-20T04:49:05.1215186Z Resolving deltas:  70% (38/54)
+2021-08-20T04:49:05.1215907Z Resolving deltas:  72% (39/54)
+2021-08-20T04:49:05.1216334Z Resolving deltas:  74% (40/54)
+2021-08-20T04:49:05.1216747Z Resolving deltas:  75% (41/54)
+2021-08-20T04:49:05.1217173Z Resolving deltas:  77% (42/54)
+2021-08-20T04:49:05.1217584Z Resolving deltas:  79% (43/54)
+2021-08-20T04:49:05.1218008Z Resolving deltas:  81% (44/54)
+2021-08-20T04:49:05.1218433Z Resolving deltas:  83% (45/54)
+2021-08-20T04:49:05.1219025Z Resolving deltas:  85% (46/54)
+2021-08-20T04:49:05.1219583Z Resolving deltas:  87% (47/54)
+2021-08-20T04:49:05.1222774Z Resolving deltas:  88% (48/54)
+2021-08-20T04:49:05.1223179Z Resolving deltas:  90% (49/54)
+2021-08-20T04:49:05.1223537Z Resolving deltas:  92% (50/54)
+2021-08-20T04:49:05.1225638Z Resolving deltas:  94% (51/54)
+2021-08-20T04:49:05.1226617Z Resolving deltas:  96% (52/54)
+2021-08-20T04:49:05.1227239Z Resolving deltas:  98% (53/54)
+2021-08-20T04:49:05.1228249Z Resolving deltas: 100% (54/54)
+2021-08-20T04:49:05.1228922Z Resolving deltas: 100% (54/54), done.
+2021-08-20T04:49:05.1358312Z From https://github.com/matrixorigin/matrixcube
+2021-08-20T04:49:05.1361055Z  * [new ref]         d72c8e3698842e20924ef140976e992b705a89dd -> origin/master
+2021-08-20T04:49:05.1383766Z ##[endgroup]
+2021-08-20T04:49:05.1384943Z ##[group]Determining the checkout info
+2021-08-20T04:49:05.1386752Z ##[endgroup]
+2021-08-20T04:49:05.1387736Z ##[group]Checking out the ref
+2021-08-20T04:49:05.1391326Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2021-08-20T04:49:05.1697778Z Reset branch 'master'
+2021-08-20T04:49:05.1703436Z Branch 'master' set up to track remote branch 'master' from 'origin'.
+2021-08-20T04:49:05.1705891Z ##[endgroup]
+2021-08-20T04:49:05.1744448Z [command]/usr/bin/git log -1 --format='%H'
+2021-08-20T04:49:05.1771959Z 'd72c8e3698842e20924ef140976e992b705a89dd'
+2021-08-20T04:49:05.1978853Z ##[group]Run actions/setup-node@v2
+2021-08-20T04:49:05.1979324Z with:
+2021-08-20T04:49:05.1982155Z   node-version: 16
+2021-08-20T04:49:05.1982635Z   architecture: x64
+2021-08-20T04:49:05.1983240Z   always-auth: false
+2021-08-20T04:49:05.1984871Z   check-latest: false
+2021-08-20T04:49:05.1985749Z   token: ***
+2021-08-20T04:49:05.1986289Z ##[endgroup]
+2021-08-20T04:49:05.3829456Z Attempting to download 16...
+2021-08-20T04:49:06.0327655Z Acquiring 16.7.0 - x64 from https://github.com/actions/node-versions/releases/download/16.7.0-1142094056/node-16.7.0-linux-x64.tar.gz
+2021-08-20T04:49:06.6714738Z Extracting ...
+2021-08-20T04:49:06.7049238Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword -C /home/runner/work/_temp/6b758713-673f-4a13-91b9-ced920c1dc58 -f /home/runner/work/_temp/ff66ead1-06db-465a-8564-ed90a05b96a3
+2021-08-20T04:49:07.4499917Z Adding to the cache ...
+2021-08-20T04:49:08.5793403Z Done
+2021-08-20T04:49:08.6038822Z ##[group]Run actions/setup-go@v2
+2021-08-20T04:49:08.6039275Z with:
+2021-08-20T04:49:08.6039585Z   go-version: 1.17
+2021-08-20T04:49:08.6039918Z   stable: true
+2021-08-20T04:49:08.6040626Z   token: ***
+2021-08-20T04:49:08.6040953Z ##[endgroup]
+2021-08-20T04:49:08.6516551Z Setup go stable version spec 1.17
+2021-08-20T04:49:08.6571035Z Attempting to download 1.17...
+2021-08-20T04:49:09.1387468Z matching 1.17...
+2021-08-20T04:49:09.1392116Z Acquiring 1.17.0 from https://github.com/actions/go-versions/releases/download/1.17.0-1138146562/go-1.17.0-linux-x64.tar.gz
+2021-08-20T04:49:11.0652601Z Extracting Go...
+2021-08-20T04:49:11.0772255Z [command]/usr/bin/tar xz --warning=no-unknown-keyword -C /home/runner/work/_temp/e2bf7f50-c16e-468d-9e60-4941df9c1db9 -f /home/runner/work/_temp/532b3bed-3c8a-42bc-90a6-158a93656858
+2021-08-20T04:49:14.7488016Z Successfully extracted go to /home/runner/work/_temp/e2bf7f50-c16e-468d-9e60-4941df9c1db9
+2021-08-20T04:49:14.7498419Z Adding to the cache ...
+2021-08-20T04:49:18.4338787Z Successfully cached go to /opt/hostedtoolcache/go/1.17.0/x64
+2021-08-20T04:49:18.4355924Z Added go to the path
+2021-08-20T04:49:18.4441952Z Successfully setup go version 1.17
+2021-08-20T04:49:18.4572319Z go version go1.17 linux/amd64
+2021-08-20T04:49:18.4572837Z 
+2021-08-20T04:49:18.4575025Z ##[group]go env
+2021-08-20T04:49:18.5984471Z GO111MODULE=""
+2021-08-20T04:49:18.5985902Z GOARCH="amd64"
+2021-08-20T04:49:18.5986747Z GOBIN=""
+2021-08-20T04:49:18.5993453Z GOCACHE="/home/runner/.cache/go-build"
+2021-08-20T04:49:18.5994892Z GOENV="/home/runner/.config/go/env"
+2021-08-20T04:49:18.5995721Z GOEXE=""
+2021-08-20T04:49:18.5998844Z GOEXPERIMENT=""
+2021-08-20T04:49:18.6000475Z GOFLAGS=""
+2021-08-20T04:49:18.6016197Z GOHOSTARCH="amd64"
+2021-08-20T04:49:18.6017613Z GOHOSTOS="linux"
+2021-08-20T04:49:18.6018096Z GOINSECURE=""
+2021-08-20T04:49:18.6018641Z GOMODCACHE="/home/runner/go/pkg/mod"
+2021-08-20T04:49:18.6019132Z GONOPROXY=""
+2021-08-20T04:49:18.6019555Z GONOSUMDB=""
+2021-08-20T04:49:18.6023324Z GOOS="linux"
+2021-08-20T04:49:18.6024565Z GOPATH="/home/runner/go"
+2021-08-20T04:49:18.6034309Z GOPRIVATE=""
+2021-08-20T04:49:18.6035152Z GOPROXY="https://proxy.golang.org,direct"
+2021-08-20T04:49:18.6035932Z GOROOT="/opt/hostedtoolcache/go/1.17.0/x64"
+2021-08-20T04:49:18.6036604Z GOSUMDB="sum.golang.org"
+2021-08-20T04:49:18.6037015Z GOTMPDIR=""
+2021-08-20T04:49:18.6037610Z GOTOOLDIR="/opt/hostedtoolcache/go/1.17.0/x64/pkg/tool/linux_amd64"
+2021-08-20T04:49:18.6038089Z GOVCS=""
+2021-08-20T04:49:18.6038450Z GOVERSION="go1.17"
+2021-08-20T04:49:18.6038806Z GCCGO="gccgo"
+2021-08-20T04:49:18.6039131Z AR="ar"
+2021-08-20T04:49:18.6039489Z CC="gcc"
+2021-08-20T04:49:18.6039786Z CXX="g++"
+2021-08-20T04:49:18.6040127Z CGO_ENABLED="1"
+2021-08-20T04:49:18.6040659Z GOMOD="/home/runner/work/matrixcube/matrixcube/go.mod"
+2021-08-20T04:49:18.6041478Z CGO_CFLAGS="-g -O2"
+2021-08-20T04:49:18.6041872Z CGO_CPPFLAGS=""
+2021-08-20T04:49:18.6042412Z CGO_CXXFLAGS="-g -O2"
+2021-08-20T04:49:18.6042954Z CGO_FFLAGS="-g -O2"
+2021-08-20T04:49:18.6043510Z CGO_LDFLAGS="-g -O2"
+2021-08-20T04:49:18.6044105Z PKG_CONFIG="pkg-config"
+2021-08-20T04:49:18.6045413Z GOGCCFLAGS="-fPIC -m64 -pthread -fmessage-length=0 -fdebug-prefix-map=/tmp/go-build1364335403=/tmp/go-build -gno-record-gcc-switches"
+2021-08-20T04:49:18.6046138Z 
+2021-08-20T04:49:18.6046965Z ##[endgroup]
+2021-08-20T04:49:18.6129088Z ##[group]Run cd $GITHUB_WORKSPACE && make test
+2021-08-20T04:49:18.6129658Z [36;1mcd $GITHUB_WORKSPACE && make test[0m
+2021-08-20T04:49:18.6169932Z shell: /usr/bin/bash -e {0}
+2021-08-20T04:49:18.6170240Z env:
+2021-08-20T04:49:18.6170801Z   GOROOT: /opt/hostedtoolcache/go/1.17.0/x64
+2021-08-20T04:49:18.6171375Z ##[endgroup]
+2021-08-20T04:49:18.6288297Z ======== test matrixcube
+2021-08-20T04:49:20.0742942Z go test  -count=1 -timeout 600s github.com/matrixorigin/matrixcube/storage
+2021-08-20T04:49:20.0992656Z go: downloading github.com/cockroachdb/pebble v0.0.0-20210503173641-1387689d3d7c
+2021-08-20T04:49:20.1000303Z go: downloading github.com/stretchr/testify v1.7.0
+2021-08-20T04:49:20.1696905Z go: downloading github.com/gogo/protobuf v1.3.1
+2021-08-20T04:49:20.6340028Z go: downloading github.com/fagongzi/goetty v1.8.0
+2021-08-20T04:49:20.6341532Z go: downloading github.com/fagongzi/log v0.0.0-20191122063922-293b75312445
+2021-08-20T04:49:20.6778966Z go: downloading github.com/fagongzi/util v0.0.0-20210409031311-a10fdf8fbd7a
+2021-08-20T04:49:20.6780332Z go: downloading github.com/google/btree v1.0.0
+2021-08-20T04:49:20.7192612Z go: downloading github.com/shirou/gopsutil v3.21.7+incompatible
+2021-08-20T04:49:20.7988980Z go: downloading github.com/cockroachdb/errors v1.8.2
+2021-08-20T04:49:20.8021635Z go: downloading github.com/lni/vfs v0.2.1-0.20210810090357-27c7525cf64f
+2021-08-20T04:49:20.8385849Z go: downloading github.com/davecgh/go-spew v1.1.1
+2021-08-20T04:49:20.8886734Z go: downloading github.com/pmezard/go-difflib v1.0.0
+2021-08-20T04:49:20.9025783Z go: downloading gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c
+2021-08-20T04:49:20.9334061Z go: downloading github.com/cockroachdb/redact v1.0.8
+2021-08-20T04:49:20.9490440Z go: downloading github.com/RoaringBitmap/roaring v0.9.4
+2021-08-20T04:49:20.9527035Z go: downloading github.com/deepfabric/etcd v1.4.15
+2021-08-20T04:49:21.5870697Z go: downloading github.com/tklauser/go-sysconf v0.3.7
+2021-08-20T04:49:21.6066623Z go: downloading golang.org/x/sys v0.0.0-20210809222454-d867a43fc93e
+2021-08-20T04:49:22.1181747Z go: downloading github.com/cockroachdb/logtags v0.0.0-20190617123548-eb05cc24525f
+2021-08-20T04:49:22.1770177Z go: downloading github.com/cockroachdb/sentry-go v0.6.1-cockroachdb.2
+2021-08-20T04:49:22.2015648Z go: downloading golang.org/x/exp v0.0.0-20200513190911-00229845015e
+2021-08-20T04:49:22.3344650Z go: downloading github.com/DataDog/zstd v1.4.5
+2021-08-20T04:49:22.7680465Z go: downloading github.com/cespare/xxhash/v2 v2.1.1
+2021-08-20T04:49:22.7850577Z go: downloading github.com/golang/snappy v0.0.2-0.20190904063534-ff6b7dc882cf
+2021-08-20T04:49:22.8035101Z go: downloading github.com/google/uuid v1.0.0
+2021-08-20T04:49:22.8172893Z go: downloading go.uber.org/zap v1.10.0
+2021-08-20T04:49:22.8689425Z go: downloading google.golang.org/grpc v1.29.1
+2021-08-20T04:49:23.1060007Z go: downloading github.com/coreos/go-semver v0.2.0
+2021-08-20T04:49:23.1316050Z go: downloading github.com/coreos/pkg v0.0.0-20160727233714-3ac0863d7acf
+2021-08-20T04:49:23.1537670Z go: downloading github.com/dustin/go-humanize v1.0.0
+2021-08-20T04:49:23.1707490Z go: downloading github.com/golang/protobuf v1.4.2
+2021-08-20T04:49:23.2039677Z go: downloading github.com/prometheus/client_golang v1.4.1
+2021-08-20T04:49:23.2385757Z go: downloading go.etcd.io/bbolt v1.3.6
+2021-08-20T04:49:23.2719335Z go: downloading github.com/tklauser/numcpus v0.2.3
+2021-08-20T04:49:23.2835658Z go: downloading github.com/kr/pretty v0.1.0
+2021-08-20T04:49:23.2923410Z go: downloading github.com/pkg/errors v0.9.1
+2021-08-20T04:49:23.3105438Z go: downloading golang.org/x/net v0.0.0-20200520004742-59133d7f0dd7
+2021-08-20T04:49:23.4954191Z go: downloading github.com/coreos/go-systemd v0.0.0-20180511133405-39ca1b05acc7
+2021-08-20T04:49:23.5177098Z go: downloading go.uber.org/atomic v1.4.0
+2021-08-20T04:49:23.5271880Z go: downloading go.uber.org/multierr v1.1.0
+2021-08-20T04:49:23.5405601Z go: downloading google.golang.org/genproto v0.0.0-20190819201941-24fa4b261c55
+2021-08-20T04:49:24.2439952Z go: downloading google.golang.org/protobuf v1.23.0
+2021-08-20T04:49:24.4198800Z go: downloading github.com/beorn7/perks v1.0.1
+2021-08-20T04:49:24.4294594Z go: downloading github.com/prometheus/client_model v0.2.0
+2021-08-20T04:49:24.4387798Z go: downloading github.com/prometheus/common v0.9.1
+2021-08-20T04:49:24.4676621Z go: downloading github.com/prometheus/procfs v0.0.8
+2021-08-20T04:49:24.5009971Z go: downloading github.com/dgrijalva/jwt-go v3.2.0+incompatible
+2021-08-20T04:49:24.5287289Z go: downloading golang.org/x/crypto v0.0.0-20191011191535-87dc89f01550
+2021-08-20T04:49:24.6627606Z go: downloading github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2
+2021-08-20T04:49:24.6720389Z go: downloading golang.org/x/time v0.0.0-20191024005414-555d28b269f0
+2021-08-20T04:49:24.6811030Z go: downloading github.com/jonboulle/clockwork v0.1.0
+2021-08-20T04:49:24.6908100Z go: downloading github.com/kr/text v0.1.0
+2021-08-20T04:49:24.7084346Z go: downloading github.com/matttproud/golang_protobuf_extensions v1.0.1
+2021-08-20T04:49:24.7209882Z go: downloading github.com/json-iterator/go v1.1.9
+2021-08-20T04:49:24.7505492Z go: downloading github.com/modern-go/reflect2 v1.0.1
+2021-08-20T04:49:24.7657715Z go: downloading github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd
+2021-08-20T04:49:24.7741220Z go: downloading golang.org/x/text v0.3.3
+2021-08-20T04:50:27.5048184Z ok  	github.com/matrixorigin/matrixcube/storage	4.101s
+2021-08-20T04:50:27.5678318Z go test  -count=1 -timeout 600s github.com/matrixorigin/matrixcube/raftstore
+2021-08-20T04:50:27.6138960Z go: downloading github.com/BurntSushi/toml v0.3.1
+2021-08-20T04:50:27.6196729Z go: downloading github.com/docker/go-units v0.4.0
+2021-08-20T04:50:27.7229475Z go: downloading github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0
+2021-08-20T04:50:27.7237767Z go: downloading github.com/grpc-ecosystem/grpc-gateway v1.9.5
+2021-08-20T04:50:27.7363603Z go: downloading github.com/soheilhy/cmux v0.1.4
+2021-08-20T04:50:27.7494259Z go: downloading github.com/tmc/grpc-websocket-proxy v0.0.0-20200427203606-3cfed13b9966
+2021-08-20T04:50:27.7712376Z go: downloading sigs.k8s.io/yaml v1.1.0
+2021-08-20T04:50:27.7852356Z go: downloading github.com/juju/ratelimit v1.0.1
+2021-08-20T04:50:27.8049836Z go: downloading github.com/montanaflynn/stats v0.6.6
+2021-08-20T04:50:27.8052441Z go: downloading github.com/phf/go-queue v0.0.0-20170504031614-9abe38d0371d
+2021-08-20T04:50:27.8249751Z go: downloading github.com/gorilla/websocket v1.4.2
+2021-08-20T04:50:27.8256594Z go: downloading github.com/sirupsen/logrus v1.4.2
+2021-08-20T04:50:27.8454441Z go: downloading github.com/grpc-ecosystem/go-grpc-middleware v1.0.1-0.20190118093823-f849b5445de4
+2021-08-20T04:50:27.8456208Z go: downloading github.com/spf13/pflag v1.0.3
+2021-08-20T04:50:27.8723851Z go: downloading gopkg.in/yaml.v2 v2.3.0
+2021-08-20T04:52:22.7263359Z WARNING: Package "github.com/golang/protobuf/protoc-gen-go/generator" is deprecated.
+2021-08-20T04:52:22.7264476Z 	A future release of golang/protobuf will delete this package,
+2021-08-20T04:52:22.7265152Z 	which has long been excluded from the compatibility promise.
+2021-08-20T04:52:22.7265537Z 
+2021-08-20T04:52:22.7266242Z 2021/08/20 04:50:42.724785 [info] prophet: prophet logger set
+2021-08-20T04:52:22.7297182Z 2021/08/20 04:50:42.744584 [info] [raftstore]: start scan gc snap files
+2021-08-20T04:52:22.7297846Z 2021/08/20 04:50:42.744742 [info] [raftstore]: begin start raftstore
+2021-08-20T04:52:22.7298452Z 2021/08/20 04:50:42.744755 [info] [raftstore]: begin to start prophet
+2021-08-20T04:52:22.7299590Z [WARNING] Deprecated '--logger=capnslog' flag is set; use '--logger=zap' flag instead
+2021-08-20T04:52:22.7300538Z 2021-08-20 04:50:42.744918 I | embed: pprof is enabled under /debug/pprof
+2021-08-20T04:52:22.7301264Z 2021-08-20 04:50:42.744976 I | embed: name = node-0
+2021-08-20T04:52:22.7302028Z 2021-08-20 04:50:42.744987 I | embed: data dir = /tmp/cube/node-0/prophet
+2021-08-20T04:52:22.7303111Z 2021-08-20 04:50:42.744990 I | embed: member dir = /tmp/cube/node-0/prophet/member
+2021-08-20T04:52:22.7303948Z 2021-08-20 04:50:42.744993 I | embed: heartbeat = 100ms
+2021-08-20T04:52:22.7304635Z 2021-08-20 04:50:42.744995 I | embed: election = 3000ms
+2021-08-20T04:52:22.7305322Z 2021-08-20 04:50:42.744998 I | embed: snapshot count = 100000
+2021-08-20T04:52:22.7306361Z 2021-08-20 04:50:42.745003 I | embed: advertise client URLs = http://127.0.0.1:40000
+2021-08-20T04:52:22.7307465Z 2021-08-20 04:50:42.749103 I | etcdserver: starting member 93ccda9956d988f4 in cluster 6a4ade671189dc2f
+2021-08-20T04:52:22.7308446Z raft2021/08/20 04:50:42 INFO: 93ccda9956d988f4 switched to configuration voters=()
+2021-08-20T04:52:22.7309203Z raft2021/08/20 04:50:42 INFO: 93ccda9956d988f4 became follower at term 0
+2021-08-20T04:52:22.7310118Z raft2021/08/20 04:50:42 INFO: newRaft 93ccda9956d988f4 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0]
+2021-08-20T04:52:22.7310928Z raft2021/08/20 04:50:42 INFO: 93ccda9956d988f4 became follower at term 1
+2021-08-20T04:52:22.7311920Z raft2021/08/20 04:50:42 INFO: 93ccda9956d988f4 switched to configuration voters=(10650127570946328820)
+2021-08-20T04:52:22.7313146Z 2021-08-20 04:50:42.750421 W | auth: simple token is not cryptographically signed
+2021-08-20T04:52:22.7396274Z 2021-08-20 04:50:42.753654 I | etcdserver: starting server... [version: 3.4.15, cluster version: to_be_decided]
+2021-08-20T04:52:22.7397589Z 2021-08-20 04:50:42.754024 I | etcdserver: 93ccda9956d988f4 as single-node; fast-forwarding 29 ticks (election ticks 30)
+2021-08-20T04:52:22.7398725Z raft2021/08/20 04:50:42 INFO: 93ccda9956d988f4 switched to configuration voters=(10650127570946328820)
+2021-08-20T04:52:22.7399966Z 2021-08-20 04:50:42.754369 I | etcdserver/membership: added member 93ccda9956d988f4 [http://127.0.0.1:50000] to cluster 6a4ade671189dc2f
+2021-08-20T04:52:22.7400995Z 2021-08-20 04:50:42.755110 I | embed: listening for peers on 127.0.0.1:50000
+2021-08-20T04:52:22.7401684Z raft2021/08/20 04:50:43 INFO: 93ccda9956d988f4 is starting a new election at term 1
+2021-08-20T04:52:22.7402383Z raft2021/08/20 04:50:43 INFO: 93ccda9956d988f4 became candidate at term 2
+2021-08-20T04:52:22.7403182Z raft2021/08/20 04:50:43 INFO: 93ccda9956d988f4 received MsgVoteResp from 93ccda9956d988f4 at term 2
+2021-08-20T04:52:22.7403924Z raft2021/08/20 04:50:43 INFO: 93ccda9956d988f4 became leader at term 2
+2021-08-20T04:52:22.7404695Z raft2021/08/20 04:50:43 INFO: raft.node: 93ccda9956d988f4 elected leader 93ccda9956d988f4 at term 2
+2021-08-20T04:52:22.7405701Z 2021-08-20 04:50:43.650097 I | etcdserver: setting up the initial cluster version to 3.4
+2021-08-20T04:52:22.7406680Z 2021-08-20 04:50:43.650622 N | etcdserver/membership: set the initial cluster version to 3.4
+2021-08-20T04:52:22.7407625Z 2021-08-20 04:50:43.650661 I | etcdserver/api: enabled capabilities for version 3.4
+2021-08-20T04:52:22.7408818Z 2021-08-20 04:50:43.650714 I | etcdserver: published {Name:node-0 ClientURLs:[http://127.0.0.1:40000]} to cluster 6a4ade671189dc2f
+2021-08-20T04:52:22.7409799Z 2021/08/20 04:50:43.650717 [info] prophet: create etcd v3 client with endpoints [http://127.0.0.1:40000]
+2021-08-20T04:52:22.7410685Z 2021-08-20 04:50:43.650724 I | embed: ready to serve client requests
+2021-08-20T04:52:22.7411716Z 2021-08-20 04:50:43.651940 N | embed: serving insecure client requests on 127.0.0.1:40000, this is strongly discouraged!
+2021-08-20T04:52:22.7412443Z 2021/08/20 04:50:43.654806 [info] prophet: net application started
+2021-08-20T04:52:22.7413060Z 2021/08/20 04:50:43.654857 [info] prophet: start system time monitor 
+2021-08-20T04:52:22.7413995Z 2021/08/20 04:50:43.655078 [info] prophet: [prophet-leader/node-0]/loop: current leader is []
+2021-08-20T04:52:22.7415030Z 2021/08/20 04:50:43.655437 [info] prophet: [prophet-leader/node-0]/campaign: load expect leader: []
+2021-08-20T04:52:22.7416023Z 2021/08/20 04:50:43.655448 [info] prophet: [prophet-leader/node-0]/campaign: start
+2021-08-20T04:52:22.7417002Z 2021/08/20 04:50:43.655812 [info] prophet: [prophet-leader/node-0]/campaign: grant lease ok
+2021-08-20T04:52:22.7418208Z 2021/08/20 04:50:43.656244 [info] prophet: [prophet-leader/node-0]/campaign: completed, start keepalive
+2021-08-20T04:52:22.7419244Z 2021/08/20 04:50:43.656257 [info] prophet: ********node-0 become to leader now********
+2021-08-20T04:52:22.7420902Z 2021/08/20 04:50:43.656759 [info] prophet: load 0 containers, cost 285.502µs
+2021-08-20T04:52:22.7421991Z 2021/08/20 04:50:43.657023 [info] prophet: load 0 resources, cost 249.302µs
+2021-08-20T04:52:22.7422704Z 2021/08/20 04:50:43.658038 [info] prophet: client start init connection to leader 127.0.0.1:30000
+2021-08-20T04:52:22.7423477Z 2021/08/20 04:50:43.658152 [info] prophet: coordinator starts to collect cluster information 
+2021-08-20T04:52:22.7424312Z 2021/08/20 04:50:43.658164 [info] prophet: coordinator has finished cluster information preparation 
+2021-08-20T04:52:22.7425100Z 2021/08/20 04:50:43.658166 [info] prophet: coordinator starts to run schedulers 
+2021-08-20T04:52:22.7425796Z 2021/08/20 04:50:43.658241 [info] prophet: client read loop started 
+2021-08-20T04:52:22.7426357Z 2021/08/20 04:50:43.658254 [info] prophet: client started
+2021-08-20T04:52:22.7426982Z 2021/08/20 04:50:43.658259 [info] [raftstore]: *********Become prophet leader*********
+2021-08-20T04:52:22.7427681Z 2021/08/20 04:50:43.658260 [info] [raftstore]: begin to bootstrap the cluster
+2021-08-20T04:52:22.7428760Z 2021/08/20 04:50:43.658316 [info] [raftstore]: raftstore init with store raftAddr:"127.0.0.1:10000" clientAddr:"127.0.0.1:20000" labels:<key:"c" value:"0" > startTime:1629435043 deployPath:"not set" 
+2021-08-20T04:52:22.7429651Z 2021/08/20 04:50:43.658334 [info] [raftstore]: begin to create local store metadata
+2021-08-20T04:52:22.7430352Z 2021/08/20 04:50:43.658396 [info] prophet: client start connect to leader 127.0.0.1:30000
+2021-08-20T04:52:22.7431073Z 2021/08/20 04:50:43.658436 [info] prophet: client read loop actived, ready to read from leader
+2021-08-20T04:52:22.7431936Z 2021/08/20 04:50:43.658620 [info] prophet: session 1[127.0.0.1:59344] connected
+2021-08-20T04:52:22.7432695Z 2021/08/20 04:50:43.659252 [info] prophet: load 0 jobs
+2021-08-20T04:52:22.7433423Z 2021/08/20 04:50:43.660909 [info] prophet: coordinator begins to actively drive push operator 
+2021-08-20T04:52:22.7434458Z 2021/08/20 04:50:43.660961 [info] prophet: coordinator starts patrol resources 
+2021-08-20T04:52:22.7435198Z 2021/08/20 04:50:43.661133 [info] [raftstore]: create local store with id 1
+2021-08-20T04:52:22.7436393Z 2021/08/20 04:50:43.661811 [info] [raftstore]: the cluster already bootstrap: false
+2021-08-20T04:52:22.7437363Z 2021/08/20 04:50:43.661845 [info] [raftstore]: begin to bootstrap the cluster with init shards
+2021-08-20T04:52:22.7438335Z 2021/08/20 04:50:43.662123 [info] [raftstore]: create init shard id:2 epoch:<confVer:1 version:1 > peers:<id:3 containerID:1 > 
+2021-08-20T04:52:22.7439259Z 2021/08/20 04:50:43.664469 [info] prophet: container 1 limit added
+2021-08-20T04:52:22.7441388Z 2021/08/20 04:50:43.664599 [info] [raftstore]: prophet started
+2021-08-20T04:52:22.7442268Z 2021/08/20 04:50:43.664675 [info] [transport]: net application started
+2021-08-20T04:52:22.7443149Z 2021/08/20 04:50:43.664685 [info] [raftstore]: start listen at 127.0.0.1:10000 for raft
+2021-08-20T04:52:22.7444060Z 2021/08/20 04:50:43.664689 [info] [raftstore]: raft shards workers started
+2021-08-20T04:52:22.7445676Z 2021/08/20 04:50:43.664740 [info] [raftstore]: shard 2 init with raft local state {HardState:{Term:5 Vote:0 Commit:5 XXX_unrecognized:[]} LastIndex:5 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}
+2021-08-20T04:52:22.7447855Z 2021/08/20 04:50:43.664751 [info] [raftstore]: shard 2 init raft apply state, state=<{AppliedIndex:5 TruncatedState:{Index:5 Term:5 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}>
+2021-08-20T04:52:22.7449159Z 2021/08/20 04:50:43.664754 [info] [raftstore]: shard 2 init last term, last term=<5>
+2021-08-20T04:52:22.7450551Z {"level":"info","ts":"2021-08-20T04:50:43.664Z","caller":"raft/raft.go:1550","msg":"3 switched to configuration voters=(3)"}
+2021-08-20T04:52:22.7451911Z {"level":"info","ts":"2021-08-20T04:50:43.664Z","caller":"raft/raft.go:711","msg":"3 became follower at term 5"}
+2021-08-20T04:52:22.7453227Z {"level":"info","ts":"2021-08-20T04:50:43.664Z","caller":"raft/raft.go:388","msg":"newRaft 3 [peers: [3], term: 5, commit: 5, applied: 5, lastindex: 5, lastterm: 5]"}
+2021-08-20T04:52:22.7454279Z 2021/08/20 04:50:43.664906 [info] [raftstore]: shard 2 try to campaign leader, because only self
+2021-08-20T04:52:22.7455429Z {"level":"info","ts":"2021-08-20T04:50:43.664Z","caller":"raft/raft.go:934","msg":"3 is starting a new election at term 5"}
+2021-08-20T04:52:22.7456535Z {"level":"info","ts":"2021-08-20T04:50:43.664Z","caller":"raft/raft.go:724","msg":"3 became candidate at term 6"}
+2021-08-20T04:52:22.7458034Z {"level":"info","ts":"2021-08-20T04:50:43.664Z","caller":"raft/raft.go:835","msg":"3 received MsgVoteResp from 3 at term 6"}
+2021-08-20T04:52:22.7459286Z {"level":"info","ts":"2021-08-20T04:50:43.664Z","caller":"raft/raft.go:776","msg":"3 became leader at term 6"}
+2021-08-20T04:52:22.7462213Z 2021/08/20 04:50:43.665065 [info] [raftstore]: shard 2 added with peer {ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, epoch {ConfVer:1 Version:1 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, peers [{ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}], raft worker 0, apply worker apply-0-0
+2021-08-20T04:52:22.7464044Z 2021/08/20 04:50:43.665079 [info] [raftstore]: starts with 1 shards, including 0 tombstones and 0 applying shards
+2021-08-20T04:52:22.7464922Z 2021/08/20 04:50:43.665081 [info] [raftstore]: cleanup possible garbage data complete
+2021-08-20T04:52:22.7465664Z 2021/08/20 04:50:43.665083 [info] [raftstore]: shards started
+2021-08-20T04:52:22.7466317Z 2021/08/20 04:50:43.665087 [info] [raftstore]: shard timer based tasks started
+2021-08-20T04:52:22.7467065Z 2021/08/20 04:50:43.665100 [info] [raftstore]: net application started
+2021-08-20T04:52:22.7467933Z 2021/08/20 04:50:43.665108 [info] [raftstore]: start listen at 127.0.0.1:20000 for client
+2021-08-20T04:52:22.7468539Z 2021/08/20 04:50:43.665121 [info] [raftstore]: router started
+2021-08-20T04:52:22.7469465Z 2021/08/20 04:50:43.665248 [info] prophet: container 1 heartbeat stream binded
+2021-08-20T04:52:22.7470211Z 2021/08/20 04:50:43.665314 [info] [raftstore]: raft worker 0/0 start
+2021-08-20T04:52:22.7470956Z 2021/08/20 04:50:43.665395 [info] prophet: client start init connection to leader 127.0.0.1:30000
+2021-08-20T04:52:22.7471750Z 2021/08/20 04:50:43.665435 [info] [raftstore]: shard 2 ********become leader now********
+2021-08-20T04:52:22.7472514Z 2021/08/20 04:50:43.665468 [info] [raftstore]: router event loop task started
+2021-08-20T04:52:22.7473257Z 2021/08/20 04:50:43.665507 [info] prophet: client start connect to leader 127.0.0.1:30000
+2021-08-20T04:52:22.7475105Z 2021/08/20 04:50:43.665514 [info] prophet: watcher init leader connection 127.0.0.1:30000 succeed
+2021-08-20T04:52:22.7476205Z 2021/08/20 04:50:43.665573 [info] prophet: session 2[127.0.0.1:59346] connected
+2021-08-20T04:52:22.7476920Z 2021/08/20 04:50:43.665594 [info] prophet: new watcher 127.0.0.1:59346 added
+2021-08-20T04:52:22.7477614Z 2021/08/20 04:50:43.665997 [info] [raftstore]: start init event
+2021-08-20T04:52:22.7478415Z 2021/08/20 04:50:43.776010 [info] [raftstore]: shard 2 start split check job from [122 0 0 0 0 0 0 0 0] to [122 0 0 0 0 0 0 0 1]
+2021-08-20T04:52:22.7479334Z 2021/08/20 04:50:43.776081 [info] [raftstore]: shard 2 try to split, size 40 bytes splitKeys [[122 0 0 0 0 0 0 0 0 107 101 121 50]]
+2021-08-20T04:52:22.7480145Z 2021/08/20 04:50:43.776418 [info] prophet: alloc ids [6] for resource 5 split
+2021-08-20T04:52:22.7483016Z 2021/08/20 04:50:43.796426 [info] [raftstore]: shard 2 update to {ID:2 Start:[] End:[107 101 121 50] Epoch:{ConfVer:1 Version:2 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} State:Running Peers:[{ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}] DisableSplit:false Group:0 Unique: RuleGroups:[] Data:[] XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} by post applt split
+2021-08-20T04:52:22.7485833Z 2021/08/20 04:50:43.796457 [info] [raftstore]: shard 5 init with raft local state {HardState:{Term:5 Vote:0 Commit:5 XXX_unrecognized:[]} LastIndex:5 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}
+2021-08-20T04:52:22.7487898Z 2021/08/20 04:50:43.796469 [info] [raftstore]: shard 5 init raft apply state, state=<{AppliedIndex:5 TruncatedState:{Index:5 Term:5 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}>
+2021-08-20T04:52:22.7489239Z 2021/08/20 04:50:43.796474 [info] [raftstore]: shard 5 init last term, last term=<5>
+2021-08-20T04:52:22.7490702Z {"level":"info","ts":"2021-08-20T04:50:43.796Z","caller":"raft/raft.go:1550","msg":"6 switched to configuration voters=(6)"}
+2021-08-20T04:52:22.7492015Z {"level":"info","ts":"2021-08-20T04:50:43.796Z","caller":"raft/raft.go:711","msg":"6 became follower at term 5"}
+2021-08-20T04:52:22.7493429Z {"level":"info","ts":"2021-08-20T04:50:43.796Z","caller":"raft/raft.go:388","msg":"newRaft 6 [peers: [6], term: 5, commit: 5, applied: 5, lastindex: 5, lastterm: 5]"}
+2021-08-20T04:52:22.7494625Z 2021/08/20 04:50:43.796546 [info] [raftstore]: shard 5 try to campaign leader, because only self
+2021-08-20T04:52:22.7495844Z {"level":"info","ts":"2021-08-20T04:50:43.796Z","caller":"raft/raft.go:934","msg":"6 is starting a new election at term 5"}
+2021-08-20T04:52:22.7497249Z {"level":"info","ts":"2021-08-20T04:50:43.796Z","caller":"raft/raft.go:724","msg":"6 became candidate at term 6"}
+2021-08-20T04:52:22.7498991Z {"level":"info","ts":"2021-08-20T04:50:43.796Z","caller":"raft/raft.go:835","msg":"6 received MsgVoteResp from 6 at term 6"}
+2021-08-20T04:52:22.7500550Z {"level":"info","ts":"2021-08-20T04:50:43.796Z","caller":"raft/raft.go:776","msg":"6 became leader at term 6"}
+2021-08-20T04:52:22.7503316Z 2021/08/20 04:50:43.796634 [info] [raftstore]: shard 5 added with peer {ID:6 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, epoch {ConfVer:1 Version:2 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, peers [{ID:6 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}], raft worker 0, apply worker apply-0-0
+2021-08-20T04:52:22.7506424Z 2021/08/20 04:50:43.796651 [info] [raftstore]: shard 2 new shard added, new shards [{ID:5 Start:[107 101 121 50] End:[] Epoch:{ConfVer:1 Version:2 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} State:Running Peers:[{ID:6 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}] DisableSplit:false Group:0 Unique: RuleGroups:[] Data:[] XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}]
+2021-08-20T04:52:22.7508121Z 2021/08/20 04:50:43.796666 [info] [raftstore]: shard 5 ********become leader now********
+2021-08-20T04:52:22.7508817Z 2021/08/20 04:50:43.796756 [info] prophet: resource 2 version changed from 1 to 2
+2021-08-20T04:52:22.7509674Z 2021/08/20 04:50:43.867177 [info] [raftstore]: shard 5 start split check job from [122 0 0 0 0 0 0 0 0 107 101 121 50] to [122 0 0 0 0 0 0 0 1]
+2021-08-20T04:52:22.7510557Z 2021/08/20 04:50:43.965478 [info] [raftstore]: shard 5 start split check job from [122 0 0 0 0 0 0 0 0 107 101 121 50] to [122 0 0 0 0 0 0 0 1]
+2021-08-20T04:52:22.7511375Z 2021/08/20 04:50:43.965618 [info] [raftstore]: shard 5 try to split, size 40 bytes splitKeys [[122 0 0 0 0 0 0 0 0 107 101 121 51]]
+2021-08-20T04:52:22.7512153Z 2021/08/20 04:50:43.965734 [info] prophet: alloc ids [8] for resource 7 split
+2021-08-20T04:52:22.7515066Z 2021/08/20 04:50:43.976441 [info] [raftstore]: shard 5 update to {ID:5 Start:[107 101 121 50] End:[107 101 121 51] Epoch:{ConfVer:1 Version:3 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} State:Running Peers:[{ID:6 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}] DisableSplit:false Group:0 Unique: RuleGroups:[] Data:[] XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} by post applt split
+2021-08-20T04:52:22.7518049Z 2021/08/20 04:50:43.976494 [info] [raftstore]: shard 7 init with raft local state {HardState:{Term:5 Vote:0 Commit:5 XXX_unrecognized:[]} LastIndex:5 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}
+2021-08-20T04:52:22.7520393Z 2021/08/20 04:50:43.976511 [info] [raftstore]: shard 7 init raft apply state, state=<{AppliedIndex:5 TruncatedState:{Index:5 Term:5 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}>
+2021-08-20T04:52:22.7522477Z 2021/08/20 04:50:43.976514 [info] [raftstore]: shard 7 init last term, last term=<5>
+2021-08-20T04:52:22.7523732Z {"level":"info","ts":"2021-08-20T04:50:43.976Z","caller":"raft/raft.go:1550","msg":"8 switched to configuration voters=(8)"}
+2021-08-20T04:52:22.7525321Z {"level":"info","ts":"2021-08-20T04:50:43.976Z","caller":"raft/raft.go:711","msg":"8 became follower at term 5"}
+2021-08-20T04:52:22.7526839Z {"level":"info","ts":"2021-08-20T04:50:43.976Z","caller":"raft/raft.go:388","msg":"newRaft 8 [peers: [8], term: 5, commit: 5, applied: 5, lastindex: 5, lastterm: 5]"}
+2021-08-20T04:52:22.7527842Z 2021/08/20 04:50:43.976625 [info] [raftstore]: shard 7 try to campaign leader, because only self
+2021-08-20T04:52:22.7529254Z {"level":"info","ts":"2021-08-20T04:50:43.976Z","caller":"raft/raft.go:934","msg":"8 is starting a new election at term 5"}
+2021-08-20T04:52:22.7530619Z {"level":"info","ts":"2021-08-20T04:50:43.976Z","caller":"raft/raft.go:724","msg":"8 became candidate at term 6"}
+2021-08-20T04:52:22.7531992Z {"level":"info","ts":"2021-08-20T04:50:43.976Z","caller":"raft/raft.go:835","msg":"8 received MsgVoteResp from 8 at term 6"}
+2021-08-20T04:52:22.7533400Z {"level":"info","ts":"2021-08-20T04:50:43.976Z","caller":"raft/raft.go:776","msg":"8 became leader at term 6"}
+2021-08-20T04:52:22.7536571Z 2021/08/20 04:50:43.976694 [info] [raftstore]: shard 7 added with peer {ID:8 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, epoch {ConfVer:1 Version:3 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, peers [{ID:8 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}], raft worker 0, apply worker apply-0-0
+2021-08-20T04:52:22.7541853Z 2021/08/20 04:50:43.976715 [info] [raftstore]: shard 5 new shard added, new shards [{ID:7 Start:[107 101 121 51] End:[] Epoch:{ConfVer:1 Version:3 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} State:Running Peers:[{ID:8 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}] DisableSplit:false Group:0 Unique: RuleGroups:[] Data:[] XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}]
+2021-08-20T04:52:22.7544276Z 2021/08/20 04:50:43.976735 [info] [raftstore]: shard 7 ********become leader now********
+2021-08-20T04:52:22.7545413Z 2021/08/20 04:50:43.976834 [info] prophet: resource 5 version changed from 2 to 3
+2021-08-20T04:52:22.7546911Z 2021/08/20 04:50:44.007689 [error] prophet: client read resp from leader 127.0.0.1:30000 failed with read tcp 127.0.0.1:59344->127.0.0.1:30000: use of closed network connection
+2021-08-20T04:52:22.7547895Z 2021/08/20 04:50:44.007722 [error] prophet: client read loop stopped
+2021-08-20T04:52:22.7549536Z 2021/08/20 04:50:44.007776 [error] prophet: session 2[127.0.0.1:59346] read failed with read tcp 127.0.0.1:30000->127.0.0.1:59346: use of closed network connection
+2021-08-20T04:52:22.7550850Z 2021/08/20 04:50:44.007841 [error] prophet: session 1[127.0.0.1:59344] read failed with read tcp 127.0.0.1:30000->127.0.0.1:59344: use of closed network connection
+2021-08-20T04:52:22.7551727Z 2021/08/20 04:50:44.008225 [error] prophet: watcher read events failed with EOF
+2021-08-20T04:52:22.7552522Z 2021/08/20 04:50:44.008235 [error] prophet: reset watcher conn failed with <nil>, retry later
+2021-08-20T04:52:22.7553894Z 2021/08/20 04:50:44.008380 [info] prophet: [prophet-leader/node-0]/lease: closed
+2021-08-20T04:52:22.7555126Z 2021/08/20 04:50:44.008468 [info] prophet: [prophet-leader/node-0]/keepalive: exit with context done
+2021-08-20T04:52:22.7556487Z 2021/08/20 04:50:44.008487 [info] prophet: [prophet-leader/node-0]/lease: exit with context done
+2021-08-20T04:52:22.7557718Z 2021/08/20 04:50:44.008499 [error] prophet: [prophet-leader/node-0]/lease: keep lease exit
+2021-08-20T04:52:22.7558592Z 2021/08/20 04:50:44.008503 [info] prophet: patrol resources has been stopped 
+2021-08-20T04:52:22.7559453Z 2021/08/20 04:50:44.008510 [info] prophet: drive push operator has been stopped 
+2021-08-20T04:52:22.7560159Z 2021/08/20 04:50:44.008514 [info] prophet: coordinator is stopping
+2021-08-20T04:52:22.7560893Z 2021/08/20 04:50:44.008519 [info] prophet: coordinator has been stopped
+2021-08-20T04:52:22.7562156Z 2021-08-20 04:50:44.008569 I | etcdserver: skipped leadership transfer for single voting member cluster
+2021-08-20T04:52:22.7562980Z 2021/08/20 04:50:44.015958 [info] [raftstore]: shard 5 handle serve raft stopped
+2021-08-20T04:52:22.7563747Z 2021/08/20 04:50:44.015972 [info] [raftstore]: shard 2 handle serve raft stopped
+2021-08-20T04:52:22.7564473Z 2021/08/20 04:50:44.015974 [info] [raftstore]: shard 7 handle serve raft stopped
+2021-08-20T04:52:22.7565157Z 2021/08/20 04:50:44.015994 [info] [raftstore]: router event loop task stopped
+2021-08-20T04:52:22.7565865Z 2021/08/20 04:50:44.016001 [info] [raftstore]: raft worker worker 0/0 exit
+2021-08-20T04:52:22.7566518Z 2021/08/20 04:50:44.016006 [info] [raftstore]: timer based tasks stopped
+2021-08-20T04:52:22.7567318Z 2021/08/20 04:50:44.016032 [info] [raftstore]: handle resource heartbeat resp task stopped
+2021-08-20T04:52:22.7568080Z 2021/08/20 04:50:44.016075 [info] [transport]: send snapshot worker stopped
+2021-08-20T04:52:22.7568755Z 2021/08/20 04:50:44.016107 [info] [transport]: send snapshot worker stopped
+2021-08-20T04:52:22.7569446Z 2021/08/20 04:50:44.016120 [info] [transport]: transfer stopped
+2021-08-20T04:52:22.7570153Z 2021/08/20 04:50:44.016141 [info] [transport]: send snapshot worker stopped
+2021-08-20T04:52:22.7570831Z 2021/08/20 04:50:44.016153 [info] [transport]: send snapshot worker stopped
+2021-08-20T04:52:22.7571548Z 2021/08/20 04:50:44.016162 [info] [transport]: send snapshot worker stopped
+2021-08-20T04:52:22.7572257Z 2021/08/20 04:50:44.016187 [info] [transport]: send raft worker stopped
+2021-08-20T04:52:22.7572925Z 2021/08/20 04:50:44.016121 [info] [transport]: send snapshot worker stopped
+2021-08-20T04:52:22.7573662Z 2021/08/20 04:50:44.016123 [info] [transport]: send snapshot worker stopped
+2021-08-20T04:52:22.7574383Z 2021/08/20 04:50:44.016124 [info] [transport]: send snapshot worker stopped
+2021-08-20T04:52:22.7575030Z 2021/08/20 04:50:44.016945 [info] [raftstore]: shard 2 raft tick stopped
+2021-08-20T04:52:22.7575690Z 2021/08/20 04:50:44.017599 [info] prophet: prophet logger set
+2021-08-20T04:52:22.7576305Z 2021/08/20 04:50:44.028181 [info] [raftstore]: start scan gc snap files
+2021-08-20T04:52:22.7576984Z 2021/08/20 04:50:44.028184 [info] [raftstore]: begin start raftstore
+2021-08-20T04:52:22.7577649Z 2021/08/20 04:50:44.028244 [info] [raftstore]: begin to start prophet
+2021-08-20T04:52:22.7578610Z [WARNING] Deprecated '--logger=capnslog' flag is set; use '--logger=zap' flag instead
+2021-08-20T04:52:22.7579636Z 2021-08-20 04:50:44.028343 I | embed: pprof is enabled under /debug/pprof
+2021-08-20T04:52:22.7580434Z 2021-08-20 04:50:44.028414 I | embed: name = node-0
+2021-08-20T04:52:22.7581256Z 2021-08-20 04:50:44.028424 I | embed: data dir = /tmp/cube/node-0/prophet
+2021-08-20T04:52:22.7582583Z 2021-08-20 04:50:44.028428 I | embed: member dir = /tmp/cube/node-0/prophet/member
+2021-08-20T04:52:22.7583504Z 2021-08-20 04:50:44.028431 I | embed: heartbeat = 100ms
+2021-08-20T04:52:22.7584287Z 2021-08-20 04:50:44.028433 I | embed: election = 3000ms
+2021-08-20T04:52:22.7585121Z 2021-08-20 04:50:44.028439 I | embed: snapshot count = 100000
+2021-08-20T04:52:22.7586436Z 2021-08-20 04:50:44.028447 I | embed: advertise client URLs = http://127.0.0.1:40000
+2021-08-20T04:52:22.7587977Z 2021-08-20 04:50:44.028451 I | embed: initial advertise peer URLs = http://127.0.0.1:50000
+2021-08-20T04:52:22.7588978Z 2021-08-20 04:50:44.028458 I | embed: initial cluster = 
+2021-08-20T04:52:22.7590436Z 2021-08-20 04:50:44.029085 I | etcdserver: restarting member 93ccda9956d988f4 in cluster 6a4ade671189dc2f at commit index 20
+2021-08-20T04:52:22.7592173Z {"level":"info","ts":"2021-08-20T04:50:44.029Z","caller":"raft/raft.go:1550","msg":"93ccda9956d988f4 switched to configuration voters=()"}
+2021-08-20T04:52:22.7594484Z {"level":"info","ts":"2021-08-20T04:50:44.029Z","caller":"raft/raft.go:711","msg":"93ccda9956d988f4 became follower at term 2"}
+2021-08-20T04:52:22.7596301Z {"level":"info","ts":"2021-08-20T04:50:44.029Z","caller":"raft/raft.go:388","msg":"newRaft 93ccda9956d988f4 [peers: [], term: 2, commit: 20, applied: 0, lastindex: 20, lastterm: 2]"}
+2021-08-20T04:52:22.7597623Z 2021-08-20 04:50:44.030299 W | auth: simple token is not cryptographically signed
+2021-08-20T04:52:22.7599004Z 2021-08-20 04:50:44.031800 I | etcdserver: starting server... [version: 3.4.15, cluster version: to_be_decided]
+2021-08-20T04:52:22.7599954Z 2021-08-20 04:50:44.034289 I | embed: listening for peers on 127.0.0.1:50000
+2021-08-20T04:52:22.7601262Z {"level":"info","ts":"2021-08-20T04:50:44.034Z","caller":"raft/raft.go:1550","msg":"93ccda9956d988f4 switched to configuration voters=(10650127570946328820)"}
+2021-08-20T04:52:22.7602665Z 2021-08-20 04:50:44.034603 I | etcdserver/membership: added member 93ccda9956d988f4 [http://127.0.0.1:50000] to cluster 6a4ade671189dc2f
+2021-08-20T04:52:22.7603813Z 2021-08-20 04:50:44.034694 N | etcdserver/membership: set the initial cluster version to 3.4
+2021-08-20T04:52:22.7604780Z 2021/08/20 04:50:44.067260 [info] [raftstore]: shard 5 raft tick stopped
+2021-08-20T04:52:22.7605703Z 2021/08/20 04:50:44.067286 [info] [raftstore]: shard 7 raft tick stopped
+2021-08-20T04:52:22.7606695Z 2021/08/20 04:50:44.108833 [info] prophet: [prophet-leader/node-0]/loop: exit
+2021-08-20T04:52:22.7608020Z {"level":"info","ts":"2021-08-20T04:50:47.529Z","caller":"raft/raft.go:934","msg":"93ccda9956d988f4 is starting a new election at term 2"}
+2021-08-20T04:52:22.7609363Z {"level":"info","ts":"2021-08-20T04:50:47.530Z","caller":"raft/raft.go:724","msg":"93ccda9956d988f4 became candidate at term 3"}
+2021-08-20T04:52:22.7610795Z {"level":"info","ts":"2021-08-20T04:50:47.530Z","caller":"raft/raft.go:835","msg":"93ccda9956d988f4 received MsgVoteResp from 93ccda9956d988f4 at term 3"}
+2021-08-20T04:52:22.7612703Z {"level":"info","ts":"2021-08-20T04:50:47.530Z","caller":"raft/raft.go:776","msg":"93ccda9956d988f4 became leader at term 3"}
+2021-08-20T04:52:22.7614350Z {"level":"info","ts":"2021-08-20T04:50:47.530Z","caller":"raft/node.go:325","msg":"raft.node: 93ccda9956d988f4 elected leader 93ccda9956d988f4 at term 3"}
+2021-08-20T04:52:22.7615804Z 2021-08-20 04:50:47.531493 I | etcdserver: published {Name:node-0 ClientURLs:[http://127.0.0.1:40000]} to cluster 6a4ade671189dc2f
+2021-08-20T04:52:22.7616964Z 2021-08-20 04:50:47.531508 I | embed: ready to serve client requests
+2021-08-20T04:52:22.7618203Z 2021/08/20 04:50:47.531511 [info] prophet: create etcd v3 client with endpoints [http://127.0.0.1:40000]
+2021-08-20T04:52:22.7619610Z 2021-08-20 04:50:47.531891 N | embed: serving insecure client requests on 127.0.0.1:40000, this is strongly discouraged!
+2021-08-20T04:52:22.7620673Z 2021/08/20 04:50:47.532813 [info] prophet: net application started
+2021-08-20T04:52:22.7621412Z 2021/08/20 04:50:47.532866 [info] prophet: start system time monitor 
+2021-08-20T04:52:22.7622448Z 2021/08/20 04:50:47.533119 [info] prophet: [prophet-leader/node-0]/loop: current leader is []
+2021-08-20T04:52:22.7623664Z 2021/08/20 04:50:47.533388 [info] prophet: [prophet-leader/node-0]/campaign: load expect leader: []
+2021-08-20T04:52:22.7624997Z 2021/08/20 04:50:47.533398 [info] prophet: [prophet-leader/node-0]/campaign: start
+2021-08-20T04:52:22.7626230Z 2021/08/20 04:50:47.533672 [info] prophet: [prophet-leader/node-0]/campaign: grant lease ok
+2021-08-20T04:52:22.7627816Z 2021/08/20 04:50:47.534250 [info] prophet: [prophet-leader/node-0]/campaign: completed, start keepalive
+2021-08-20T04:52:22.7628862Z 2021/08/20 04:50:47.534264 [info] prophet: ********node-0 become to leader now********
+2021-08-20T04:52:22.7629882Z 2021/08/20 04:50:47.535233 [info] prophet: load 1 containers, cost 838.305µs
+2021-08-20T04:52:22.7630819Z 2021/08/20 04:50:47.535612 [info] prophet: load 3 resources, cost 366.903µs
+2021-08-20T04:52:22.7631617Z 2021/08/20 04:50:47.536266 [info] prophet: coordinator starts to collect cluster information 
+2021-08-20T04:52:22.7632327Z 2021/08/20 04:50:47.536303 [info] prophet: client read loop started 
+2021-08-20T04:52:22.7633116Z 2021/08/20 04:50:47.536320 [info] prophet: client start init connection to leader 127.0.0.1:30000
+2021-08-20T04:52:22.7634036Z 2021/08/20 04:50:47.536376 [info] prophet: client started
+2021-08-20T04:52:22.7634703Z 2021/08/20 04:50:47.536395 [info] [raftstore]: *********Become prophet leader*********
+2021-08-20T04:52:22.7635618Z 2021/08/20 04:50:47.536406 [info] [raftstore]: begin to bootstrap the cluster
+2021-08-20T04:52:22.7636765Z 2021/08/20 04:50:47.536443 [info] [raftstore]: raftstore init with store raftAddr:"127.0.0.1:10000" clientAddr:"127.0.0.1:20000" labels:<key:"c" value:"0" > startTime:1629435047 deployPath:"not set" 
+2021-08-20T04:52:22.7637798Z 2021/08/20 04:50:47.536468 [info] prophet: client start connect to leader 127.0.0.1:30000
+2021-08-20T04:52:22.7638815Z 2021/08/20 04:50:47.536482 [info] prophet: client read loop actived, ready to read from leader
+2021-08-20T04:52:22.7639524Z 2021/08/20 04:50:47.536548 [info] prophet: session 1[127.0.0.1:59358] connected
+2021-08-20T04:52:22.7640170Z 2021/08/20 04:50:47.536650 [info] [raftstore]: load local store 1
+2021-08-20T04:52:22.7640808Z 2021/08/20 04:50:47.536716 [info] [raftstore]: prophet started
+2021-08-20T04:52:22.7642670Z 2021/08/20 04:50:47.536783 [info] [transport]: net application started
+2021-08-20T04:52:22.7643809Z 2021/08/20 04:50:47.536807 [info] [raftstore]: start listen at 127.0.0.1:10000 for raft
+2021-08-20T04:52:22.7644757Z 2021/08/20 04:50:47.536820 [info] [raftstore]: raft shards workers started
+2021-08-20T04:52:22.7646788Z 2021/08/20 04:50:47.536864 [info] [raftstore]: shard 2 init with raft local state {HardState:{Term:6 Vote:3 Commit:9 XXX_unrecognized:[]} LastIndex:9 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}
+2021-08-20T04:52:22.7649753Z 2021/08/20 04:50:47.536894 [info] [raftstore]: shard 2 init raft apply state, state=<{AppliedIndex:9 TruncatedState:{Index:5 Term:5 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}>
+2021-08-20T04:52:22.7651367Z 2021/08/20 04:50:47.536920 [info] [raftstore]: shard 2 init last term, last term=<6>
+2021-08-20T04:52:22.7652914Z {"level":"info","ts":"2021-08-20T04:50:47.536Z","caller":"raft/raft.go:1550","msg":"3 switched to configuration voters=(3)"}
+2021-08-20T04:52:22.7653664Z 2021/08/20 04:50:47.536978 [info] prophet: load 0 jobs
+2021-08-20T04:52:22.7655443Z {"level":"info","ts":"2021-08-20T04:50:47.536Z","caller":"raft/raft.go:711","msg":"3 became follower at term 6"}
+2021-08-20T04:52:22.7656276Z 2021/08/20 04:50:47.537023 [info] [raftstore]: raft worker 0/0 start
+2021-08-20T04:52:22.7657588Z {"level":"info","ts":"2021-08-20T04:50:47.537Z","caller":"raft/raft.go:388","msg":"newRaft 3 [peers: [3], term: 6, commit: 9, applied: 9, lastindex: 9, lastterm: 6]"}
+2021-08-20T04:52:22.7658986Z 2021/08/20 04:50:47.537052 [info] [raftstore]: shard 2 try to campaign leader, because only self
+2021-08-20T04:52:22.7660211Z {"level":"info","ts":"2021-08-20T04:50:47.537Z","caller":"raft/raft.go:934","msg":"3 is starting a new election at term 6"}
+2021-08-20T04:52:22.7661358Z {"level":"info","ts":"2021-08-20T04:50:47.537Z","caller":"raft/raft.go:724","msg":"3 became candidate at term 7"}
+2021-08-20T04:52:22.7663064Z {"level":"info","ts":"2021-08-20T04:50:47.537Z","caller":"raft/raft.go:835","msg":"3 received MsgVoteResp from 3 at term 7"}
+2021-08-20T04:52:22.7664332Z {"level":"info","ts":"2021-08-20T04:50:47.537Z","caller":"raft/raft.go:776","msg":"3 became leader at term 7"}
+2021-08-20T04:52:22.7666955Z 2021/08/20 04:50:47.537222 [info] [raftstore]: shard 2 added with peer {ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, epoch {ConfVer:1 Version:2 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, peers [{ID:3 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}], raft worker 0, apply worker apply-0-0
+2021-08-20T04:52:22.7668967Z 2021/08/20 04:50:47.537242 [info] [raftstore]: shard 2 ********become leader now********
+2021-08-20T04:52:22.7670472Z 2021/08/20 04:50:47.537245 [info] [raftstore]: shard 5 init with raft local state {HardState:{Term:6 Vote:6 Commit:9 XXX_unrecognized:[]} LastIndex:9 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}
+2021-08-20T04:52:22.7672446Z 2021/08/20 04:50:47.537254 [info] [raftstore]: shard 5 init raft apply state, state=<{AppliedIndex:8 TruncatedState:{Index:5 Term:5 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}>
+2021-08-20T04:52:22.7674143Z 2021/08/20 04:50:47.537259 [info] [raftstore]: shard 5 init last term, last term=<6>
+2021-08-20T04:52:22.7675618Z {"level":"info","ts":"2021-08-20T04:50:47.537Z","caller":"raft/raft.go:1550","msg":"6 switched to configuration voters=(6)"}
+2021-08-20T04:52:22.7676857Z {"level":"info","ts":"2021-08-20T04:50:47.537Z","caller":"raft/raft.go:711","msg":"6 became follower at term 6"}
+2021-08-20T04:52:22.7678238Z {"level":"info","ts":"2021-08-20T04:50:47.537Z","caller":"raft/raft.go:388","msg":"newRaft 6 [peers: [6], term: 6, commit: 9, applied: 8, lastindex: 9, lastterm: 6]"}
+2021-08-20T04:52:22.7679612Z 2021/08/20 04:50:47.537301 [info] [raftstore]: shard 5 try to campaign leader, because only self
+2021-08-20T04:52:22.7680786Z {"level":"info","ts":"2021-08-20T04:50:47.537Z","caller":"raft/raft.go:934","msg":"6 is starting a new election at term 6"}
+2021-08-20T04:52:22.7682021Z {"level":"info","ts":"2021-08-20T04:50:47.537Z","caller":"raft/raft.go:724","msg":"6 became candidate at term 7"}
+2021-08-20T04:52:22.7683398Z {"level":"info","ts":"2021-08-20T04:50:47.537Z","caller":"raft/raft.go:835","msg":"6 received MsgVoteResp from 6 at term 7"}
+2021-08-20T04:52:22.7684570Z {"level":"info","ts":"2021-08-20T04:50:47.537Z","caller":"raft/raft.go:776","msg":"6 became leader at term 7"}
+2021-08-20T04:52:22.7687054Z 2021/08/20 04:50:47.537364 [info] [raftstore]: shard 5 added with peer {ID:6 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, epoch {ConfVer:1 Version:3 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, peers [{ID:6 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}], raft worker 0, apply worker apply-0-0
+2021-08-20T04:52:22.7690466Z 2021/08/20 04:50:47.537385 [info] [raftstore]: shard 7 init with raft local state {HardState:{Term:6 Vote:8 Commit:6 XXX_unrecognized:[]} LastIndex:6 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}
+2021-08-20T04:52:22.7692821Z 2021/08/20 04:50:47.537393 [info] [raftstore]: shard 7 init raft apply state, state=<{AppliedIndex:6 TruncatedState:{Index:5 Term:5 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0} XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}>
+2021-08-20T04:52:22.7694647Z 2021/08/20 04:50:47.537397 [info] [raftstore]: shard 7 init last term, last term=<6>
+2021-08-20T04:52:22.7696065Z {"level":"info","ts":"2021-08-20T04:50:47.537Z","caller":"raft/raft.go:1550","msg":"8 switched to configuration voters=(8)"}
+2021-08-20T04:52:22.7697769Z {"level":"info","ts":"2021-08-20T04:50:47.537Z","caller":"raft/raft.go:711","msg":"8 became follower at term 6"}
+2021-08-20T04:52:22.7699294Z {"level":"info","ts":"2021-08-20T04:50:47.537Z","caller":"raft/raft.go:388","msg":"newRaft 8 [peers: [8], term: 6, commit: 6, applied: 6, lastindex: 6, lastterm: 6]"}
+2021-08-20T04:52:22.7700330Z 2021/08/20 04:50:47.537435 [info] [raftstore]: shard 7 try to campaign leader, because only self
+2021-08-20T04:52:22.7701648Z {"level":"info","ts":"2021-08-20T04:50:47.537Z","caller":"raft/raft.go:934","msg":"8 is starting a new election at term 6"}
+2021-08-20T04:52:22.7708016Z {"level":"info","ts":"2021-08-20T04:50:47.537Z","caller":"raft/raft.go:724","msg":"8 became candidate at term 7"}
+2021-08-20T04:52:22.7709296Z {"level":"info","ts":"2021-08-20T04:50:47.537Z","caller":"raft/raft.go:835","msg":"8 received MsgVoteResp from 8 at term 7"}
+2021-08-20T04:52:22.7710484Z {"level":"info","ts":"2021-08-20T04:50:47.537Z","caller":"raft/raft.go:776","msg":"8 became leader at term 7"}
+2021-08-20T04:52:22.7713021Z 2021/08/20 04:50:47.537533 [info] [raftstore]: shard 7 added with peer {ID:8 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, epoch {ConfVer:1 Version:3 XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}, peers [{ID:8 ContainerID:1 Role:Voter XXX_NoUnkeyedLiteral:{} XXX_unrecognized:[] XXX_sizecache:0}], raft worker 0, apply worker apply-0-0
+2021-08-20T04:52:22.7714934Z 2021/08/20 04:50:47.537541 [info] [raftstore]: starts with 3 shards, including 0 tombstones and 0 applying shards
+2021-08-20T04:52:22.7715798Z 2021/08/20 04:50:47.537544 [info] [raftstore]: cleanup possible garbage data complete
+2021-08-20T04:52:22.7716482Z 2021/08/20 04:50:47.537546 [info] [raftstore]: shards started
+2021-08-20T04:52:22.7717165Z 2021/08/20 04:50:47.537549 [info] [raftstore]: shard timer based tasks started
+2021-08-20T04:52:22.7717869Z 2021/08/20 04:50:47.537566 [info] [raftstore]: net application started
+2021-08-20T04:52:22.7718591Z 2021/08/20 04:50:47.537576 [info] [raftstore]: start listen at 127.0.0.1:20000 for client
+2021-08-20T04:52:22.7719196Z 2021/08/20 04:50:47.537587 [info] [raftstore]: router started
+2021-08-20T04:52:22.7719938Z 2021/08/20 04:50:47.537876 [info] prophet: client start init connection to leader 127.0.0.1:30000
+2021-08-20T04:52:22.7720675Z 2021/08/20 04:50:47.537985 [info] [raftstore]: router event loop task started
+2021-08-20T04:52:22.7721422Z 2021/08/20 04:50:47.538017 [info] prophet: client start connect to leader 127.0.0.1:30000
+2021-08-20T04:52:22.7722200Z 2021/08/20 04:50:47.538020 [info] prophet: watcher init leader connection 127.0.0.1:30000 succeed
+2021-08-20T04:52:22.7722894Z 2021/08/20 04:50:47.538097 [info] prophet: session 2[127.0.0.1:59360] connected
+2021-08-20T04:52:22.7723573Z 2021/08/20 04:50:47.538124 [info] prophet: new watcher 127.0.0.1:59360 added
+2021-08-20T04:52:22.7724263Z 2021/08/20 04:50:47.538660 [info] [raftstore]: start init event
+2021-08-20T04:52:22.7724903Z 2021/08/20 04:50:47.538666 [info] [raftstore]: shard 7 ********become leader now********
+2021-08-20T04:52:22.7725617Z 2021/08/20 04:50:47.539361 [info] [raftstore]: shard 5 ********become leader now********
+2021-08-20T04:52:22.7726482Z 2021/08/20 04:50:47.637926 [info] [raftstore]: shard 5 start split check job from [122 0 0 0 0 0 0 0 0 107 101 121 50] to [122 0 0 0 0 0 0 0 0 107 101 121 51]
+2021-08-20T04:52:22.7727334Z 2021/08/20 04:50:50.536329 [info] prophet: coordinator has finished cluster information preparation 
+2021-08-20T04:52:22.7728206Z 2021/08/20 04:50:50.536376 [info] prophet: coordinator starts to run schedulers 
+2021-08-20T04:52:22.7729023Z 2021/08/20 04:50:50.537568 [info] prophet: coordinator begins to actively drive push operator 
+2021-08-20T04:52:22.7729787Z 2021/08/20 04:50:50.537613 [info] prophet: coordinator starts patrol resources 
+2021-08-20T04:52:22.7731377Z 2021/08/20 04:50:57.540499 [error] prophet: client read resp from leader 127.0.0.1:30000 failed with read tcp 127.0.0.1:59358->127.0.0.1:30000: use of closed network connection
+2021-08-20T04:52:22.7732311Z 2021/08/20 04:50:57.540530 [error] prophet: client read loop stopped
+2021-08-20T04:52:22.7733695Z 2021/08/20 04:50:57.540579 [error] prophet: session 2[127.0.0.1:59360] read failed with read tcp 127.0.0.1:30000->127.0.0.1:59360: use of closed network connection
+2021-08-20T04:52:22.7735371Z 2021/08/20 04:50:57.540611 [error] prophet: session 1[127.0.0.1:59358] read failed with read tcp 127.0.0.1:30000->127.0.0.1:59358: use of closed network connection
+2021-08-20T04:52:22.7736820Z 2021/08/20 04:50:57.540823 [error] prophet: watcher read events failed with EOF
+2021-08-20T04:52:22.7737687Z 2021/08/20 04:50:57.540835 [error] prophet: reset watcher conn failed with <nil>, retry later
+2021-08-20T04:52:22.7739094Z 2021/08/20 04:50:57.541100 [info] prophet: [prophet-leader/node-0]/lease: closed
+2021-08-20T04:52:22.7740338Z 2021/08/20 04:50:57.541172 [info] prophet: [prophet-leader/node-0]/keepalive: exit with context done
+2021-08-20T04:52:22.7741682Z 2021/08/20 04:50:57.541211 [info] prophet: [prophet-leader/node-0]/lease: exit with context done
+2021-08-20T04:52:22.7743963Z 2021/08/20 04:50:57.541249 [error] prophet: [prophet-leader/node-0]/lease: keep lease exit
+2021-08-20T04:52:22.7745124Z 2021/08/20 04:50:57.541266 [info] prophet: drive push operator has been stopped 
+2021-08-20T04:52:22.7746158Z 2021/08/20 04:50:57.541280 [info] prophet: patrol resources has been stopped 
+2021-08-20T04:52:22.7747803Z 2021/08/20 04:50:57.541306 [info] prophet: coordinator is stopping
+2021-08-20T04:52:22.7748586Z 2021/08/20 04:50:57.541385 [info] prophet: coordinator has been stopped
+2021-08-20T04:52:22.7749798Z 2021-08-20 04:50:57.541351 I | etcdserver: skipped leadership transfer for single voting member cluster
+2021-08-20T04:52:22.7750877Z 2021/08/20 04:50:57.547854 [info] [raftstore]: shard 2 handle serve raft stopped
+2021-08-20T04:52:22.7751644Z 2021/08/20 04:50:57.547909 [info] [raftstore]: shard 5 handle serve raft stopped
+2021-08-20T04:52:22.7752332Z 2021/08/20 04:50:57.547919 [info] [raftstore]: shard 7 handle serve raft stopped
+2021-08-20T04:52:22.7753224Z 2021/08/20 04:50:57.547940 [info] [raftstore]: raft worker worker 0/0 exit
+2021-08-20T04:52:22.7754119Z 2021/08/20 04:50:57.547950 [info] [raftstore]: timer based tasks stopped
+2021-08-20T04:52:22.7754830Z 2021/08/20 04:50:57.547952 [info] [raftstore]: router event loop task stopped
+2021-08-20T04:52:22.7755616Z 2021/08/20 04:50:57.548043 [info] [transport]: send snapshot worker stopped
+2021-08-20T04:52:22.7756281Z 2021/08/20 04:50:57.548053 [info] [transport]: transfer stopped
+2021-08-20T04:52:22.7757051Z 2021/08/20 04:50:57.548077 [info] [transport]: send snapshot worker stopped
+2021-08-20T04:52:22.7757809Z 2021/08/20 04:50:57.548104 [info] [transport]: send snapshot worker stopped
+2021-08-20T04:52:22.7758523Z 2021/08/20 04:50:57.548108 [info] [transport]: send snapshot worker stopped
+2021-08-20T04:52:22.7759303Z 2021/08/20 04:50:57.548112 [info] [transport]: send snapshot worker stopped
+2021-08-20T04:52:22.7760410Z 2021/08/20 04:50:57.548115 [info] [transport]: send snapshot worker stopped
+2021-08-20T04:52:22.7761122Z 2021/08/20 04:50:57.548119 [info] [transport]: send snapshot worker stopped
+2021-08-20T04:52:22.7761879Z 2021/08/20 04:50:57.548127 [info] [transport]: send snapshot worker stopped
+2021-08-20T04:52:22.7762630Z 2021/08/20 04:50:57.548131 [info] [transport]: send raft worker stopped
+2021-08-20T04:52:22.7763405Z --- FAIL: TestIssue97 (14.83s)
+2021-08-20T04:52:22.7765084Z     peer_apply_test.go:106: 
+2021-08-20T04:52:22.7765589Z         	Error Trace:	peer_apply_test.go:106
+2021-08-20T04:52:22.7766167Z         	Error:      	Received unexpected error:
+2021-08-20T04:52:22.7766640Z         	            	timeout error
+2021-08-20T04:52:22.7767155Z         	Test:       	TestIssue97
