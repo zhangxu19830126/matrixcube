@@ -21,7 +21,8 @@ import (
 )
 
 var (
-	errNoIdleShard = errors.New("no idle shard")
+	errNoIdleShard   = errors.New("no idle shard")
+	batchCreateCount = 4
 )
 
 // ShardsPool is a shards pool, it will always create shards until the number of available shards reaches the
@@ -184,10 +185,7 @@ func (dsp *dynamicShardsPool) Execute(data []byte, store storage.JobStorage, awa
 	cmd := &bhmetapb.ShardsPoolCmd{}
 	protoc.MustUnmarshal(cmd, data)
 
-	logger.Errorf(">>>>>>>>>>> do exec shard pool")
-	defer logger.Errorf(">>>>>>>>>>> do exec shard pool, completed")
 	dsp.mu.Lock()
-	logger.Errorf(">>>>>>>>>>> do exec shard pool, get lock")
 	defer dsp.mu.Unlock()
 
 	if !dsp.isStartedLocked() {
@@ -203,8 +201,6 @@ func (dsp *dynamicShardsPool) Execute(data []byte, store storage.JobStorage, awa
 }
 
 func (dsp *dynamicShardsPool) doAllocLocked(cmd *bhmetapb.ShardsPoolAllocCmd, store storage.JobStorage, aware pconfig.ResourcesAware) ([]byte, error) {
-	logger.Errorf(">>>>>>>>>>> do exec shard pool, doAllocLocked")
-
 	group := cmd.Group
 	p := dsp.mu.pools.Pools[group]
 
@@ -234,10 +230,8 @@ func (dsp *dynamicShardsPool) doAllocLocked(cmd *bhmetapb.ShardsPoolAllocCmd, st
 			id = shard.ID
 		}
 	}
-	logger.Errorf(">>>>>>>>>>> do exec shard pool, ForeachWaittingCreateResources")
 	aware.ForeachWaittingCreateResources(fn)
 	if id == 0 {
-		logger.Errorf(">>>>>>>>>>> do exec shard pool, ForeachResources")
 		aware.ForeachResources(group, fn)
 	}
 	if id == 0 {
@@ -252,15 +246,13 @@ func (dsp *dynamicShardsPool) doAllocLocked(cmd *bhmetapb.ShardsPoolAllocCmd, st
 	p.AllocatedShards = append(p.AllocatedShards, allocated)
 	dsp.mu.pools.Pools[group] = p
 
-	logger.Errorf(">>>>>>>>>>> do exec shard pool, saveLocked")
-	st := time.Now()
 	if err := dsp.saveLocked(store); err != nil {
 		logger.Errorf("shards pool alloc failed with %+v, retry later",
 			err)
 		dsp.mu.pools = old
 		return nil, err
 	}
-	logger.Errorf(">>>>>>>>>>> do exec shard pool, saveLocked ok cost %+v, %d bytes", time.Since(st), len(protoc.MustMarshal(&dsp.mu.pools)))
+
 	dsp.triggerCreateLocked()
 	return protoc.MustMarshal(allocated), nil
 }
@@ -314,46 +306,56 @@ func (dsp *dynamicShardsPool) triggerCreateLocked() {
 }
 
 func (dsp *dynamicShardsPool) maybeCreate(store storage.JobStorage) {
-	logger.Errorf(">>>>>>>>>>> maybeCreate")
-	defer logger.Errorf(">>>>>>>>>>> maybeCreate completed")
 	dsp.mu.Lock()
-	defer dsp.mu.Unlock()
-
 	if !dsp.isStartedLocked() {
+		dsp.mu.Unlock()
 		return
 	}
 
-	old := dsp.cloneDataLocked()
+	// we don't modify directly
+	modified := dsp.cloneDataLocked()
 	var creates []metadata.Resource
-	for g, p := range dsp.mu.pools.Pools {
-		if p.Seq == 0 ||
-			(int(p.Seq-p.AllocatedOffset) < int(p.Capacity) && len(creates) < 8) {
-			p.Seq++
-			creates = append(creates, NewResourceAdapterWithShard(dsp.factory(g,
-				addPrefix(p.RangePrefix, p.Seq),
-				addPrefix(p.RangePrefix, p.Seq+1),
-				dsp.unique(g, p.Seq),
-				p.Seq)))
+	for {
+		changed := false
+		for g, p := range modified.Pools {
+			if p.Seq == 0 ||
+				(int(p.Seq-p.AllocatedOffset) < int(p.Capacity) && len(creates) < batchCreateCount) {
+				p.Seq++
+				creates = append(creates, NewResourceAdapterWithShard(dsp.factory(g,
+					addPrefix(p.RangePrefix, p.Seq),
+					addPrefix(p.RangePrefix, p.Seq+1),
+					dsp.unique(g, p.Seq),
+					p.Seq)))
+				changed = true
+			}
+		}
+
+		if !changed {
+			break
 		}
 	}
+	dsp.mu.Unlock()
 
 	if len(creates) > 0 {
-		logger.Errorf(">>>>>>>>>>> maybeCreate, AsyncAddResources")
-
 		err := dsp.pd.AsyncAddResources(creates...)
 		if err != nil {
 			logger.Errorf("shards pool create shards failed with %+v", err)
-			dsp.mu.pools = old
 			return
 		}
-		logger.Errorf(">>>>>>>>>>> maybeCreate, AsyncAddResources ok")
 
+		// only update seq, all operation to update seq are in the same goroutine.
+		dsp.mu.Lock()
+		defer dsp.mu.Unlock()
+
+		backup := dsp.cloneDataLocked()
+		for g, p := range dsp.mu.pools.Pools {
+			p.Seq = modified.Pools[g].Seq
+		}
 		if err := dsp.saveLocked(store); err != nil {
-			logger.Errorf("save shard pool job data failed with %+v", err)
-			dsp.mu.pools = old
+			logger.Errorf("save shard pool job data failed with %+v, retry later", err)
+			dsp.mu.pools = backup
 		}
 
-		logger.Errorf(">>>>>>>>>>> maybeCreate, AsyncAddResources save ok")
 		dsp.triggerCreateLocked()
 	}
 }
