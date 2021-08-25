@@ -347,10 +347,10 @@ func (c *RaftCluster) HandleCreateResources(request *rpcpb.Request) (*rpcpb.Crea
 
 	st := time.Now()
 	err := c.storage.PutResources(createResources...)
+	util.GetLogger().Infof("save %d resources cost %+v, error: %+v", len(createResources), time.Since(st), err)
 	if err != nil {
 		return nil, err
 	}
-	util.GetLogger().Infof("resource %d save cost %+v", createResources[0].ID(), time.Since(st))
 
 	c.core.AddWaittingCreateResources(createResources...)
 	c.triggerNotifyCreateResources()
