@@ -314,7 +314,8 @@ func (dsp *dynamicShardsPool) triggerCreateLocked() {
 }
 
 func (dsp *dynamicShardsPool) maybeCreate(store storage.JobStorage) {
-
+	logger.Errorf(">>>>>>>>>>> maybeCreate")
+	defer logger.Errorf(">>>>>>>>>>> maybeCreate completed")
 	dsp.mu.Lock()
 	defer dsp.mu.Unlock()
 
@@ -337,18 +338,22 @@ func (dsp *dynamicShardsPool) maybeCreate(store storage.JobStorage) {
 	}
 
 	if len(creates) > 0 {
+		logger.Errorf(">>>>>>>>>>> maybeCreate, AsyncAddResources")
+
 		err := dsp.pd.AsyncAddResources(creates...)
 		if err != nil {
 			logger.Errorf("shards pool create shards failed with %+v", err)
 			dsp.mu.pools = old
 			return
 		}
+		logger.Errorf(">>>>>>>>>>> maybeCreate, AsyncAddResources ok")
 
 		if err := dsp.saveLocked(store); err != nil {
 			logger.Errorf("save shard pool job data failed with %+v", err)
 			dsp.mu.pools = old
 		}
 
+		logger.Errorf(">>>>>>>>>>> maybeCreate, AsyncAddResources save ok")
 		dsp.triggerCreateLocked()
 	}
 }

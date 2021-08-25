@@ -16,6 +16,7 @@ package prophet
 import (
 	"context"
 	"errors"
+	"fmt"
 	"sync"
 	"sync/atomic"
 	"time"
@@ -373,7 +374,7 @@ func (c *asyncClient) AsyncAddResourcesWithLeastPeers(resources []metadata.Resou
 
 	_, err := c.syncDo(req)
 	if err != nil {
-		return err
+		return fmt.Errorf("request %d, %s", req.ID, err.Error())
 	}
 
 	return nil
