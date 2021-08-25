@@ -184,7 +184,10 @@ func (dsp *dynamicShardsPool) Execute(data []byte, store storage.JobStorage, awa
 	cmd := &bhmetapb.ShardsPoolCmd{}
 	protoc.MustUnmarshal(cmd, data)
 
+	logger.Errorf(">>>>>>>>>>> do exec shard pool")
+	defer logger.Errorf(">>>>>>>>>>> do exec shard pool, completed")
 	dsp.mu.Lock()
+	logger.Errorf(">>>>>>>>>>> do exec shard pool, get lock")
 	defer dsp.mu.Unlock()
 
 	if !dsp.isStartedLocked() {
@@ -200,6 +203,8 @@ func (dsp *dynamicShardsPool) Execute(data []byte, store storage.JobStorage, awa
 }
 
 func (dsp *dynamicShardsPool) doAllocLocked(cmd *bhmetapb.ShardsPoolAllocCmd, store storage.JobStorage, aware pconfig.ResourcesAware) ([]byte, error) {
+	logger.Errorf(">>>>>>>>>>> do exec shard pool, doAllocLocked")
+
 	group := cmd.Group
 	p := dsp.mu.pools.Pools[group]
 
@@ -229,8 +234,10 @@ func (dsp *dynamicShardsPool) doAllocLocked(cmd *bhmetapb.ShardsPoolAllocCmd, st
 			id = shard.ID
 		}
 	}
+	logger.Errorf(">>>>>>>>>>> do exec shard pool, ForeachWaittingCreateResources")
 	aware.ForeachWaittingCreateResources(fn)
 	if id == 0 {
+		logger.Errorf(">>>>>>>>>>> do exec shard pool, ForeachResources")
 		aware.ForeachResources(group, fn)
 	}
 	if id == 0 {
@@ -245,13 +252,15 @@ func (dsp *dynamicShardsPool) doAllocLocked(cmd *bhmetapb.ShardsPoolAllocCmd, st
 	p.AllocatedShards = append(p.AllocatedShards, allocated)
 	dsp.mu.pools.Pools[group] = p
 
+	logger.Errorf(">>>>>>>>>>> do exec shard pool, saveLocked")
+	st := time.Now()
 	if err := dsp.saveLocked(store); err != nil {
 		logger.Errorf("shards pool alloc failed with %+v, retry later",
 			err)
 		dsp.mu.pools = old
 		return nil, err
 	}
-
+	logger.Errorf(">>>>>>>>>>> do exec shard pool, saveLocked ok cost %+v, %d bytes", time.Since(st), len(protoc.MustMarshal(&dsp.mu.pools)))
 	dsp.triggerCreateLocked()
 	return protoc.MustMarshal(allocated), nil
 }
