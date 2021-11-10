@@ -819,7 +819,7 @@ func (c *testRaftCluster) StartWithConcurrent(concurrent bool) {
 		}
 
 		wg.Add(1)
-		if concurrent && i != 0 {
+		if concurrent {
 			go fn(i)
 		} else {
 			fn(i)
@@ -848,7 +848,7 @@ func (c *testRaftCluster) RestartWithFunc(beforeStartFunc func()) {
 	if beforeStartFunc != nil {
 		beforeStartFunc()
 	}
-	c.Start()
+	c.StartWithConcurrent(true)
 }
 
 func (c *testRaftCluster) Stop() {
