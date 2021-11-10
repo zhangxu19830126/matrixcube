@@ -190,6 +190,11 @@ func (pr *replica) start() {
 			zap.Error(err))
 	}
 	pr.rn = rn
+
+	if pr.aware != nil {
+		pr.aware.Created(shard)
+	}
+
 	close(pr.startedC)
 
 	// If this shard has only one replica and I am the one, campaign directly.
@@ -206,10 +211,6 @@ func (pr *replica) start() {
 
 	pr.onRaftTick(nil)
 	pr.logger.Info("replica started")
-
-	if pr.aware != nil {
-		pr.aware.Created(shard)
-	}
 }
 
 func (pr *replica) close() {
