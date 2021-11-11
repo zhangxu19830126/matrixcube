@@ -95,7 +95,6 @@ func (pr *replica) addAdminRequest(req rpc.AdminRequest) error {
 
 func (pr *replica) addRaftTick() bool {
 	if err := pr.ticks.Put(struct{}{}); err != nil {
-		pr.logger.Info("raft tick stopped")
 		return false
 	}
 	pr.notifyWorker()
@@ -103,20 +102,17 @@ func (pr *replica) addRaftTick() bool {
 }
 
 func (pr *replica) onRaftTick(arg interface{}) {
-	schedule := true
-	if !pr.stopRaftTick {
-		schedule = pr.addRaftTick()
+	if pr.addRaftTick() {
 		metric.SetRaftTickQueueMetric(pr.ticks.Len())
-	}
-	if schedule {
 		util.DefaultTimeoutWheel().Schedule(pr.cfg.Raft.TickInterval.Duration, pr.onRaftTick, nil)
+		return
 	}
 }
-
 func (pr *replica) shutdown() {
 	pr.metrics.flush()
 	pr.actions.Dispose()
 	pr.ticks.Dispose()
+	pr.actions.Dispose()
 	pr.messages.Dispose()
 	pr.feedbacks.Dispose()
 
@@ -265,9 +261,7 @@ func (pr *replica) handleTick(items []interface{}) bool {
 		return false
 	}
 	for i := int64(0); i < n; i++ {
-		if !pr.stopRaftTick {
-			pr.rn.Tick()
-		}
+		pr.rn.Tick()
 	}
 
 	return true
