@@ -57,7 +57,7 @@ func (s *store) initMeta() {
 		zap.Any("labels", s.Meta().Labels))
 }
 
-func (s *store) doBootstrapCluster(bootstrapCluster bool) {
+func (s *store) doBootstrapCluster(bootstrap bool) {
 	s.logger.Info("begin to bootstrap the cluster",
 		s.storeField())
 	s.initMeta()
@@ -74,7 +74,7 @@ func (s *store) doBootstrapCluster(bootstrapCluster bool) {
 	s.logger.Info("create local store",
 		s.storeField())
 
-	if bootstrapCluster {
+	if bootstrap {
 		ok, err := s.pd.GetStorage().AlreadyBootstrapped()
 		if err != nil {
 			s.logger.Fatal("failed to check the cluster whether bootstrapped",
