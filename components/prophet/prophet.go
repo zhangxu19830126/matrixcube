@@ -155,6 +155,9 @@ func NewProphet(cfg *config.Config) Prophet {
 }
 
 func (p *defaultProphet) Start() {
+	p.logger.Info("begin to start prophet",
+		zap.String("peer-address", p.cfg.Prophet.EmbedEtcd.PeerUrls),
+		zap.String("client-address", p.cfg.Prophet.EmbedEtcd.ClientUrls))
 	var err error
 	for i := 0; i < initClusterMaxRetryTimes; i++ {
 		if err = p.initClusterID(); err == nil {

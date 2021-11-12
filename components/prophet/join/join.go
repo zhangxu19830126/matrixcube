@@ -291,6 +291,9 @@ func startEmbedEtcd(ctx context.Context, cfg *config.Config, logger *zap.Logger)
 		}
 		for _, m := range etcdMembers.Members {
 			if etcdServerID == m.ID && m.Name == cfg.Prophet.Name {
+				logger.Info("embed etcd started",
+					zap.String("peer-address", cfg.Prophet.EmbedEtcd.PeerUrls),
+					zap.String("client-address", cfg.Prophet.EmbedEtcd.ClientUrls))
 				return client, etcd, nil
 			}
 		}
