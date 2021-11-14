@@ -113,7 +113,7 @@ func NewClient(adapter metadata.Adapter, opts ...Option) Client {
 		resetReadC:            make(chan struct{}),
 		resetLeaderConnC:      make(chan struct{}),
 		writeC:                make(chan *ctx, 128),
-		resourceHeartbeatRspC: make(chan rpcpb.ResourceHeartbeatRsp, 128),
+		resourceHeartbeatRspC: make(chan rpcpb.ResourceHeartbeatRsp, 512),
 	}
 
 	for _, opt := range opts {

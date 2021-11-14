@@ -700,7 +700,7 @@ func (c *testRaftCluster) reset(init bool, opts ...TestClusterOption) {
 			cfg.Prophet.Replication.MaxReplicas = uint64(c.opts.nodes)
 		}
 
-		cfg.Replication.ShardHeartbeatDuration = typeutil.NewDuration(time.Millisecond * 100)
+		cfg.Replication.ShardHeartbeatDuration = typeutil.NewDuration(time.Millisecond * 500)
 		cfg.Replication.StoreHeartbeatDuration = typeutil.NewDuration(time.Second)
 		cfg.Replication.ShardSplitCheckDuration = typeutil.NewDuration(time.Millisecond * 100)
 		cfg.Raft.TickInterval = typeutil.NewDuration(time.Millisecond * 100)
