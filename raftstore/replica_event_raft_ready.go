@@ -193,7 +193,7 @@ func (pr *replica) sendMessage(msg raftpb.Message) {
 		// We don't care such failed message transmission, just log the error
 		pr.logger.Debug("fail to send msg",
 			zap.Uint64("from", msg.From),
-			zap.Uint64("from", msg.To),
+			zap.Uint64("to", msg.To),
 			zap.Error(err))
 	}
 	pr.metrics.ready.message++
@@ -205,6 +205,12 @@ func (pr *replica) sendRaftMessage(msg raftpb.Message) error {
 	if !ok {
 		return errors.Wrapf(ErrUnknownReplica,
 			"shardID %d, replicaID: %d", pr.shardID, msg.To)
+	}
+
+	if msg.Type == raftpb.MsgApp && len(msg.Entries) > 0 {
+		pr.logger.Debug("send append raft msg",
+			log.ReplicaField("to", to),
+			zap.Uint64("last-index", msg.Entries[len(msg.Entries)-1].Index))
 	}
 
 	m := meta.RaftMessage{
