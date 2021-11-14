@@ -422,12 +422,16 @@ func (c *RaftCluster) HandleContainerHeartbeat(stats *metapb.ContainerStats) err
 			zap.Uint64("available", newContainer.GetAvailable()))
 	}
 	if newContainer.NeedPersist() && c.storage != nil {
+		start := time.Now()
 		if err := c.storage.PutContainer(newContainer.Meta); err != nil {
 			c.logger.Error("fail to persist container",
 				zap.Uint64("contianer", newContainer.Meta.ID()),
 				zap.Error(err))
 		} else {
 			newContainer = newContainer.Clone(core.SetLastPersistTime(time.Now()))
+			c.logger.Error("persist container to storage",
+				zap.Uint64("contianer", newContainer.Meta.ID()),
+				zap.Duration("cost", time.Since(start)))
 		}
 
 		c.changedEvents <- event.NewContainerEvent(newContainer.Meta)
@@ -613,13 +617,19 @@ func (c *RaftCluster) processResourceHeartbeat(res *core.CachedResource) error {
 	// If there are concurrent heartbeats from the same resource, the last write will win even if
 	// writes to storage in the critical area. So don't use mutex to protect it.
 	if saveKV && c.storage != nil {
+		start := time.Now()
 		if err := c.storage.PutResource(res.Meta); err != nil {
 			// Not successfully saved to storage is not fatal, it only leads to longer warm-up
 			// after restart. Here we only log the error then go on updating cache.
 			c.logger.Error("fail to save resource to storage",
 				zap.Uint64("resource", res.Meta.ID()),
 				zap.Error(err))
+		} else {
+			c.logger.Error("save resource to storage",
+				zap.Uint64("resource", res.Meta.ID()),
+				zap.Duration("cost", time.Since(start)))
 		}
+
 		resourceEventCounter.WithLabelValues("update_kv").Inc()
 	}
 	if saveKV || saveCache || isNew {
